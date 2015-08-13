@@ -1,5 +1,7 @@
 # Curvilinear VTK Meshes
 
+## Summary
+
 A simple tutorial how to visualize curvilinear meshes in VTK format with GLVis.
 
 ## Details

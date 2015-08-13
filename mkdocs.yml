@@ -12,6 +12,7 @@ pages:
 #- Examples: examples.md
 - Documentation:
   - 'Options and Use': options-and-use.md
+  - 'Mesh Formats': mesh-formats.md
   - 'Curvilinear VTK Meshes': curvilinear-vtk-meshes.md
   #- 'Serial Tutorial': serial-tutorial.md
   #- 'Parallel Tutorial': parallel-tutorial.md
