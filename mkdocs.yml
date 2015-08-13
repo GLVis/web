@@ -10,8 +10,8 @@ pages:
 - Home: index.md
 - Features: features.md
 #- Examples: examples.md
-#- Documentation:
-  #- 'Building MFEM': building.md
+- Documentation:
+  - 'Curvilinear VTK Meshes': curvilinear-vtk-meshes.md
   #- 'Serial Tutorial': serial-tutorial.md
   #- 'Parallel Tutorial': parallel-tutorial.md
   #- 'Mesh Formats': mesh-formats.md

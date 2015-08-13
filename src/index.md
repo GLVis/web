@@ -35,7 +35,7 @@ For older releases see the [download](download.md) section.
 ## Documentation
 
 **
-[Building GLVis](building.md) 
+[Building](http://mfem.org/building) 
 / [Mesh formats](mesh-formats.md) 
 / [Parallel visualization](parallel-visualization.md) 
 <br> [VTK meshes](curvilinear-vtk-meshes.md) 
