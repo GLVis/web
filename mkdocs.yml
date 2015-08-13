@@ -1,0 +1,27 @@
+site_name: GLVis
+docs_dir: 'src'
+
+markdown_extensions:
+- extra  # allow markdown in <div markdown="1">
+
+repo_url: https://github.com/glvis/glvis
+
+pages:
+- Home: index.md
+#- Features: features.md
+#- Examples: examples.md
+#- Documentation:
+  #- 'Building MFEM': building.md
+  #- 'Serial Tutorial': serial-tutorial.md
+  #- 'Parallel Tutorial': parallel-tutorial.md
+  #- 'Mesh Formats': mesh-formats.md
+  #- 'Publications': publications.md
+#  - 'The Team': team.md
+  #- 'About': about.md
+#- Gallery: gallery.md
+#- Download: download.md
+
+theme_dir: template
+
+include_next_prev: false  # turn of next/previous buttons
+
