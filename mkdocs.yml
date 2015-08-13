@@ -8,7 +8,7 @@ repo_url: https://github.com/glvis/glvis
 
 pages:
 - Home: index.md
-#- Features: features.md
+- Features: features.md
 #- Examples: examples.md
 #- Documentation:
   #- 'Building MFEM': building.md

@@ -11,7 +11,7 @@ GLVis is a _lightweight_ OpenGL tool for _accurate_ visualization of _serial_ an
  * Support for triangular, quadrilateral, tetrahedral and hexahedral elements with [curved boundaries](mesh-formats.md#curvilinear-and-more-general-meshes).
  * 2D and 3D, arbitrary high-order H1, H(curl), H(div), L2 and [NURBS](NURBS.md) elements.
  * Visualization of [parallel](parallel-visualization.md) meshes and solutions.
- * ... and [many more](Features.md).
+ * ... and [many more](features.md).
 
 GLVis is based on the [MFEM](http://mfem.org) library and is currently used in the [BLAST](http://www.llnl.gov/casc/blast), _[hypre](http://www.llnl.gov/casc/hypre)_ and [XBraid](http://www.llnl.gov/casc/xbraid) projects. See also our [Gallery](gallery.md).
 
@@ -38,7 +38,7 @@ For older releases see the [download](download.md) section.
 [Building GLVis](building.md) 
 / [Mesh formats](mesh-formats.md) 
 / [Parallel visualization](parallel-visualization.md) 
-<br> [VTK meshes](vtk-meshes.md) 
+<br> [VTK meshes](curvilinear-vtk-meshes.md) 
 / [NURBS meshes and solutions](nurbs.md) 
 **
 
