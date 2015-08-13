@@ -6,6 +6,7 @@ Though depending on MFEM for its finite element dictionary, GLVis can be used in
 
 ## Accurate Visualization
 
+<img src="../img/gallery/fem2d-2.png" align="right" width="275">
 GLVis uses OpenGL with interactive refinement to accurately represent curved high-order [meshes](options-and-use.md#visualizing-meshes) and a wide variety of finite element [grid functions](options-and-use.md#visualizing-functions) defined on them. GLVis is based on the modular finite element methods library [MFEM](http://mfem.org), which supports in particular:
 
   - 1D, 2D, 3D volume and surface meshes,
@@ -16,9 +17,13 @@ GLVis uses OpenGL with interactive refinement to accurately represent curved hig
   - accurate cutting planes and level lines/surfaces,
   - visualization of parallel meshes and solutions.
 
+
 ## Lightweight and Convenient
 
-GLVis has a fast [keystroke-based](https://raw.githubusercontent.com/glvis/glvis/master/README) interface and uses standard OpenGL that takes advantage of hardware acceleration in modern GPUs. It has a number of convenient features, including:
+GLVis has a fast [keystroke-based](https://raw.githubusercontent.com/glvis/glvis/master/README) interface and uses standard OpenGL that takes advantage of
+ hardware acceleration in modern GPUs.
+<img src="../img/gallery/ball-nurbs-np16.png" align="right" width="250">
+It has a number of convenient features, including:
 
   - unlimited number of refinement and de-refinement levels,
   - interactive rotation, translation and scaling with the mouse,
@@ -30,6 +35,7 @@ GLVis has a fast [keystroke-based](https://raw.githubusercontent.com/glvis/glvis
 ## Flexible Server and Scripting Support
 
 When started without any options, GLVis [establishes a server](options-and-use.md#server-mode), which waits for socket connections and visualizes any received data in a separate interactive window. This enables:
+<img src="../img/gallery/hypre-ex4-np36-n15-K3-C1-U02-F4.png" align="right" width="275">
 
   - simultaneous visualization of [multiple fields/meshes](http://mfem.org/examples?darcy) in separate GLVis windows,
   - [persistent](http://mfem.org/examples?rk) visualization of time-evolving fields,
