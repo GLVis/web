@@ -155,7 +155,7 @@
 <p>The goal of GLVis is to enable research and development of general finite element discretization algorithms through accurate OpenGL visualization, and tight integration with the <a href="http://mfem.org">MFEM</a> library.</p>
 <p>Though depending on MFEM for its finite element dictionary, GLVis can be used independently for parallel and serial visualization. For example, the <em><a href="http://www.llnl.gov/casc/hypre">hypre</a></em> library includes scripts for displaying the numerical results from its parallel example codes through GLVis.</p>
 <h2 id="accurate-visualization">Accurate Visualization</h2>
-<p><img src="../img/gallery/fem2d-2.png" align="right" width="275">
+<p><img class="floatpad" src="../img/gallery/fem2d-2.png" width="260">
 GLVis uses OpenGL with interactive refinement to accurately represent curved high-order <a href="../options-and-use/#visualizing-meshes">meshes</a> and a wide variety of finite element <a href="../options-and-use/#visualizing-functions">grid functions</a> defined on them. GLVis is based on the modular finite element methods library <a href="http://mfem.org">MFEM</a>, which supports in particular:</p>
 <ul>
 <li>1D, 2D, 3D volume and surface meshes,</li>
@@ -167,9 +167,9 @@ GLVis uses OpenGL with interactive refinement to accurately represent curved hig
 <li>visualization of parallel meshes and solutions.</li>
 </ul>
 <h2 id="lightweight-and-convenient">Lightweight and Convenient</h2>
-<p>GLVis has a fast <a href="https://raw.githubusercontent.com/glvis/glvis/master/README">keystroke-based</a> interface and uses standard OpenGL that takes advantage of
+<p><img class="floatpad" src="../img/gallery/ball-nurbs-np16.png" width="240">
+GLVis has a fast <a href="https://raw.githubusercontent.com/glvis/glvis/master/README">keystroke-based</a> interface and uses standard OpenGL that takes advantage of
  hardware acceleration in modern GPUs.
-<img src="../img/gallery/ball-nurbs-np16.png" align="right" width="250">
 It has a number of convenient features, including:</p>
 <ul>
 <li>unlimited number of refinement and de-refinement levels,</li>
@@ -180,8 +180,8 @@ It has a number of convenient features, including:</p>
 <li>screenshots in PNG or TIFF format,</li>
 </ul>
 <h2 id="flexible-server-and-scripting-support">Flexible Server and Scripting Support</h2>
-<p>When started without any options, GLVis <a href="../options-and-use/#server-mode">establishes a server</a>, which waits for socket connections and visualizes any received data in a separate interactive window. This enables:
-<img src="../img/gallery/hypre-ex4-np36-n15-K3-C1-U02-F4.png" align="right" width="275"></p>
+<p><img class="floatpad" src="../img/gallery/hypre-ex4-np36-n15-K3-C1-U02-F4.png" width="260">
+When started without any options, GLVis <a href="../options-and-use/#server-mode">establishes a server</a>, which waits for socket connections and visualizes any received data in a separate interactive window. This enables:</p>
 <ul>
 <li>simultaneous visualization of <a href="http://mfem.org/examples?darcy">multiple fields/meshes</a> in separate GLVis windows,</li>
 <li><a href="http://mfem.org/examples?rk">persistent</a> visualization of time-evolving fields,</li>
