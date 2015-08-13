@@ -16,14 +16,8 @@ pages:
   - 'Mesh Formats': mesh-formats.md
   - 'Curvilinear VTK Meshes': curvilinear-vtk-meshes.md
   - 'NURBS Meshes': nurbs.md
-  #- 'Serial Tutorial': serial-tutorial.md
-  #- 'Parallel Tutorial': parallel-tutorial.md
-  #- 'Mesh Formats': mesh-formats.md
-  #- 'Publications': publications.md
-#  - 'The Team': team.md
-  #- 'About': about.md
 #- Gallery: gallery.md
-#- Download: download.md
+- Download: download.md
 
 theme_dir: template
 
