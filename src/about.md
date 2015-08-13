@@ -9,7 +9,7 @@
 - [Veselin Dobrev](http://people.llnl.gov/dobrev1)
 - Truman Ellis
 - [Aaron Fisher](http://people.llnl.gov/fisher47)
-- [Tzanio Kolev](http://people.llnl.gov/kolev1) -- Project Leader
+- [Tzanio Kolev](http://people.llnl.gov/kolev1) &mdash; Project Leader
 - Ilya Lashuk
 - [Robert Rieben](http://people.llnl.gov/rieben1)
 - [Mark Stowell](http://people.llnl.gov/stowell1)
