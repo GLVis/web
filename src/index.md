@@ -2,14 +2,13 @@
 
 [<img class="centered" src="img/logo-300.png" alt="GLVis logo">](gallery.md)
 
-GLVis is a _lightweight_ OpenGL tool for _accurate_ visualization of _serial_ and _parallel_ finite element meshes and functions.
+GLVis is a _lightweight_ tool for _accurate_ and _flexible_ finite element visualization.
 
 ## Features
 
- * Accurate finite element mesh and function representation through interactive refinement.
+ * Accurate representation of a variety of finite element [meshes](mesh-formats) and [spaces](http://mfem.org/features/#higher-order-finite-element-spaces).
  * [Server mode](options-and-use.md#server-mode) accepting multiple and/or persistent socket connections.
- * Support for triangular, quadrilateral, tetrahedral and hexahedral elements with [curved boundaries](mesh-formats.md#curvilinear-and-more-general-meshes).
- * 2D and 3D, arbitrary high-order H1, H(curl), H(div), L2 and [NURBS](nurbs.md) elements.
+ * Support for arbitrary high-order [curved](mesh-formats.md#curvilinear-and-more-general-meshes) elements and [NURBS](nurbs.md) meshes.
  * Visualization of [parallel](parallel-visualization.md) meshes and solutions.
  * ... and [many more](features.md).
 
@@ -21,8 +20,8 @@ GLVis is based on the [MFEM](http://mfem.org) library and is currently used in t
 
 **
 [New features](https://raw.githubusercontent.com/glvis/glvis/master/CHANGELOG)
-/ [User documentation](https://raw.githubusercontent.com/glvis/glvis/master/README) 
-/ [Code documentation](http://glvis.github.io/doxygen/html/index.html) 
+/ [User documentation](https://raw.githubusercontent.com/glvis/glvis/master/README)
+/ [Code documentation](http://glvis.github.io/doxygen/html/index.html)
 / [Sources](https://github.com/glvis/glvis)
 **
 
@@ -35,16 +34,16 @@ For older releases see the [download](download.md) section.
 ## Documentation
 
 **
-[Building](http://mfem.org/building) 
-/ [Mesh formats](mesh-formats.md) 
-/ [Parallel visualization](parallel-visualization.md) 
-<br> [VTK meshes](curvilinear-vtk-meshes.md) 
-/ [NURBS meshes and solutions](nurbs.md) 
+[Building](http://mfem.org/building)
+/ [Mesh formats](mesh-formats.md)
+/ [Parallel visualization](parallel-visualization.md)
+/ [VTK](curvilinear-vtk-meshes.md)
+/ [NURBS](nurbs.md)
 **
 
 The best starting point for new users is the [options and general use](options-and-use.md) tutorial.
 
-We also recommend reading documentation for the [MFEM project](http://mfem.org).
+We also recommend reading the [MFEM project](http://mfem.org) documentation.
 
 ## Contact
 
