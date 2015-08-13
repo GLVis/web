@@ -11,6 +11,7 @@ pages:
 - Features: features.md
 #- Examples: examples.md
 - Documentation:
+  - 'Options and Use': options-and-use.md
   - 'Curvilinear VTK Meshes': curvilinear-vtk-meshes.md
   #- 'Serial Tutorial': serial-tutorial.md
   #- 'Parallel Tutorial': parallel-tutorial.md
