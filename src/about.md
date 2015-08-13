@@ -1,5 +1,7 @@
 # About GLVis
 
+GLVis originates from previous research effort in the (unreleased) [AggieFEM/aFEM](http://www.math.tamu.edu/research/vigre/archive/2000c-Lazarov.html) project.
+
 ## Contributors
 
 - [Robert Anderson](http://people.llnl.gov/anderson110)
@@ -19,4 +21,4 @@
 
 ## License
 
-- [GNU Lesser GPL](http://www.gnu.org/licenses/lgpl.html)
+- [GNU Lesser GPL v2.1](http://www.gnu.org/licenses/lgpl-2.1.html)

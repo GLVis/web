@@ -9,11 +9,10 @@ repo_url: https://github.com/glvis/glvis
 pages:
 - Home: index.md
 - Features: features.md
-#- Examples: examples.md
 - Documentation:
   - 'Options and Use': options-and-use.md
-  - 'Parallel Visualization': parallel-visualization.md
   - 'Mesh Formats': mesh-formats.md
+  - 'Parallel Visualization': parallel-visualization.md
   - 'Curvilinear VTK Meshes': curvilinear-vtk-meshes.md
   - 'NURBS Meshes': nurbs.md
   - 'About': about.md
