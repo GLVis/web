@@ -7,9 +7,9 @@ GLVis is a _lightweight_ OpenGL tool for _accurate_ visualization of _serial_ an
 ## Features
 
  * Accurate finite element mesh and function representation through interactive refinement.
- * [Server mode](options-and-general-use.md#server-mode) accepting multiple and/or persistent socket connections.
+ * [Server mode](options-and-use.md#server-mode) accepting multiple and/or persistent socket connections.
  * Support for triangular, quadrilateral, tetrahedral and hexahedral elements with [curved boundaries](mesh-formats.md#curvilinear-and-more-general-meshes).
- * 2D and 3D, arbitrary high-order H1, H(curl), H(div), L2 and [NURBS](NURBS.md) elements.
+ * 2D and 3D, arbitrary high-order H1, H(curl), H(div), L2 and [NURBS](nurbs.md) elements.
  * Visualization of [parallel](parallel-visualization.md) meshes and solutions.
  * ... and [many more](features.md).
 
@@ -42,7 +42,7 @@ For older releases see the [download](download.md) section.
 / [NURBS meshes and solutions](nurbs.md) 
 **
 
-The best starting point for new users is the [options and general use](options-and-general-use.md) tutorial.
+The best starting point for new users is the [options and general use](options-and-use.md) tutorial.
 
 We also recommend reading documentation for the [MFEM project](http://mfem.org).
 

@@ -1,4 +1,4 @@
-# Features
+# GLVis Features
 
 The goal of GLVis is to enable research and development of general finite element discretization algorithms through accurate OpenGL visualization, and tight integration with the [MFEM](http://mfem.org) library.
 

@@ -1,6 +1,6 @@
 # Gallery
 
-This page collects screenshots from various simulations that have used GLVis visualization. Additional images can be found in the  [MFEM Gallery](https://github.com/mfem/mfem/wiki/Gallery).
+This page collects screenshots from various simulations that have used GLVis visualization. Additional images can be found in the [MFEM Gallery](http://mfem.org/gallery).
 
 <br>
 <center>
@@ -13,13 +13,13 @@ This page collects screenshots from various simulations that have used GLVis vis
 
 [![](img/gallery/triple-point_BLAST_q8q7.png)](img/gallery/triple-pt-np128.gif)
 
-*Curvilinear 8th order mesh from a triple-point shock simulation in the MFEM-based  [BLAST](http://www.llnl.gov/casc/blast) shock hydrodynamics code. Click for a movie of the evolution of the processor partitioning from a high-resolution parallel run of the problem produced with a [GLVis script](https://github.com/glvis/glvis/wiki/Options-And-Use#glvis-scripts).*
+*Curvilinear 8th order mesh from a triple-point shock simulation in the MFEM-based  [BLAST](http://www.llnl.gov/casc/blast) shock hydrodynamics code. Click for a movie of the evolution of the processor partitioning from a high-resolution parallel run of the problem produced with a [GLVis script](options-and-use.md#glvis-scripts).*
 
 ----
 
 ![](img/gallery/triple-pt-rz-2-web.png)
 
-*Axisymmetric problem with revolved 2D mesh and solution, plus [coloring grid functions](https://github.com/glvis/glvis/wiki/Options-And-Use#visualizing-functions) emphasizing mesh elements.*
+*Axisymmetric problem with revolved 2D mesh and solution, plus [coloring grid functions](options-and-use.md#visualizing-functions) emphasizing mesh elements.*
 
 ----
 

@@ -165,7 +165,7 @@ Ordering: 0
 0
 1
 ```
-Note that the mesh portion of the above file is the MFEM mesh v1.0 version of the quad.vtk mesh from the [curvilinear VTK tutorial](https://github.com/glvis/glvis/wiki/Curvilinear-VTK-Meshes).
+Note that the mesh portion of the above file is the MFEM mesh v1.0 version of the quad.vtk mesh from the [curvilinear VTK tutorial](curvilinear-vtk-meshes.md).
 
 The "`*.saved`" files contain an *exact copy* of the socket data stream which can be visualized later as follows:
 ```
@@ -182,7 +182,7 @@ GLVis can also be employed in non-sever mode, e.g. to visualize a mesh file:
 ```
 glvis -m quad.vtk
 ```
-The optional "`-k`" parameter specifies a set of keystrokes, which will be passed directly to the GLVis window, see, e.g., the examples in the [mesh formats tutorial](https://github.com/glvis/glvis/wiki/Mesh-Formats).
+The optional "`-k`" parameter specifies a set of keystrokes, which will be passed directly to the GLVis window, see, e.g., the examples in the [mesh formats tutorial](mesh-formats.md).
 
 Two dimensional meshes are shown with elements in multiple colors, corresponding to a piece-wise constant function with different values in neighboring elements. This function can be generated and saved with the "`-sc`" option, which writes it in a file called "`GLVis_coloring.gf`".
 
