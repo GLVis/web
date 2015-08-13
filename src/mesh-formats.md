@@ -7,8 +7,9 @@ Description of the various mesh formats that can be used with GLVis.
 ## Details
 
 GLVis supports a number of mesh formats, including:
-  - The [MFEM](http://mfem.org) mesh v1.0 format, which can describe very general meshes based on any finite element grid function supported by MFEM, including [NURBS meshes](https://github.com/glvis/glvis/wiki/NURBS).
-  - The [VTK](http://www.vtk.org/) unstructured mesh format, for triangular, quadrilateral, tetrahedral and hexahedral meshes. See the [curvilinear VTK tutorial](https://github.com/glvis/glvis/wiki/Curvilinear-VTK-Meshes) for more details. Some examples of VTK meshes can be found in MFEM's [data directory](https://github.com/mfem/mfem/blob/master/data).
+
+  - The [MFEM](http://mfem.org) mesh v1.0 format, which can describe very general meshes based on any finite element grid function supported by MFEM, including [NURBS meshes](nurbs.md).
+  - The [VTK](http://www.vtk.org/) unstructured mesh format, for triangular, quadrilateral, tetrahedral and hexahedral meshes. See the [curvilinear VTK tutorial](curvilinear-vtk-meshes.md) for more details. Some examples of VTK meshes can be found in MFEM's [data directory](https://github.com/mfem/mfem/blob/master/data).
   - The [NETGEN](http://sourceforge.net/projects/netgen-mesher/) triangular and tetrahedral mesh formats.
   - The [TrueGrid](http://www.truegrid.com/) hexahedral mesh format.
 
@@ -183,4 +184,4 @@ produces after some refinement (key "`o`") and mouse manipulations
 
 ![](img/glvis-pipe-nurbs.png)
 
-More details about the NURBS mesh format can be found in the separate [NURBS tutorial](https://github.com/glvis/glvis/wiki/NURBS).
+More details about the NURBS mesh format can be found in the separate [NURBS tutorial](nurbs.md).
