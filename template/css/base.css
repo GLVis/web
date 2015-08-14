@@ -43,6 +43,14 @@ p.centered {
     text-align: center;
 }
 
+img.floatpad {
+    float: right;
+    display: block; 
+    margin-bottom: 20px; 
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
 /*label {
     display: inline-block;
     margin-bottom: 5px;
