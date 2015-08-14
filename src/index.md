@@ -49,11 +49,12 @@ We also recommend reading the [MFEM project](http://mfem.org) documentation.
 
 Developed by the [GLVis team](about.md) at [CASC](http://computation.llnl.gov/casc/),
 [LLNL](https://www.llnl.gov/). Please cite with
-
-    @misc{glvis-tool,
-      title = {{GLVis}: Accurate finite element visualization},
-      howpublished = {\url{glvis.org}}
-    }
+```c
+@misc{glvis-tool,
+  title = {{GLVis}: Accurate finite element visualization},
+  howpublished = {\url{glvis.org}}
+}
+```
 
 Use the GitHub [issue tracker](https://github.com/glvis/glvis/issues)
 to report [bugs](https://github.com/glvis/glvis/issues/new?labels=bug)

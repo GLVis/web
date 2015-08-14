@@ -9,7 +9,7 @@ A simple tutorial how to visualize NURBS meshes and solutions with GLVis.
 GLVis provides full support for meshes and discretization spaces based on Non-uniform Rational B-Splines (NURBS). These are treated similarly to general [curvilinear meshes](mesh-formats.md#curvilinear-and-more-general-meshes) where the NURBS nodes are specified as a grid function at the end of the mesh file.
 
 For example, here is a simple quadratic NURBS mesh for a square domain with a (perfectly) circular hole in the middle. (The exact representation of conical sections is a major advantage of the NURBS approach over high-order finite elements.)
-```
+```sh
 MFEM NURBS mesh v1.0
 
 #
@@ -124,7 +124,7 @@ Ordering: 1
 0.108578644 0.5
 ```
 This above file, as well as other examples of NURBS meshes, can be be found in [MFEM's data directory](https://github.com/mfem/mfem/tree/master/data). It can be visualized directly with
-```
+```sh
 glvis -m square-disc-nurbs.mesh
 ```
 which after several refinements with the "`i`" key looks like
@@ -138,7 +138,7 @@ In the NURBS case we need to also provide description of the edges on the patch 
 The position of the NURBS nodes (control points) is given as a NURBS grid function at the end of the file, while the associated weights are listed in the preceeding `weights` section.
 
 Solutions from NURBS discretization spaces are also natively supported. For example here is the approximation for the solution of a simple Poisson problem on a refined version of the above mesh.
-```
+```sh
 glvis -m square-disc-nurbs.mesh -g sol.gf
 ```
 

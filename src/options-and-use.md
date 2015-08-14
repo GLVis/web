@@ -20,7 +20,7 @@ Some of the command-line options of GLVis and its general use are described in m
 
 GLVis has a number of command-line options that allow it to be used in several different ways. The list of all available options is given by the output of "`glvis -h`":
 
-```
+```tex
        _/_/_/  _/      _/      _/  _/
     _/        _/      _/      _/        _/_/_/
    _/  _/_/  _/      _/      _/  _/  _/_/
@@ -81,7 +81,6 @@ All Options:
     Set the line width (multisampling off).
    -mslw <double>, --multisample-line-width <double>, current value: 1.4
     Set the line width (multisampling on).
-
 ```
 
 ### Server mode
@@ -91,19 +90,19 @@ GLVis can be used as a visualization server, where it waits for data sent by soc
 ![](img/glvis-screenshot2.png)
 
 To establish the GLVis server, open a new terminal and start the GLVis application without any options:
-```
+```sh
 glvis
 ```
 By default, the server is established on [port 19916](https://github.com/glvis/glvis/blob/master/glvis.cpp#L1007), but this can be changed with the "`-p`" option.
 
 On lagacy Mac machines with OS X Leopard, the server needs to be started with
-```
+```sh
 glvis -mac
 ```
 This is due to the fact that Mac OS X returns an error when [fork() is called without an immediate exec()](http://developer.apple.com/library/mac/#technotes/tn2083/_index.html#//apple_ref/doc/uid/DTS10003794-CH1-SUBSUBSECTION66). *Note that this option is not necessary on newer versions of OS X.*
 
 A side effect of the "`-mac`" option is that all socket streams will be saved in incrementally named files "`glvis-saved.0001`", "`glvis-saved.0002`", and so on. These socket files consist of a [data type identifier](https://github.com/glvis/glvis/blob/master/glvis.cpp#L104) followed by a mesh and a finite element function. For example:
-```
+```sh
 fem2d_gf_data
 
 MFEM mesh v1.0
@@ -168,7 +167,7 @@ Ordering: 0
 Note that the mesh portion of the above file is the MFEM mesh v1.0 version of the quad.vtk mesh from the [curvilinear VTK tutorial](curvilinear-vtk-meshes.md).
 
 The "`*.saved`" files contain an *exact copy* of the socket data stream which can be visualized later as follows:
-```
+```sh
 glvis -saved glvis-saved.0001
 ```
 
@@ -179,7 +178,7 @@ Below is the result for the above socket data using the following GLVis keystrok
 ### Visualizing meshes
 
 GLVis can also be employed in non-sever mode, e.g. to visualize a mesh file:
-```
+```sh
 glvis -m quad.vtk
 ```
 The optional "`-k`" parameter specifies a set of keystrokes, which will be passed directly to the GLVis window, see, e.g., the examples in the [mesh formats tutorial](mesh-formats.md).
@@ -189,7 +188,7 @@ Two dimensional meshes are shown with elements in multiple colors, corresponding
 ### Visualizing functions
 
 There are several ways to visualize a function on a given mesh. For example we can visualize the coloring function for the mesh [beam-hex.mesh](https://github.com/mfem/mfem/blob/master/data/beam-hex.mesh) as follows:
-```
+```sh
 glvis -m beam-hex.mesh -sc
 glvis -m beam-hex.mesh -g GLVis_coloring.gf
 ```
@@ -198,7 +197,7 @@ The result is:
 ![](img/beam-hex-sc.png)
 
 As another example, consider the finite element grid function "`quad.gf`" embedded in the socket stream "`glvis-saved.0001`" discussed above:
-```
+```sh
 FiniteElementSpace
 FiniteElementCollection: Quadratic
 VDim: 1
@@ -215,13 +214,13 @@ Ordering: 0
 1
 ```
 Then
-```
+```sh
 glvis -m quad.vtk -g quad.gf
 ```
 will produce identical result to "`glvis -saved glvis-saved.0001`".
 
 Vector-valued grid functions are also supported. For example, consider the following data saved in a file named "`quad-vec.gf`"
-```
+```sh
 FiniteElementSpace
 FiniteElementCollection: Quadratic
 VDim: 2
@@ -252,13 +251,13 @@ which corresponds to the Q2 vector field transforming the "`quad.vtk`" quadrilat
 ![](img/quad-vec.png)
 
 The above plot was produced with:
-```
+```sh
 glvis -m quad.vtk -g quad-vec.gf -k "fRjlAmeIIiiiiiiiiiiibbvuuuuuuuuuuu"
 ```
 The transformation between the two domains can be further explored with the "`b`" and "`n`" keys.
 
 One can also visualize the different components of a vector field as scalar functions using the "`-gc`" option, e.g.
-```
+```sh
 glvis -m quad.vtk -g quad-vec.gf -gc 1
 ```
 gives after some manipulations the following plot:
@@ -266,7 +265,7 @@ gives after some manipulations the following plot:
 ![](img/quad-vec-sc1.png)
 
 Finally, GLVis supports the visualization of functions with values provided only in the vertices of the mesh. *This is only supported for non-curved meshes!* The scalar and vector case are handled by the "`-s`" and "`-v`" options respectively. Here is an example with the [beam-quad.mesh](https://github.com/mfem/mfem/blob/master/data/beam-quad.mesh) mesh file and a solution saved in a file "`beam-quad.sol`":
-```
+```sh
 solution
 1
 2
@@ -287,7 +286,7 @@ solution
 17
 18
 ```
-```
+```sh
 glvis -m beam-quad.mesh -s beam-quad.sol -k "Amaa"
 ```
 
@@ -300,7 +299,7 @@ Note that the data in this type of solution files starts from the second line (t
 GLVis can also run a batch sequence of commands, called GLVis scripts, which are useful for saving particular visualization scenes, as well as to generate still frames for animations. 
 
 Scripts are executed with `glvis -run`. For example, consider the following script, saved in a file "`quad-vec.glvs`":
-```
+```sh
 # Visualization window geometry
 window 0 0 300 300
 
@@ -345,11 +344,11 @@ solution quad.vtk quad-vec.gf
 The "`#`" lines above indicate comments, while the braces separate the different sequences of commands that are executed together. GLVis will pause between these execution blocks, waiting for the user to press the space bar in order to continue. The "`solution`" command above updates the mesh and the finite element function plotted, without changing any other visualization parameters, while "`screenshot`" uses [xwd](http://www.xfree86.org/current/xwd.1.html) or the [TIFF library](http://www.libtiff.org/) together with [ImageMagick's convert utility](http://www.imagemagick.org/script/convert.php) to save a picture in the specified format. There are a number of additional script commands available, the complete list of which can be found (and extended) by examining the [glvis.cpp source code](https://github.com/glvis/glvis/blob/master/glvis.cpp#L563).
 
 Executing
-```
+```sh
 glvis -run quad-vec.glvs
 ```
 and pressing the space bar twice in the GLVis window generates a sequence of screenshots, which can be animated, e.g., with
-```
+```sh
 convert -delay 20 quad-vec.??.png quad-vec.gif
 ```
 The generated animated GIF file is shown below (you may need to reload the page to see the animation):

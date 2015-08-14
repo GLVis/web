@@ -20,7 +20,7 @@ This is the default format in GLVis. It can be used to describe simple (triangul
 #### Straight meshes
 
 In the simple case of a mesh with straight edges the format looks as follows
-```
+```sh
 MFEM mesh v1.0
 
 # Space dimension: 2 or 3
@@ -46,17 +46,20 @@ vertices
 <coordinate 1> ... <coordinate <vdim>>
 ...
 ```
+
 Lines starting with "#" denote comments. The supported geometry types are:
+
   - POINT       = 0
   - SEGMENT     = 1
   - TRIANGLE    = 2
   - SQUARE      = 3
   - TETRAHEDRON = 4
   - CUBE        = 5
+
 see the comments in [this source file](https://github.com/mfem/mfem/blob/master/fem/geom.hpp) for more details.
 
 For example, the [beam-quad.mesh](https://github.com/mfem/mfem/blob/master/data/beam-quad.mesh) file from MFEM looks like this:
-```
+```sh
 MFEM mesh v1.0
 
 dimension
@@ -121,14 +124,14 @@ which corresponds to the mesh
 ![](img/beam-quad.png)
 
 visualized with
-```
+```sh
 glvis -m beam-quad.mesh -k "Ame****"
 ```
 
 #### Curvilinear and more general meshes
 
 The MFEM mesh v1.0 format also support the general description of meshes based on a vector finite element grid function with degrees of freedom in the "nodes" of the mesh:
-```
+```sh
 MFEM mesh v1.0
 
 # Space dimension: 2 or 3
@@ -167,7 +170,7 @@ Ordering: 0
 Some possible [finite element collection](https://github.com/mfem/mfem/blob/master/fem/fe_coll.hpp) choices are: `Linear`, `Quadratic` and `Cubic` corresponding to curvilinear P1/Q1, P2/Q2 and P3/Q3 meshes. The algorithm for the numbering of the degrees of freedom can be found in [MFEM's source code](https://github.com/mfem/mfem/blob/master/fem/fespace.cpp#L739).
 
 For example, the [escher-p3.mesh](https://github.com/mfem/mfem/blob/master/data/escher-p3.mesh) from MFEM's [data directory](https://github.com/mfem/mfem/blob/master/data) describes a tetrahedral mesh with nodes given by a P3 vector Lagrangian finite element function. Visualizing this mesh with
-```
+```sh
 glvis -m escher-p3.mesh -k "Aaaoooooooooo**************tt"
 ```
 we get:
@@ -177,7 +180,7 @@ we get:
 #### NURBS meshes
 
 NURBS meshes and functions are fully supported in GLVis. For example,
-```
+```sh
 glvis -m pipe-nurbs.mesh
 ```
 produces after some refinement (key "`o`") and mouse manipulations
