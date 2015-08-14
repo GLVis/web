@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "GLVis is a \nlightweight\n tool for \naccurate\n and \nflexible\n finite element visualization.\n\n\nFeatures\n\n\n\n\nAccurate representation of a variety of finite element \nmeshes\n and \nspaces\n.\n\n\nServer mode\n accepting multiple and/or persistent socket connections.\n\n\nSupport for arbitrary high-order \ncurved\n elements and \nNURBS\n meshes.\n\n\nVisualization of \nparallel\n meshes and solutions.\n\n\n... and \nmany more\n.\n\n\n\n\nGLVis is based on the \nMFEM\n library and is currently used in the \nBLAST\n, \nhypre\n and \nXBraid\n projects. See also our \nGallery\n.\n\n\n\n\n\n\n\n\nLatest Release\n\n\n\n\nNew features\n\n/ \nUser documentation\n\n/ \nCode documentation\n\n/ \nSources\n\n\n\n\n\n\nDownload glvis-3.0.tgz\n\n\n\n\nFor older releases see the \ndownload\n section.\n\n\nDocumentation\n\n\n\n\nBuilding\n\n/ \nMesh formats\n\n/ \nParallel visualization\n\n/ \nVTK\n\n/ \nNURBS\n\n\n\n\nThe best starting point for new users is the \noptions and general use\n tutorial.\n\n\nWe also recommend reading the \nMFEM project\n documentation.\n\n\nContact\n\n\nDeveloped by the \nGLVis team\n at \nCASC\n,\n\nLLNL\n. Please cite with\n\n\n@misc{glvis-tool,\n  title = {{GLVis}: Accurate finite element visualization},\n  howpublished = {\\url{glvis.org}}\n}\n\n\n\nUse the GitHub \nissue tracker\n\nto report \nbugs\n\nor post \nquestions\n\nor \ncomments\n.", 
+            "text": "GLVis is a \nlightweight\n tool for \naccurate\n and \nflexible\n finite element visualization.\n\n\nFeatures\n\n\n\n\nAccurate representation of a variety of finite element \nmeshes\n and \nspaces\n.\n\n\nServer mode\n accepting multiple and/or persistent socket connections.\n\n\nSupport for arbitrary high-order \ncurved\n elements and \nNURBS\n meshes.\n\n\nVisualization of \nparallel\n meshes and solutions.\n\n\n... and \nmany more\n.\n\n\n\n\nGLVis is based on the \nMFEM\n library and is currently used in the \nBLAST\n, \nhypre\n and \nXBraid\n projects. See also our \nGallery\n.\n\n\n\n\n\n\nLatest Release\n\n\n\n\nNew features\n\n/ \nUser documentation\n\n/ \nCode documentation\n\n/ \nSources\n\n\n\n\n\n\nDownload glvis-3.0.tgz\n\n\n\n\nFor older releases see the \ndownload\n section.\n\n\nDocumentation\n\n\n\n\nBuilding\n\n/ \nMesh formats\n\n/ \nParallel visualization\n\n/ \nVTK\n\n/ \nNURBS\n\n\n\n\nNew users should start with the \noptions and general use\n tutorial.\n\n\nWe also recommend reading the \nMFEM project\n documentation.\n\n\nContact\n\n\nDeveloped by the \nGLVis team\n at \nCASC\n,\n\nLLNL\n. Please cite with\n\n\n@misc{glvis-tool,\n  title = {{GLVis}: Accurate finite element visualization},\n  howpublished = {\\url{glvis.org}}\n}\n\n\n\nUse the GitHub \nissue tracker\n\nto report \nbugs\n\nor post \nquestions\n\nor \ncomments\n.", 
             "title": "Home"
         }, 
         {
@@ -17,7 +17,7 @@
         }, 
         {
             "location": "/#documentation", 
-            "text": "Building \n/  Mesh formats \n/  Parallel visualization \n/  VTK \n/  NURBS   The best starting point for new users is the  options and general use  tutorial.  We also recommend reading the  MFEM project  documentation.", 
+            "text": "Building \n/  Mesh formats \n/  Parallel visualization \n/  VTK \n/  NURBS   New users should start with the  options and general use  tutorial.  We also recommend reading the  MFEM project  documentation.", 
             "title": "Documentation"
         }, 
         {
