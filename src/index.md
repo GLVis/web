@@ -41,7 +41,7 @@ For older releases see the [download](download.md) section.
 / [NURBS](nurbs.md)
 **
 
-The best starting point for new users is the [options and general use](options-and-use.md) tutorial.
+New users should start with the [options and general use](options-and-use.md) tutorial.
 
 We also recommend reading the [MFEM project](http://mfem.org) documentation.
 
