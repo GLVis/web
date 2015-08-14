@@ -1,6 +1,6 @@
 <div class="col-md-6" markdown="1">
 
-[<img class="centered" src="img/logo-300.png" alt="GLVis logo">](gallery.md)
+[![GLVis logo](img/logo-300.png)](gallery.md)
 
 GLVis is a _lightweight_ tool for _accurate_ and _flexible_ finite element visualization.
 

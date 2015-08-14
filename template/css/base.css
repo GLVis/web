@@ -25,7 +25,7 @@ div.source-links {
     float: right;
 }
 
-img.centered {
+img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -41,14 +41,6 @@ p.centered {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-}
-
-img.floatpad {
-    float: right;
-    display: block; 
-    margin-bottom: 20px; 
-    margin-left: 20px;
-    margin-top: 10px;
 }
 
 /*label {
