@@ -153,7 +153,7 @@
 <h2 id="details">Details</h2>
 <p>GLVis provides full support for meshes and discretization spaces based on Non-uniform Rational B-Splines (NURBS). These are treated similarly to general <a href="../mesh-formats/#curvilinear-and-more-general-meshes">curvilinear meshes</a> where the NURBS nodes are specified as a grid function at the end of the mesh file.</p>
 <p>For example, here is a simple quadratic NURBS mesh for a square domain with a (perfectly) circular hole in the middle. (The exact representation of conical sections is a major advantage of the NURBS approach over high-order finite elements.)</p>
-<pre><code>MFEM NURBS mesh v1.0
+<pre><code class="sh">MFEM NURBS mesh v1.0
 
 #
 # MFEM Geometry Types (see mesh/geom.hpp):
@@ -268,7 +268,7 @@ Ordering: 1
 </code></pre>
 
 <p>This above file, as well as other examples of NURBS meshes, can be be found in <a href="https://github.com/mfem/mfem/tree/master/data">MFEM's data directory</a>. It can be visualized directly with</p>
-<pre><code>glvis -m square-disc-nurbs.mesh
+<pre><code class="sh">glvis -m square-disc-nurbs.mesh
 </code></pre>
 
 <p>which after several refinements with the "<code>i</code>" key looks like</p>
@@ -277,7 +277,7 @@ Ordering: 1
 <p>In the NURBS case we need to also provide description of the edges on the patch boundaries and associate a knot vector with each of them. This is done in the <code>edges</code> section where the first index in each row refers to the knot vector id (from the following <code>knotvectors</code> section), while the remaining two indexes are the edge vertex numbers.</p>
 <p>The position of the NURBS nodes (control points) is given as a NURBS grid function at the end of the file, while the associated weights are listed in the preceeding <code>weights</code> section.</p>
 <p>Solutions from NURBS discretization spaces are also natively supported. For example here is the approximation for the solution of a simple Poisson problem on a refined version of the above mesh.</p>
-<pre><code>glvis -m square-disc-nurbs.mesh -g sol.gf
+<pre><code class="sh">glvis -m square-disc-nurbs.mesh -g sol.gf
 </code></pre>
 
 <p><img alt="" src="../img/glvis-square-disc-nurbs-r2.png" /></p></div>

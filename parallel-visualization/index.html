@@ -153,18 +153,18 @@
 <h2 id="details">Details</h2>
 <p>GLVis supports visualization of parallel meshes and grid functions, which are either saved in separate files or send through separate socket connections from each processor. In both cases, GLVis will stitch the parallel results to show the global mesh and solution, but the subdomain data can still be examined through the <code>F3</code>/<code>F4</code>, <code>F8</code>, <code>F9</code>/<code>F10</code> and <code>F11</code>/<code>F12</code> keystrokes.</p>
 <p>For data saved in separate files, e.g. <code>mesh.000000</code>, ... , <code>mesh.000003</code> and <code>sol.000000</code>, ...  , <code>sol.000003</code> from a run on 4 processors, the format is:</p>
-<pre><code>glvis -np 4 -m mesh -g sol
+<pre><code class="sh">glvis -np 4 -m mesh -g sol
 </code></pre>
 
 <p>In other words, the actual mesh and solution file names are obtained from the above prefixes "<code>mesh</code>" and "<code>sol</code>" by appending "<code>.</code>" followed by a 6-digit processor/subdomain number padded with 0's, see e.g. <a href="https://github.com/mfem/mfem/blob/master/examples/ex1p.cpp#L182">this example</a>. (Note that the related obsolete option -par3d was removed in version 2.0).</p>
 <p>For results send by separate socket connections from each processor, the
 parallel format just adds a prefix specifying the total number of processors and the current processor id:</p>
-<pre><code>parallel &lt;num_proc&gt; &lt;myid&gt;
+<pre><code class="sh">parallel &lt;num_proc&gt; &lt;myid&gt;
 </code></pre>
 
 <p>An example of this can be found <a href="https://github.com/mfem/mfem/blob/master/examples/ex1p.cpp#L200">here</a>.</p>
 <p>To illustrate the parallel visualization capabilities of GLVis, suppose that we have solves a simple Poisson problem on a 2x2 square grid using 2 processors. The processor mesh files generated, e.g. by <a href="https://github.com/mfem/mfem/blob/master/examples/ex1p.cpp">MFEM's Parallel Example 1</a>, are "<code>mesh.000000</code>":</p>
-<pre><code>MFEM mesh v1.0
+<pre><code class="sh">MFEM mesh v1.0
 
 #
 # MFEM Geometry Types (see mesh/geom.hpp):
@@ -206,7 +206,7 @@ vertices
 </code></pre>
 
 <p>and "<code>mesh.000001</code>":</p>
-<pre><code>MFEM mesh v1.0
+<pre><code class="sh">MFEM mesh v1.0
 
 #
 # MFEM Geometry Types (see mesh/geom.hpp):
@@ -248,7 +248,7 @@ vertices
 </code></pre>
 
 <p>The corresponding linear (Q1) finite element solutions on each processor are, "<code>sol.000000</code>":</p>
-<pre><code>FiniteElementSpace
+<pre><code class="sh">FiniteElementSpace
 FiniteElementCollection: Linear
 VDim: 1
 Ordering: 0
@@ -263,24 +263,24 @@ Ordering: 0
 
 <p>and "<code>sol.000001</code>", which happens to be identical to "<code>sol.000000</code>" in this case.</p>
 <p>As before, we can view the local mesh and solution on each processor by specifying its mesh and solution files:</p>
-<pre><code>glvis -m mesh.000000 -g sol.000000
+<pre><code class="sh">glvis -m mesh.000000 -g sol.000000
 </code></pre>
 
 <p><img alt="" src="../img/glvis-quad-np2-1.png" /></p>
 <p>However, we can also view the global (stitched) mesh by specifying the number of processors, and the mesh prefix</p>
-<pre><code>glvis -np 2 -m mesh
+<pre><code class="sh">glvis -np 2 -m mesh
 </code></pre>
 
 <p><img alt="" src="../img/glvis-quad-np2-3.png" /></p>
 <p>The global parallel mesh and solution can be visualized with</p>
-<pre><code>glvis -np 2 -m mesh -g sol
+<pre><code class="sh">glvis -np 2 -m mesh -g sol
 </code></pre>
 
 <p><img alt="" src="../img/glvis-quad-np2-2.png" /></p>
 <p>and now we can use, e.g. the <code>F11</code>/<code>F12</code> keystrokes to shrink/zoom the subdomains corresponding to different processors. Here is what the result looks like for a refined version of this problem on 16 processors:</p>
 <p><img alt="" src="../img/glvis-quad-np100.png" /></p>
 <p>Parallel meshes and solutions are also supported in  GLVis scripts. The corresponding command is</p>
-<pre><code>psolution &lt;num_proc&gt; &lt;mesh_prefix&gt; &lt;attr_flag&gt; &lt;solution_prefix&gt;
+<pre><code class="sh">psolution &lt;num_proc&gt; &lt;mesh_prefix&gt; &lt;attr_flag&gt; &lt;solution_prefix&gt;
 </code></pre>
 
 <p>where "<code>&lt;attr_flag&gt;</code>" controls if the boundary attributes should be replaced with the processor number or if they should be kept unchanged. This option is also available from the command line as "'-a'".</p></div>
