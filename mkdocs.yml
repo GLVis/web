@@ -11,6 +11,7 @@ pages:
 - Home: index.md
 - Features: features.md
 - Documentation:
+  - 'Building GLVis': building.md
   - 'Options and Use': options-and-use.md
   - 'Mesh Formats': mesh-formats.md
   - 'Parallel Visualization': parallel-visualization.md

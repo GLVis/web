@@ -34,7 +34,7 @@ For older releases see the [download](download.md) section.
 ## Documentation
 
 **
-[Building](http://mfem.org/building)
+[Building](building.md)
 / [Mesh formats](mesh-formats.md)
 / [Parallel visualization](parallel-visualization.md)
 / [VTK](curvilinear-vtk-meshes.md)
