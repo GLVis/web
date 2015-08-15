@@ -123,7 +123,7 @@ Ordering: 1
 0.5 0.891421356
 0.108578644 0.5
 ```
-This above file, as well as other examples of NURBS meshes, can be be found in [MFEM's data directory](https://github.com/mfem/mfem/tree/master/data). It can be visualized directly with
+This above file, as well as other examples of NURBS meshes, can be found in [MFEM's data directory](https://github.com/mfem/mfem/tree/master/data). It can be visualized directly with
 ```sh
 glvis -m square-disc-nurbs.mesh
 ```
@@ -135,7 +135,7 @@ To explain MFEM's NURBS mesh file format, we first note that the topological par
 
 In the NURBS case we need to also provide description of the edges on the patch boundaries and associate a knot vector with each of them. This is done in the `edges` section where the first index in each row refers to the knot vector id (from the following `knotvectors` section), while the remaining two indexes are the edge vertex numbers.
 
-The position of the NURBS nodes (control points) is given as a NURBS grid function at the end of the file, while the associated weights are listed in the preceeding `weights` section.
+The position of the NURBS nodes (control points) is given as a NURBS grid function at the end of the file, while the associated weights are listed in the preceding `weights` section.
 
 Solutions from NURBS discretization spaces are also natively supported. For example here is the approximation for the solution of a simple Poisson problem on a refined version of the above mesh.
 ```sh

@@ -7,7 +7,7 @@ This page collects screenshots from various simulations that have used GLVis vis
 
 [![](img/gallery/logo-gallery.png)](img/gallery/logo-gallery-full.png)
 
-*The GLVis logo is derived from the [Metatron model](http://www.bathsheba.com/downloads/metatron.zip) at [bathsheba.com](http://www.bathsheba.com). Shown is the magnitude of the projection of a smooth vector field using 4th order Nedelec elements on a second order curved tehrahedral mesh (based on MFEM's [Example 3](http://mfem.github.io/doxygen/html/ex3_8cpp_source.html)).*
+*The GLVis logo is derived from the [Metatron model](http://www.bathsheba.com/downloads/metatron.zip) at [bathsheba.com](http://www.bathsheba.com). Shown is the magnitude of the projection of a smooth vector field using 4th order Nedelec elements on a second order curved tetrahedral mesh (based on MFEM's [Example 3](http://mfem.github.io/doxygen/html/ex3_8cpp_source.html)).*
 
 ----
 

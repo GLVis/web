@@ -11,7 +11,7 @@
 **Download glvis-3.0.tgz**
 </button>](http://goo.gl/HcdvqY)
 
-Plase use the GitHub [issue tracker](https://github.com/glvis/glvis/issues)
+Please use the GitHub [issue tracker](https://github.com/glvis/glvis/issues)
 to report [bugs](https://github.com/glvis/glvis/issues/new?labels=bug)
 or post [questions](https://github.com/glvis/glvis/issues/new?labels=question)
 or [comments](https://github.com/glvis/glvis/issues/new?labels=comment).

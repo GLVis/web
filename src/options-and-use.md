@@ -64,7 +64,7 @@ All Options:
    -p <int>, --listen-port <int>, current value: 19916
     Specify the port number on which to accept connections.
    -mac, --save-stream, -no-mac, --dont-save-stream, current option: --dont-save-stream
-    In server mode, save incomming data to a file before visualization.
+    In server mode, save incoming data to a file before visualization.
    -saved <string>, --saved-stream <string>, current value: (none)
     Load a GLVis stream saved to a file.
    -ww <int>, --window-width <int>, current value: 400
@@ -95,7 +95,7 @@ glvis
 ```
 By default, the server is established on [port 19916](https://github.com/glvis/glvis/blob/master/glvis.cpp#L1007), but this can be changed with the "`-p`" option.
 
-On lagacy Mac machines with OS X Leopard, the server needs to be started with
+On legacy Mac machines with OS X Leopard, the server needs to be started with
 ```sh
 glvis -mac
 ```

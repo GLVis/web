@@ -31,7 +31,7 @@ Build GLVis:
 
 That's it! The `glvis` executable can be found in the `glvis-3.0` directory.
 
-## Testing and rebuiling
+## Testing and rebuilding
 
 To test the build, visualize a mesh with
 ```sh
