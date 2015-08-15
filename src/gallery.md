@@ -5,11 +5,25 @@ This page collects screenshots from various simulations that have used GLVis vis
 <br>
 <center>
 
+<div class="col-md-4"  markdown="1">
+
 [![](img/gallery/logo-gallery.png)](img/gallery/logo-gallery-full.png)
 
 *The GLVis logo is derived from the [Metatron model](http://www.bathsheba.com/downloads/metatron.zip) at [bathsheba.com](http://www.bathsheba.com). Shown is the magnitude of the projection of a smooth vector field using 4th order Nedelec elements on a second order curved tetrahedral mesh (based on MFEM's [Example 3](http://mfem.github.io/doxygen/html/ex3_8cpp_source.html)).*
 
 ----
+
+![](img/gallery/fem2d-1.png)
+
+*Locally refined grid in 2D. Simulation with [MFEM](http://mfem.org).*
+
+----
+
+![](img/gallery/ball-nurbs-np16.png)
+
+*Unstructured parallel decomposition of a [fourth order NURBS mesh](https://github.com/mfem/mfem/blob/master/data/ball-nurbs.mesh) of the unit ball obtained in the solution of MFEM's parallel [Example 1](https://github.com/mfem/mfem/blob/master/examples/ex1p.cpp) on 16 processors.*
+
+</div><div class="col-md-5"  markdown="1">
 
 [![](img/gallery/triple-point_BLAST_q8q7.png)](img/gallery/triple-pt-np128.gif)
 
@@ -23,21 +37,21 @@ This page collects screenshots from various simulations that have used GLVis vis
 
 ----
 
+![](img/gallery/fem2d-2.png)
+
+*Level lines in 2D. Simulation with [MFEM](http://mfem.org).*
+
+----
+
 [![](img/gallery/tp-3d-ale-black.png)](http://computation.llnl.gov/)
 
 *3D Arbitrary Lagrangian-Eulerian (ALE) simulation of a shock-triple point interaction with Q2-Q1 elements in the MFEM-based [BLAST](http://www.llnl.gov/casc/blast) shock hydrodynamics code. Shown are the cutting plane and level surface capabilities of GLVis.*
 
-----
+</div><div class="col-md-3"  markdown="1">
 
-![](img/gallery/fem2d-1.png)
+![](img/gallery/CSE13logo.jpeg)
 
-*Locally refined grid in 2D. Simulation with [MFEM](http://mfem.org).*
-
-----
-
-![](img/gallery/fem2d-2.png)
-
-*Level lines in 2D. Simulation with [MFEM](http://mfem.org).*
+*The [SIAM CSE13](http://www.siam.org/meetings/cse13) logo illustrates the decomposition of a hexahedral zone in tetrahedral "sides". This and related images can be found in [this paper](http://dx.doi.org/10.1137/100801640).*
 
 ----
 
@@ -51,16 +65,6 @@ This page collects screenshots from various simulations that have used GLVis vis
 
 *One of the eight order (Q8) basis functions on the reference square. The sub-refinement in GLVis (key 'i') allows for the correct visualization of such high-order functions.*
 
-----
-
-![](img/gallery/ball-nurbs-np16.png)
-
-*Unstructured parallel decomposition of a [fourth order NURBS mesh](https://github.com/mfem/mfem/blob/master/data/ball-nurbs.mesh) of the unit ball obtained in the solution of MFEM's parallel [Example 1](https://github.com/mfem/mfem/blob/master/examples/ex1p.cpp) on 16 processors.*
-
-----
-
-![](img/gallery/CSE13logo.jpeg)
-
-*The [SIAM CSE13](http://www.siam.org/meetings/cse13) logo illustrates the decomposition of a hexahedral zone in tetrahedral "sides". This and related images can be found in [this paper](http://dx.doi.org/10.1137/100801640).*
+</div>
 
 </center>
