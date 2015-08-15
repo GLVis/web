@@ -9,6 +9,11 @@ body {
     height: 75px;
 }*/
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 ul.nav li.main {
     font-weight: bold;
 }
@@ -45,8 +50,8 @@ p.centered {
 
 img.floatpad {
     float: right;
-    display: block; 
-    margin-bottom: 20px; 
+    display: block;
+    margin-bottom: 20px;
     margin-left: 20px;
     margin-top: 10px;
 }
