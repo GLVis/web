@@ -67,6 +67,10 @@
                     <ul class="dropdown-menu">
                     
                         <li >
+                            <a href="../building/">Building GLVis</a>
+                        </li>
+                    
+                        <li >
                             <a href="../options-and-use/">Options and Use</a>
                         </li>
                     
@@ -267,7 +271,7 @@ Ordering: 1
 0.108578644 0.5
 </code></pre>
 
-<p>This above file, as well as other examples of NURBS meshes, can be be found in <a href="https://github.com/mfem/mfem/tree/master/data">MFEM's data directory</a>. It can be visualized directly with</p>
+<p>This above file, as well as other examples of NURBS meshes, can be found in <a href="https://github.com/mfem/mfem/tree/master/data">MFEM's data directory</a>. It can be visualized directly with</p>
 <pre><code class="sh">glvis -m square-disc-nurbs.mesh
 </code></pre>
 
@@ -275,7 +279,7 @@ Ordering: 1
 <p><img alt="" src="../img/glvis-square-disc-nurbs.png" /></p>
 <p>To explain MFEM's NURBS mesh file format, we first note that the topological part of the mesh (the <code>elements</code> and <code>boundary</code> sections) describe the 4 NURBS patches visible above. We use the vertex numbers as labels, so we only need the number of vertices.</p>
 <p>In the NURBS case we need to also provide description of the edges on the patch boundaries and associate a knot vector with each of them. This is done in the <code>edges</code> section where the first index in each row refers to the knot vector id (from the following <code>knotvectors</code> section), while the remaining two indexes are the edge vertex numbers.</p>
-<p>The position of the NURBS nodes (control points) is given as a NURBS grid function at the end of the file, while the associated weights are listed in the preceeding <code>weights</code> section.</p>
+<p>The position of the NURBS nodes (control points) is given as a NURBS grid function at the end of the file, while the associated weights are listed in the preceding <code>weights</code> section.</p>
 <p>Solutions from NURBS discretization spaces are also natively supported. For example here is the approximation for the solution of a simple Poisson problem on a refined version of the above mesh.</p>
 <pre><code class="sh">glvis -m square-disc-nurbs.mesh -g sol.gf
 </code></pre>
