@@ -6,9 +6,9 @@ GLVis is a _lightweight_ tool for _accurate_ and _flexible_ finite element visua
 
 ## Features
 
- * Accurate representation of a variety of finite element [meshes](mesh-formats.md) and [spaces](http://mfem.org/features/#higher-order-finite-element-spaces).
- * [Server mode](options-and-use.md#server-mode) accepting multiple and/or persistent socket connections.
- * Support for arbitrary high-order [curved](mesh-formats.md#curvilinear-and-more-general-meshes) elements and [NURBS](nurbs.md) meshes.
+ * Accurate functional representation of many [finite elements](http://mfem.org/features/#higher-order-finite-element-spaces).
+ * Support for [arbitrary high-order](mesh-formats.md#curvilinear-and-more-general-meshes) and [NURBS](nurbs.md) meshes.
+ * [Server mode](options-and-use.md#server-mode) accepting multiple socket connections.
  * Visualization of [parallel](parallel-visualization.md) meshes and solutions.
  * ... and [many more](features.md).
 
