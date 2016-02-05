@@ -30,7 +30,7 @@ It has a number of convenient features, including:
   - support for different perspectives, materials, lighting, color schemes and transparency,
   - processor and element shrinking for better visualization of the interior of 3D meshes,
   - antialiased meshes and fonts,
-  - screenshots in PNG or TIFF format,
+  - screenshots in PNG or TIFF format.
 
 ## Flexible Server and Scripting Support
 
