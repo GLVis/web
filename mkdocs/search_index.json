@@ -207,17 +207,17 @@
         }, 
         {
             "location": "/download/", 
-            "text": "Latest Release\n\n\n\n\nNew features\n\n/ \nUser documentation\n \n/ \nCode documentation\n \n/ \nSources\n\n\n\n\n\n\nDownload glvis-3.0.tgz\n\n\n\n\nPlease use the GitHub \nissue tracker\n\nto report \nbugs\n\nor post \nquestions\n\nor \ncomments\n.\n\n\nAll Releases\n\n\n\n\n\n\n\n\nFilename\n\n\nVersion\n\n\nRelease Date\n\n\nSize\n\n\nSLOC\n\n\nNotes\n\n\n\n\n\n\n\n\n\n\nglvis-3.1.tgz\n\n\nv3.1\n\n\nFeb 2016\n\n\n180K\n\n\n24K\n\n\n\n\n\n\n\n\nglvis-3.0.tgz\n\n\nv3.0\n\n\nJan 2015\n\n\n180K\n\n\n23K\n\n\n\n\n\n\n\n\nglvis-d32411e0e4.tgz\n\n\nN/A\n\n\nJul 2014\n\n\n170K\n\n\n22K\n\n\nDevelopment release\n\n\n\n\n\n\nglvis-d15634d151.tgz\n\n\nN/A\n\n\nJul 2013\n\n\n169K\n\n\n22K\n\n\nDevelopment release\n\n\n\n\n\n\nglvis-2.0.tgz\n\n\nv2.0\n\n\nNov 2011\n\n\n157K\n\n\n20K\n\n\n\n\n\n\n\n\nglvis-v1.2.tgz\n\n\nv1.2\n\n\nApr 2011\n\n\n149K\n\n\n19K\n\n\n\n\n\n\n\n\nglvis-v1.1.tgz\n\n\nv1.1\n\n\nSep 2010\n\n\n147K\n\n\n19K\n\n\n\n\n\n\n\n\nglvis-v1.0.tgz\n\n\nv1.0\n\n\nJul 2010\n\n\n143K\n\n\n18K\n\n\nInitial release", 
+            "text": "Latest Release\n\n\n\n\nNew features\n\n/ \nUser documentation\n \n/ \nCode documentation\n \n/ \nSources\n\n\n\n\n\n\nDownload glvis-3.1.tgz\n\n\n\n\nPlease use the GitHub \nissue tracker\n\nto report \nbugs\n\nor post \nquestions\n\nor \ncomments\n.\n\n\nAll Releases\n\n\n\n\n\n\n\n\nFilename\n\n\nVersion\n\n\nRelease Date\n\n\nSize\n\n\nSLOC\n\n\nNotes\n\n\n\n\n\n\n\n\n\n\nglvis-3.1.tgz\n\n\nv3.1\n\n\nFeb 2016\n\n\n178K\n\n\n24K\n\n\n\n\n\n\n\n\nglvis-3.0.tgz\n\n\nv3.0\n\n\nJan 2015\n\n\n174K\n\n\n23K\n\n\n\n\n\n\n\n\nglvis-d32411e0e4.tgz\n\n\nN/A\n\n\nJul 2014\n\n\n171K\n\n\n22K\n\n\nDevelopment release\n\n\n\n\n\n\nglvis-d15634d151.tgz\n\n\nN/A\n\n\nJul 2013\n\n\n170K\n\n\n22K\n\n\nDevelopment release\n\n\n\n\n\n\nglvis-2.0.tgz\n\n\nv2.0\n\n\nNov 2011\n\n\n158K\n\n\n20K\n\n\n\n\n\n\n\n\nglvis-v1.2.tgz\n\n\nv1.2\n\n\nApr 2011\n\n\n150K\n\n\n19K\n\n\n\n\n\n\n\n\nglvis-v1.1.tgz\n\n\nv1.1\n\n\nSep 2010\n\n\n148K\n\n\n19K\n\n\n\n\n\n\n\n\nglvis-v1.0.tgz\n\n\nv1.0\n\n\nJul 2010\n\n\n144K\n\n\n18K\n\n\nInitial release", 
             "title": "Download"
         }, 
         {
             "location": "/download/#latest-release", 
-            "text": "New features \n/  User documentation  \n/  Code documentation  \n/  Sources    Download glvis-3.0.tgz   Please use the GitHub  issue tracker \nto report  bugs \nor post  questions \nor  comments .", 
+            "text": "New features \n/  User documentation  \n/  Code documentation  \n/  Sources    Download glvis-3.1.tgz   Please use the GitHub  issue tracker \nto report  bugs \nor post  questions \nor  comments .", 
             "title": "Latest Release"
         }, 
         {
             "location": "/download/#all-releases", 
-            "text": "Filename  Version  Release Date  Size  SLOC  Notes      glvis-3.1.tgz  v3.1  Feb 2016  180K  24K     glvis-3.0.tgz  v3.0  Jan 2015  180K  23K     glvis-d32411e0e4.tgz  N/A  Jul 2014  170K  22K  Development release    glvis-d15634d151.tgz  N/A  Jul 2013  169K  22K  Development release    glvis-2.0.tgz  v2.0  Nov 2011  157K  20K     glvis-v1.2.tgz  v1.2  Apr 2011  149K  19K     glvis-v1.1.tgz  v1.1  Sep 2010  147K  19K     glvis-v1.0.tgz  v1.0  Jul 2010  143K  18K  Initial release", 
+            "text": "Filename  Version  Release Date  Size  SLOC  Notes      glvis-3.1.tgz  v3.1  Feb 2016  178K  24K     glvis-3.0.tgz  v3.0  Jan 2015  174K  23K     glvis-d32411e0e4.tgz  N/A  Jul 2014  171K  22K  Development release    glvis-d15634d151.tgz  N/A  Jul 2013  170K  22K  Development release    glvis-2.0.tgz  v2.0  Nov 2011  158K  20K     glvis-v1.2.tgz  v1.2  Apr 2011  150K  19K     glvis-v1.1.tgz  v1.1  Sep 2010  148K  19K     glvis-v1.0.tgz  v1.0  Jul 2010  144K  18K  Initial release", 
             "title": "All Releases"
         }
     ]
