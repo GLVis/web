@@ -47,8 +47,12 @@ We also recommend reading the [MFEM project](http://mfem.org) documentation.
 
 ## Contact
 
-Developed by the [GLVis team](about.md) at [CASC](http://computation.llnl.gov/casc/),
-[LLNL](https://www.llnl.gov/). Please cite with
+Use the GitHub [issue tracker](https://github.com/glvis/glvis/issues)
+to report [bugs](https://github.com/glvis/glvis/issues/new?labels=bug)
+or post [questions](https://github.com/glvis/glvis/issues/new?labels=question)
+or [comments](https://github.com/glvis/glvis/issues/new?labels=comment).
+
+Please cite with
 ```c
 @misc{glvis-tool,
   title = {{GLVis}: Accurate finite element visualization},
@@ -56,10 +60,6 @@ Developed by the [GLVis team](about.md) at [CASC](http://computation.llnl.gov/ca
 }
 ```
 
-Use the GitHub [issue tracker](https://github.com/glvis/glvis/issues)
-to report [bugs](https://github.com/glvis/glvis/issues/new?labels=bug)
-or post [questions](https://github.com/glvis/glvis/issues/new?labels=question)
-or [comments](https://github.com/glvis/glvis/issues/new?labels=comment).
 
 </div>
 
