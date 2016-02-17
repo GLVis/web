@@ -26,8 +26,8 @@ GLVis is based on the [MFEM](http://mfem.org) library and is currently used in t
 **
 
 [<button type="button" class="btn btn-success">
-**Download glvis-3.0.tgz**
-</button>](http://goo.gl/HcdvqY)
+**Download glvis-3.1.tgz**
+</button>](http://goo.gl/gQZuu9)
 
 For older releases see the [download](download.md) section.
 
