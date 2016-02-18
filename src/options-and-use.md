@@ -16,7 +16,7 @@ Some of the command-line options of GLVis and its general use are described in m
   - [How to visualize functions](#visualizing-functions)
   - [GLVis scripts](#glvis-scripts)
 
-## Details
+## Options
 
 GLVis has a number of command-line options that allow it to be used in several different ways. The list of all available options is given by the output of "`glvis -h`":
 
@@ -38,52 +38,56 @@ Visualize parallel mesh and solution (grid function):
 
 All Options:
    -h, --help
-    Print this help message and exit.
+        Print this help message and exit.
    -m <string>, --mesh <string>, current value: (none)
-    Mesh file to visualize.
+        Mesh file to visualize.
    -g <string>, --grid-function <string>, current value: (none)
-    Solution (GridFunction) file to visualize.
+        Solution (GridFunction) file to visualize.
    -gc <int>, --grid-function-component <int>, current value: -1
-    Select a grid function component, [or -1 for all.
+        Select a grid function component, [0-<num-comp>) or -1 for all.
    -s <string>, --scalar-solution <string>, current value: (none)
-    Scalar solution (vertex values) file to visualize.
+        Scalar solution (vertex values) file to visualize.
    -v <string>, --vector-solution <string>, current value: (none)
-    Vector solution (vertex values) file to visualize.
+        Vector solution (vertex values) file to visualize.
    -np <int>, --num-proc <int>, current value: 0
-    Load mesh/solution from multiple processors.
+        Load mesh/solution from multiple processors.
+   -d <int>, --pad-digits <int>, current value: 6
+        Number of digits used for processor ranks in file names.
    -run <string>, --run-script <string>, current value: (none)
-    Run a GLVis script file.
+        Run a GLVis script file.
    -k <string>, --keys <string>, current value: (none)
-    Execute key shortcut commands in the GLVis window.
+        Execute key shortcut commands in the GLVis window.
    -fo, --fix-orientations, -no-fo, --dont-fix-orientations, current option: --dont-fix-orientations
-    Attempt to fix the orientations of inverted elements.
+        Attempt to fix the orientations of inverted elements.
    -a, --real-attributes, -ap, --processor-attributes, current option: --processor-attributes
-    When opening a parallel mesh, use the real mesh attributes or replace them with the processor rank.
+        When opening a parallel mesh, use the real mesh attributes or replace them with the processor rank.
+   -grt <int>, --geometry-refiner-type <int>, current value: 0
+        Set of points to use when refining geometry: 0 = uniform, 1 = Gauss-Lobatto.
    -sc, --save-coloring, -no-sc, --dont-save-coloring, current option: --dont-save-coloring
-    Save the mesh coloring generated when opening only a mesh.
+        Save the mesh coloring generated when opening only a mesh.
    -p <int>, --listen-port <int>, current value: 19916
-    Specify the port number on which to accept connections.
+        Specify the port number on which to accept connections.
    -mac, --save-stream, -no-mac, --dont-save-stream, current option: --dont-save-stream
-    In server mode, save incoming data to a file before visualization.
+        In server mode, save incomming data to a file before visualization.
    -saved <string>, --saved-stream <string>, current value: (none)
-    Load a GLVis stream saved to a file.
+        Load a GLVis stream saved to a file.
    -ww <int>, --window-width <int>, current value: 400
-    Set the window width.
+        Set the window width.
    -wh <int>, --window-height <int>, current value: 350
-    Set the window height.
+        Set the window height.
    -wt <string>, --window-title <string>, current value: (default)
-    Set the window title.
+        Set the window title.
    -fn <string>, --font <string>, current value: (default)
-    Set the font: <font-name>[-<font-size>](0-<num-comp>)).
+        Set the font: <font-name>[-<font-size>].
    -ms <int>, --multisample <int>, current value: 4
-    Set the multisampling mode (toggled with the 'A' key).
+        Set the multisampling mode (toggled with the 'A' key).
    -lw <double>, --line-width <double>, current value: 1
-    Set the line width (multisampling off).
+        Set the line width (multisampling off).
    -mslw <double>, --multisample-line-width <double>, current value: 1.4
-    Set the line width (multisampling on).
+        Set the line width (multisampling on).
 ```
 
-### Server mode
+## Server mode
 
 GLVis can be used as a visualization server, where it waits for data sent by socket connections from applications and visualizes each socket stream in a separate interactive window:
 
@@ -93,7 +97,7 @@ To establish the GLVis server, open a new terminal and start the GLVis applicati
 ```sh
 glvis
 ```
-By default, the server is established on [port 19916](https://github.com/glvis/glvis/blob/master/glvis.cpp#L1007), but this can be changed with the "`-p`" option.
+By default, the server is established on [port 19916](https://github.com/glvis/glvis/blob/master/glvis.cpp#L1105), but this can be changed with the "`-p`" option.
 
 On legacy Mac machines with OS X Leopard, the server needs to be started with
 ```sh
@@ -101,7 +105,7 @@ glvis -mac
 ```
 This is due to the fact that Mac OS X returns an error when [fork() is called without an immediate exec()](http://developer.apple.com/library/mac/#technotes/tn2083/_index.html#//apple_ref/doc/uid/DTS10003794-CH1-SUBSUBSECTION66). *Note that this option is not necessary on newer versions of OS X.*
 
-A side effect of the "`-mac`" option is that all socket streams will be saved in incrementally named files "`glvis-saved.0001`", "`glvis-saved.0002`", and so on. These socket files consist of a [data type identifier](https://github.com/glvis/glvis/blob/master/glvis.cpp#L104) followed by a mesh and a finite element function. For example:
+A side effect of the "`-mac`" option is that all socket streams will be saved in incrementally named files "`glvis-saved.0001`", "`glvis-saved.0002`", and so on. These socket files consist of a [data type identifier](https://github.com/glvis/glvis/blob/master/glvis.cpp#L108) followed by a mesh and a finite element function. For example:
 ```sh
 fem2d_gf_data
 
@@ -175,7 +179,7 @@ Below is the result for the above socket data using the following GLVis keystrok
 
 ![](img/glvis-saved.png)
 
-### Visualizing meshes
+## Visualizing meshes
 
 GLVis can also be employed in non-sever mode, e.g. to visualize a mesh file:
 ```sh
@@ -185,7 +189,7 @@ The optional "`-k`" parameter specifies a set of keystrokes, which will be passe
 
 Two dimensional meshes are shown with elements in multiple colors, corresponding to a piece-wise constant function with different values in neighboring elements. This function can be generated and saved with the "`-sc`" option, which writes it in a file called "`GLVis_coloring.gf`".
 
-### Visualizing functions
+## Visualizing functions
 
 There are several ways to visualize a function on a given mesh. For example we can visualize the coloring function for the mesh [beam-hex.mesh](https://github.com/mfem/mfem/blob/master/data/beam-hex.mesh) as follows:
 ```sh
@@ -294,9 +298,9 @@ glvis -m beam-quad.mesh -s beam-quad.sol -k "Amaa"
 
 Note that the data in this type of solution files starts from the second line (the first line contains an identifier). The vector format for the "`-v`" option is similar, with all the x-components of the field listed first, followed by all the y-components, etc.
 
-### GLVis scripts
+## GLVis scripts
 
-GLVis can also run a batch sequence of commands, called GLVis scripts, which are useful for saving particular visualization scenes, as well as to generate still frames for animations. 
+GLVis can also run a batch sequence of commands, called GLVis scripts, which are useful for saving particular visualization scenes, as well as to generate still frames for animations.
 
 Scripts are executed with `glvis -run`. For example, consider the following script, saved in a file "`quad-vec.glvs`":
 ```sh
@@ -341,7 +345,7 @@ solution quad.vtk quad-vec.gf
    solution quad.vtk quad-vec.gf screenshot quad-vec.10.png
 }
 ```
-The "`#`" lines above indicate comments, while the braces separate the different sequences of commands that are executed together. GLVis will pause between these execution blocks, waiting for the user to press the space bar in order to continue. The "`solution`" command above updates the mesh and the finite element function plotted, without changing any other visualization parameters, while "`screenshot`" uses [xwd](http://www.xfree86.org/current/xwd.1.html) or the [TIFF library](http://www.libtiff.org/) together with [ImageMagick's convert utility](http://www.imagemagick.org/script/convert.php) to save a picture in the specified format. There are a number of additional script commands available, the complete list of which can be found (and extended) by examining the [glvis.cpp source code](https://github.com/glvis/glvis/blob/master/glvis.cpp#L563).
+The "`#`" lines above indicate comments, while the braces separate the different sequences of commands that are executed together. GLVis will pause between these execution blocks, waiting for the user to press the space bar in order to continue. The "`solution`" command above updates the mesh and the finite element function plotted, without changing any other visualization parameters, while "`screenshot`" uses [xwd](http://www.xfree86.org/current/xwd.1.html) or the [TIFF library](http://www.libtiff.org/) together with [ImageMagick's convert utility](http://www.imagemagick.org/script/convert.php) to save a picture in the specified format. There are a number of additional script commands available, the complete list of which can be found (and extended) by examining the [glvis.cpp source code](https://github.com/glvis/glvis/blob/master/glvis.cpp#L633).
 
 Executing
 ```sh
