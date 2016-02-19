@@ -27,10 +27,18 @@ GLVis originates from previous research effort in the (unreleased) [AggieFEM/aFE
 
 <br>
 
+Please cite with:
+```c
+@misc{glvis-tool,
+  title = {{GLVis}: Accurate finite element visualization},
+  howpublished = {\url{glvis.org}}
+}
+```
+
 This work performed under the auspices of the U.S. Department of Energy
 by Lawrence Livermore Laboratory under Contract DE-AC52-07NA27344.
 
-LLNL-CODE-443271
+Software release number: LLNL-CODE-443271
 
 ----
 

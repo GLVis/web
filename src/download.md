@@ -1,11 +1,9 @@
 ## Latest Release
 
-**
 [New features](https://raw.githubusercontent.com/glvis/glvis/master/CHANGELOG)
-/ [User documentation](https://raw.githubusercontent.com/glvis/glvis/master/README) 
-/ [Code documentation](http://glvis.github.io/doxygen/html/index.html) 
+/ [User documentation](https://raw.githubusercontent.com/glvis/glvis/master/README)
+/ [Code documentation](http://glvis.github.io/doxygen/html/index.html)
 / [Sources](https://github.com/glvis/glvis)
-**
 
 [<button type="button" class="btn btn-success">
 **Download glvis-3.1.tgz**
