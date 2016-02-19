@@ -23,7 +23,7 @@ GLVis is based on the [MFEM](http://mfem.org) library and is currently used in t
 Date         | Message
 ------------ | -----------------------------------------------------------------
 Feb 5, 2016  | Version 3.1 [released](https://raw.githubusercontent.com/glvis/glvis/master/CHANGELOG).
-Aug 18, 2015 | Moved to [GitHub](https://github.com/glvis/glvis) and [glvis.org](https://glvis.org).
+Aug 18, 2015 | Moved to [GitHub](https://github.com/glvis/glvis) and [glvis.org](http://glvis.org).
 Jan 26, 2015 | Version 3.0 released.
 
 
