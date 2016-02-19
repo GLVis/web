@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "GLVis is a \nlightweight\n tool for \naccurate\n and \nflexible\n finite element visualization.\n\n\nFeatures\n\n\n\n\nAccurate functional representation of many \nfinite elements\n.\n\n\nSupport for \narbitrary high-order\n and \nNURBS\n meshes.\n\n\nServer mode\n accepting multiple socket connections.\n\n\nVisualization of \nparallel\n meshes and solutions.\n\n\n... and \nmany more\n.\n\n\n\n\nGLVis is based on the \nMFEM\n library and is currently used in the \nBLAST\n, \nhypre\n and \nXBraid\n projects. See also our \nGallery\n.\n\n\n\n\n\n\n\n\nLatest Release\n\n\n\n\nNew features\n\n/ \nUser documentation\n\n/ \nCode documentation\n\n/ \nSources\n\n\n\n\n\n\nDownload glvis-3.1.tgz\n\n\n\n\nFor older releases see the \ndownload\n section.\n\n\nDocumentation\n\n\n\n\nBuilding\n\n/ \nMesh formats\n\n/ \nParallel visualization\n\n/ \nVTK\n\n/ \nNURBS\n\n\n\n\nNew users should start with the \noptions and general use\n tutorial.\n\n\nWe also recommend reading the \nMFEM project\n documentation.\n\n\nContact\n\n\nUse the GitHub \nissue tracker\n\nto report \nbugs\n\nor post \nquestions\n\nor \ncomments\n.\n\n\nPlease cite with:\n\n\n@misc{glvis-tool,\n  title = {{GLVis}: Accurate finite element visualization},\n  howpublished = {\\url{glvis.org}}\n}", 
+            "text": "GLVis is a \nlightweight\n tool for \naccurate\n and \nflexible\n finite element visualization.\n\n\nFeatures\n\n\n\n\nAccurate functional representation of many \nfinite elements\n.\n\n\nSupport for \narbitrary high-order\n and \nNURBS\n meshes.\n\n\nServer mode\n accepting multiple socket connections.\n\n\nVisualization of \nparallel\n meshes and solutions.\n\n\n... and \nmany more\n.\n\n\n\n\nGLVis is based on the \nMFEM\n library and is currently used in the \nBLAST\n, \nhypre\n and \nXBraid\n projects. See also our \nGallery\n.\n\n\n\n\n\n\nNews\n\n\n\n\n\n\n\n\nDate\n\n\nMessage\n\n\n\n\n\n\n\n\n\n\nFeb 5, 2016\n\n\nVersion 3.1 \nreleased\n.\n\n\n\n\n\n\nAug 18, 2015\n\n\nMoved to \nGitHub\n and \nglvis.org\n.\n\n\n\n\n\n\nJan 26, 2015\n\n\nVersion 3.0 released.\n\n\n\n\n\n\n\n\nLatest Release\n\n\nNew features\n\n/ \nUser documentation\n\n/ \nCode documentation\n\n/ \nSources\n\n\n\n\nDownload glvis-3.1.tgz\n\n\n\n\nFor older releases see the \ndownload\n section.\n\n\nDocumentation\n\n\nBuilding\n\n/ \nMesh formats\n\n/ \nParallel visualization\n\n/ \nVTK\n\n/ \nNURBS\n\n\nNew users should start with the \noptions and general use\n tutorial.\n\n\nWe also recommend reading the \nMFEM project\n documentation.\n\n\nContact\n\n\nUse the GitHub \nissue tracker\n\nto report \nbugs\n\nor post \nquestions\n\nor \ncomments\n.\nSee\nthe \nAbout\n page for citation information.", 
             "title": "Home"
         }, 
         {
@@ -11,18 +11,23 @@
             "title": "Features"
         }, 
         {
+            "location": "/#news", 
+            "text": "Date  Message      Feb 5, 2016  Version 3.1  released .    Aug 18, 2015  Moved to  GitHub  and  glvis.org .    Jan 26, 2015  Version 3.0 released.", 
+            "title": "News"
+        }, 
+        {
             "location": "/#latest-release", 
-            "text": "New features \n/  User documentation \n/  Code documentation \n/  Sources    Download glvis-3.1.tgz   For older releases see the  download  section.", 
+            "text": "New features \n/  User documentation \n/  Code documentation \n/  Sources   Download glvis-3.1.tgz   For older releases see the  download  section.", 
             "title": "Latest Release"
         }, 
         {
             "location": "/#documentation", 
-            "text": "Building \n/  Mesh formats \n/  Parallel visualization \n/  VTK \n/  NURBS   New users should start with the  options and general use  tutorial.  We also recommend reading the  MFEM project  documentation.", 
+            "text": "Building \n/  Mesh formats \n/  Parallel visualization \n/  VTK \n/  NURBS  New users should start with the  options and general use  tutorial.  We also recommend reading the  MFEM project  documentation.", 
             "title": "Documentation"
         }, 
         {
             "location": "/#contact", 
-            "text": "Use the GitHub  issue tracker \nto report  bugs \nor post  questions \nor  comments .  Please cite with:  @misc{glvis-tool,\n  title = {{GLVis}: Accurate finite element visualization},\n  howpublished = {\\url{glvis.org}}\n}", 
+            "text": "Use the GitHub  issue tracker \nto report  bugs \nor post  questions \nor  comments .\nSee the  About  page for citation information.", 
             "title": "Contact"
         }, 
         {
@@ -197,7 +202,7 @@
         }, 
         {
             "location": "/about/", 
-            "text": "About GLVis\n\n\nGLVis originates from previous research effort in the (unreleased) \nAggieFEM/aFEM\n project.\n\n\nContributors\n\n\n\n\nRobert Anderson\n\n\nIdo Akkerman\n\n\nThomas Brunner\n\n\nJakub \u010cerven\u00fd\n\n\nVeselin Dobrev\n\n\nTruman Ellis\n\n\nAaron Fisher\n\n\nTzanio Kolev\n \n Project Leader\n\n\nIlya Lashuk\n\n\nRobert Rieben\n\n\nJoachim Sch\u00f6berl\n\n\nMark Stowell\n\n\nVladimir Tomov\n\n\nStanimire Tomov\n\n\nUmberto Villa\n\n\n\n\nLicense\n\n\n\n\nGNU Lesser GPL v2.1\n\n\n\n\n\n\nThis work performed under the auspices of the U.S. Department of Energy\nby Lawrence Livermore Laboratory under Contract DE-AC52-07NA27344.\n\n\nLLNL-CODE-443271\n\n\n\n\nWebsite built with \nMkDocs\n, \nBootstrap\n\nand \nBootswatch\n. Hosted on \nGitHub\n.", 
+            "text": "About GLVis\n\n\nGLVis originates from previous research effort in the (unreleased) \nAggieFEM/aFEM\n project.\n\n\nContributors\n\n\n\n\nRobert Anderson\n\n\nIdo Akkerman\n\n\nThomas Brunner\n\n\nJakub \u010cerven\u00fd\n\n\nVeselin Dobrev\n\n\nTruman Ellis\n\n\nAaron Fisher\n\n\nTzanio Kolev\n \n Project Leader\n\n\nIlya Lashuk\n\n\nRobert Rieben\n\n\nJoachim Sch\u00f6berl\n\n\nMark Stowell\n\n\nVladimir Tomov\n\n\nStanimire Tomov\n\n\nUmberto Villa\n\n\n\n\nLicense\n\n\n\n\nGNU Lesser GPL v2.1\n\n\n\n\n\n\nPlease cite with:\n\n\n@misc{glvis-tool,\n  title = {{GLVis}: Accurate finite element visualization},\n  howpublished = {\\url{glvis.org}}\n}\n\n\n\n\nThis work performed under the auspices of the U.S. Department of Energy\nby Lawrence Livermore Laboratory under Contract DE-AC52-07NA27344.\n\n\nSoftware release number: LLNL-CODE-443271\n\n\n\n\nWebsite built with \nMkDocs\n, \nBootstrap\n\nand \nBootswatch\n. Hosted on \nGitHub\n.", 
             "title": "About"
         }, 
         {
@@ -212,12 +217,12 @@
         }, 
         {
             "location": "/about/#license", 
-            "text": "GNU Lesser GPL v2.1    This work performed under the auspices of the U.S. Department of Energy\nby Lawrence Livermore Laboratory under Contract DE-AC52-07NA27344.  LLNL-CODE-443271   Website built with  MkDocs ,  Bootstrap \nand  Bootswatch . Hosted on  GitHub .", 
+            "text": "GNU Lesser GPL v2.1    Please cite with:  @misc{glvis-tool,\n  title = {{GLVis}: Accurate finite element visualization},\n  howpublished = {\\url{glvis.org}}\n}  This work performed under the auspices of the U.S. Department of Energy\nby Lawrence Livermore Laboratory under Contract DE-AC52-07NA27344.  Software release number: LLNL-CODE-443271   Website built with  MkDocs ,  Bootstrap \nand  Bootswatch . Hosted on  GitHub .", 
             "title": "License"
         }, 
         {
             "location": "/gallery/", 
-            "text": "Gallery\n\n\nThis page collects screenshots from various simulations that have used GLVis visualization. Additional images can be found in the \nMFEM Gallery\n.\n\n\n\n\n\n\n\n\n\n\n\nThe GLVis logo is derived from the \nMetatron model\n at \nbathsheba.com\n. Shown is the magnitude of the projection of a smooth vector field using 4th order Nedelec elements on a second order curved tetrahedral mesh (based on MFEM's \nExample 3\n).\n\n\n\n\n\n\nLocally refined grid in 2D. Simulation with \nMFEM\n.\n\n\n\n\n\n\nUnstructured parallel decomposition of a \nfourth order NURBS mesh\n of the unit ball obtained in the solution of MFEM's parallel \nExample 1\n on 16 processors.\n\n\n\n\n\n\n\n\n\n\nCurvilinear 8th order mesh from a triple-point shock simulation in the MFEM-based  \nBLAST\n shock hydrodynamics code. Click for a movie of the evolution of the processor partitioning from a high-resolution parallel run of the problem produced with a \nGLVis script\n.\n\n\n\n\n\n\nAxisymmetric problem with revolved 2D mesh and solution, plus \ncoloring grid functions\n emphasizing mesh elements.\n\n\n\n\n\n\nLevel lines in 2D. Simulation with \nMFEM\n.\n\n\n\n\n\n\n3D Arbitrary Lagrangian-Eulerian (ALE) simulation of a shock-triple point interaction with Q2-Q1 elements in the MFEM-based \nBLAST\n shock hydrodynamics code. Shown are the cutting plane and level surface capabilities of GLVis.\n\n\n\n\n\n\n\n\n\n\nThe \nSIAM CSE13\n logo illustrates the decomposition of a hexahedral zone in tetrahedral \"sides\". This and related images can be found in \nthis paper\n.\n\n\n\n\n\n\nStitched parallel results from \nhypre\n's Example 4 on 36 processors.\n\n\n\n\n\n\nOne of the eight order (Q8) basis functions on the reference square. The sub-refinement in GLVis (key 'i') allows for the correct visualization of such high-order functions.", 
+            "text": "Gallery\n\n\nThis page collects screenshots from various simulations that have used GLVis visualization. Additional images can be found in the \nMFEM Gallery\n.\n\n\n\n\n\n\n\n\n\n\nThe GLVis logo is derived from the \nMetatron model\n at \nbathsheba.com\n. Shown is the magnitude of the projection of a smooth vector field using 4th order Nedelec elements on a second order curved tetrahedral mesh (based on MFEM's \nExample 3\n).\n\n\n\n\n\n\nLocally refined grid in 2D. Simulation with \nMFEM\n.\n\n\n\n\n\n\nUnstructured parallel decomposition of a \nfourth order NURBS mesh\n of the unit ball obtained in the solution of MFEM's parallel \nExample 1\n on 16 processors.\n\n\n\n\n\n\n\n\nCurvilinear 8th order mesh from a triple-point shock simulation in the MFEM-based  \nBLAST\n shock hydrodynamics code. Click for a movie of the evolution of the processor partitioning from a high-resolution parallel run of the problem produced with a \nGLVis script\n.\n\n\n\n\n\n\nAxisymmetric problem with revolved 2D mesh and solution, plus \ncoloring grid functions\n emphasizing mesh elements.\n\n\n\n\n\n\nLevel lines in 2D. Simulation with \nMFEM\n.\n\n\n\n\n\n\n3D Arbitrary Lagrangian-Eulerian (ALE) simulation of a shock-triple point interaction with Q2-Q1 elements in the MFEM-based \nBLAST\n shock hydrodynamics code. Shown are the cutting plane and level surface capabilities of GLVis.\n\n\n\n\n\n\n\n\nThe \nSIAM CSE13\n logo illustrates the decomposition of a hexahedral zone in tetrahedral \"sides\". This and related images can be found in \nthis paper\n.\n\n\n\n\n\n\nStitched parallel results from \nhypre\n's Example 4 on 36 processors.\n\n\n\n\n\n\nOne of the eight order (Q8) basis functions on the reference square. The sub-refinement in GLVis (key 'i') allows for the correct visualization of such high-order functions.", 
             "title": "Gallery"
         }, 
         {
@@ -227,12 +232,12 @@
         }, 
         {
             "location": "/download/", 
-            "text": "Latest Release\n\n\n\n\nNew features\n\n/ \nUser documentation\n \n/ \nCode documentation\n \n/ \nSources\n\n\n\n\n\n\nDownload glvis-3.1.tgz\n\n\n\n\nPlease use the GitHub \nissue tracker\n\nto report \nbugs\n\nor post \nquestions\n\nor \ncomments\n.\n\n\nAll Releases\n\n\n\n\n\n\n\n\nFilename\n\n\nVersion\n\n\nRelease Date\n\n\nSize\n\n\nSLOC\n\n\nNotes\n\n\n\n\n\n\n\n\n\n\nglvis-3.1.tgz\n\n\nv3.1\n\n\nFeb 2016\n\n\n178K\n\n\n24K\n\n\n\n\n\n\n\n\nglvis-3.0.tgz\n\n\nv3.0\n\n\nJan 2015\n\n\n174K\n\n\n23K\n\n\n\n\n\n\n\n\nglvis-d32411e0e4.tgz\n\n\nN/A\n\n\nJul 2014\n\n\n171K\n\n\n22K\n\n\nDevelopment release\n\n\n\n\n\n\nglvis-d15634d151.tgz\n\n\nN/A\n\n\nJul 2013\n\n\n170K\n\n\n22K\n\n\nDevelopment release\n\n\n\n\n\n\nglvis-2.0.tgz\n\n\nv2.0\n\n\nNov 2011\n\n\n158K\n\n\n20K\n\n\n\n\n\n\n\n\nglvis-v1.2.tgz\n\n\nv1.2\n\n\nApr 2011\n\n\n150K\n\n\n19K\n\n\n\n\n\n\n\n\nglvis-v1.1.tgz\n\n\nv1.1\n\n\nSep 2010\n\n\n148K\n\n\n19K\n\n\n\n\n\n\n\n\nglvis-v1.0.tgz\n\n\nv1.0\n\n\nJul 2010\n\n\n144K\n\n\n18K\n\n\nInitial release", 
+            "text": "Latest Release\n\n\nNew features\n\n/ \nUser documentation\n\n/ \nCode documentation\n\n/ \nSources\n\n\n\n\nDownload glvis-3.1.tgz\n\n\n\n\nPlease use the GitHub \nissue tracker\n\nto report \nbugs\n\nor post \nquestions\n\nor \ncomments\n.\n\n\nAll Releases\n\n\n\n\n\n\n\n\nFilename\n\n\nVersion\n\n\nRelease Date\n\n\nSize\n\n\nSLOC\n\n\nNotes\n\n\n\n\n\n\n\n\n\n\nglvis-3.1.tgz\n\n\nv3.1\n\n\nFeb 2016\n\n\n178K\n\n\n24K\n\n\n\n\n\n\n\n\nglvis-3.0.tgz\n\n\nv3.0\n\n\nJan 2015\n\n\n174K\n\n\n23K\n\n\n\n\n\n\n\n\nglvis-d32411e0e4.tgz\n\n\nN/A\n\n\nJul 2014\n\n\n171K\n\n\n22K\n\n\nDevelopment release\n\n\n\n\n\n\nglvis-d15634d151.tgz\n\n\nN/A\n\n\nJul 2013\n\n\n170K\n\n\n22K\n\n\nDevelopment release\n\n\n\n\n\n\nglvis-2.0.tgz\n\n\nv2.0\n\n\nNov 2011\n\n\n158K\n\n\n20K\n\n\n\n\n\n\n\n\nglvis-v1.2.tgz\n\n\nv1.2\n\n\nApr 2011\n\n\n150K\n\n\n19K\n\n\n\n\n\n\n\n\nglvis-v1.1.tgz\n\n\nv1.1\n\n\nSep 2010\n\n\n148K\n\n\n19K\n\n\n\n\n\n\n\n\nglvis-v1.0.tgz\n\n\nv1.0\n\n\nJul 2010\n\n\n144K\n\n\n18K\n\n\nInitial release", 
             "title": "Download"
         }, 
         {
             "location": "/download/#latest-release", 
-            "text": "New features \n/  User documentation  \n/  Code documentation  \n/  Sources    Download glvis-3.1.tgz   Please use the GitHub  issue tracker \nto report  bugs \nor post  questions \nor  comments .", 
+            "text": "New features \n/  User documentation \n/  Code documentation \n/  Sources   Download glvis-3.1.tgz   Please use the GitHub  issue tracker \nto report  bugs \nor post  questions \nor  comments .", 
             "title": "Latest Release"
         }, 
         {
