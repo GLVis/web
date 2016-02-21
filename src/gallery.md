@@ -61,7 +61,7 @@ This page collects screenshots from various simulations that have used GLVis vis
 
 ----
 
-![](img/gallery/ex4-2.png)
+[![](img/gallery/ex4-2.jpg)](img/gallery/ex4-2-full.png)
 
 *The vector field solution of grad-div problem on a periodic mesh computed with hybridized 3rd order Raviart-Thomas elements. Lines correspond to backward Cartesian displacements (key 'd' in GLVis).*
 
@@ -73,7 +73,7 @@ This page collects screenshots from various simulations that have used GLVis vis
 
 ----
 
-![](img/gallery/NURBS-ball-impact1.png)
+[![](img/gallery/NURBS-ball-impact1.jpg)](img/gallery/NURBS-ball-impact1-full.png)
 
 *The solution of the Laplace problem on a 3D [NURBS](nurbs.md) mesh. Shown are the solution values in a cutting plane and one of the internal boundaries.*
 
