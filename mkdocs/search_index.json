@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "GLVis is a \nlightweight\n tool for \naccurate\n and \nflexible\n finite element visualization.\n\n\nFeatures\n\n\n\n\nAccurate functional representation of many \nfinite elements\n.\n\n\nSupport for \narbitrary high-order\n and \nNURBS\n meshes.\n\n\nServer mode\n accepting multiple socket connections.\n\n\nVisualization of \nparallel\n meshes and solutions.\n\n\n... and \nmany more\n.\n\n\n\n\nGLVis is based on the \nMFEM\n library and is currently used in the \nBLAST\n, \nhypre\n and \nXBraid\n projects. See also our \nGallery\n.\n\n\n\n\n\n\nNews\n\n\n\n\n\n\n\n\nDate\n\n\nMessage\n\n\n\n\n\n\n\n\n\n\nFeb 5, 2016\n\n\nVersion 3.1 \nreleased\n.\n\n\n\n\n\n\nAug 18, 2015\n\n\nMoved to \nGitHub\n and \nglvis.org\n.\n\n\n\n\n\n\nJan 26, 2015\n\n\nVersion 3.0 released.\n\n\n\n\n\n\n\n\nLatest Release\n\n\nNew features\n\n/ \nUser documentation\n\n/ \nCode documentation\n\n/ \nSources\n\n\n\n\nDownload glvis-3.1.tgz\n\n\n\n\nFor older releases see the \ndownload\n section.\n\n\nDocumentation\n\n\nBuilding\n\n/ \nMesh formats\n\n/ \nParallel visualization\n\n/ \nVTK\n\n/ \nNURBS\n\n\nNew users should start with the \noptions and general use\n tutorial.\n\n\nWe also recommend reading the \nMFEM project\n documentation.\n\n\nContact\n\n\nUse the GitHub \nissue tracker\n\nto report \nbugs\n\nor post \nquestions\n\nor \ncomments\n.\nSee\nthe \nAbout\n page for citation information.", 
+            "text": "GLVis is a \nlightweight\n tool for \naccurate\n and \nflexible\n finite element visualization.\n\n\nFeatures\n\n\n\n\nAccurate functional representation of many \nfinite elements\n.\n\n\nSupport for \narbitrary high-order\n and \nNURBS\n meshes.\n\n\nServer mode\n accepting multiple socket connections.\n\n\nVisualization of \nparallel\n meshes and solutions.\n\n\n... and \nmany more\n.\n\n\n\n\nGLVis is based on the \nMFEM\n library and is currently used in the \nBLAST\n, \nhypre\n and \nXBraid\n projects. See also our \nGallery\n.\n\n\n\n\n\n\nNews\n\n\n\n\n\n\n\n\nDate\n\n\nMessage\n\n\n\n\n\n\n\n\n\n\nMar 4, 2016\n\n\nNew LLNL OSS \nBlog\n and \nTwitter\n.\n\n\n\n\n\n\nFeb 5, 2016\n\n\nVersion 3.1 \nreleased\n.\n\n\n\n\n\n\nAug 18, 2015\n\n\nMoved to \nGitHub\n and \nglvis.org\n.\n\n\n\n\n\n\n\n\nLatest Release\n\n\nNew features\n\n/ \nUser documentation\n\n/ \nCode documentation\n\n/ \nSources\n\n\n\n\nDownload glvis-3.1.tgz\n\n\n\n\nFor older releases see the \ndownload\n section.\n\n\nDocumentation\n\n\nBuilding\n\n/ \nMesh formats\n\n/ \nParallel visualization\n\n/ \nVTK\n\n/ \nNURBS\n\n\nNew users should start with the \noptions and general use\n tutorial.\n\n\nWe also recommend reading the \nMFEM project\n documentation.\n\n\nContact\n\n\nUse the GitHub \nissue tracker\n\nto report \nbugs\n\nor post \nquestions\n\nor \ncomments\n.\nSee\nthe \nAbout\n page for citation information.", 
             "title": "Home"
         }, 
         {
@@ -12,7 +12,7 @@
         }, 
         {
             "location": "/#news", 
-            "text": "Date  Message      Feb 5, 2016  Version 3.1  released .    Aug 18, 2015  Moved to  GitHub  and  glvis.org .    Jan 26, 2015  Version 3.0 released.", 
+            "text": "Date  Message      Mar 4, 2016  New LLNL OSS  Blog  and  Twitter .    Feb 5, 2016  Version 3.1  released .    Aug 18, 2015  Moved to  GitHub  and  glvis.org .", 
             "title": "News"
         }, 
         {
