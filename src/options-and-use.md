@@ -85,6 +85,8 @@ All Options:
         Set the window height.
    -wt <string>, --window-title <string>, current value: (default)
         Set the window title.
+   -c <string>, --plot-caption <string>, current value: (none)
+	Set the plot caption (visible when colorbar is visible).
    -fn <string>, --font <string>, current value: (default)
         Set the font: <font-name>[-<font-size>].
    -ms <int>, --multisample <int>, current value: 4
