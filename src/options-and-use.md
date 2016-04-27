@@ -424,6 +424,6 @@ to see the animation):
 ![](img/quad-vec2.gif)
 
 More examples of animations produced with GLVis scripts can be found at the
-[BLAST website](https://computation.llnl.gov/casc/blast), e.g.,
-[here](https://computation.llnl.gov/casc/blast/triple-pt/triple-pt-xy.gif) and
-[here](https://computation.llnl.gov/casc/blast/triple-pt/triple-pt-rz.gif).
+[BLAST website](http://www.llnl.gov/casc/blast), e.g.,
+[here](http://computation.llnl.gov/sites/default/files/public/triple-pt-xy.gif) and
+[here](http://computation.llnl.gov/sites/default/files/public/triple-pt-rz.gif).
