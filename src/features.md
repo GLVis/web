@@ -40,7 +40,8 @@ When started without any options, GLVis [establishes a server](options-and-use.m
   - simultaneous visualization of [multiple fields/meshes](http://mfem.org/examples?darcy) in separate GLVis windows,
   - [persistent](http://mfem.org/examples?rk) visualization of time-evolving fields,
   - local visualization of [parallel](parallel-visualization.md) meshes and solutions sent to the server by separate socket connections from each core of a remote parallel machine,
-  - saving and displaying of [socket stream data](options-and-use.md#server-mode).
+  - saving and displaying of [socket stream data](options-and-use.md#server-mode),
+  - support for [secure sockets](building.md#using-secure-sockets) using GnuTLS.
 
 GLVis can also run a [batch sequence](options-and-use.md#glvis-scripts) of commands (GLVis scripts), which enable precise control of particular visualization scenes, and can be useful for making animations.
 

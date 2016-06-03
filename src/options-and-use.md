@@ -75,8 +75,10 @@ All Options:
         Save the mesh coloring generated when opening only a mesh.
    -p <int>, --listen-port <int>, current value: 19916
         Specify the port number on which to accept connections.
+   -sec, --secure-sockets, -no-sec, --standard-sockets, current option: --standard-sockets
+        Enable or disable GnuTLS secure sockets.
    -mac, --save-stream, -no-mac, --dont-save-stream, current option: --dont-save-stream
-        In server mode, save incomming data to a file before visualization.
+        In server mode, save incoming data to a file before visualization.
    -saved <string>, --saved-stream <string>, current value: (none)
         Load a GLVis stream saved to a file.
    -ww <int>, --window-width <int>, current value: 400
@@ -86,7 +88,7 @@ All Options:
    -wt <string>, --window-title <string>, current value: (default)
         Set the window title.
    -c <string>, --plot-caption <string>, current value: (none)
-	Set the plot caption (visible when colorbar is visible).
+        Set the plot caption (visible when colorbar is visible).
    -fn <string>, --font <string>, current value: (default)
         Set the font: <font-name>[-<font-size>].
    -ms <int>, --multisample <int>, current value: 4
@@ -111,7 +113,7 @@ application without any options:
 glvis
 ```
 By default, the server is established on
-[port 19916](https://github.com/glvis/glvis/blob/master/glvis.cpp#L1105), but
+[port 19916](https://github.com/glvis/glvis/blob/master/glvis.cpp#L1137), but
 this can be changed with the `-p` option.
 
 On legacy Mac machines with OS X Leopard, the server needs to be started with
@@ -125,7 +127,7 @@ without an immediate exec()](http://developer.apple.com/library/mac/#technotes/t
 A side effect of the `-mac` option is that all socket streams will be saved in
 incrementally named files `glvis-saved.0001`, `glvis-saved.0002`, and so on.
 These socket files consist of a
-[data type identifier](https://github.com/glvis/glvis/blob/master/glvis.cpp#L108)
+[data type identifier](https://github.com/glvis/glvis/blob/master/glvis.cpp#L111)
 followed by a mesh and a finite element function. For example:
 ```text
 fem2d_gf_data
@@ -407,7 +409,7 @@ configuration) with
 to save a picture in the specified format. There are a number of additional
 script commands available, the complete list of which can be found (and
 extended) by examining the
-[glvis.cpp source code](https://github.com/glvis/glvis/blob/master/glvis.cpp#L633).
+[glvis.cpp source code](https://github.com/glvis/glvis/blob/master/glvis.cpp#L636).
 
 Executing
 ```sh
