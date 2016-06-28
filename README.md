@@ -1,6 +1,6 @@
 # GLVis / web
 
-This repo contains the GLVis website [MkDocs](mkdocs.org) sources. 
+This repo contains the GLVis website [MkDocs](mkdocs.org) sources.
 
 To make changes to the website:
 

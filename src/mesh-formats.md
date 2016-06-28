@@ -10,6 +10,8 @@ GLVis supports a number of mesh formats, including:
 
   - The [MFEM](http://mfem.org) mesh v1.0 format, which can describe very general meshes based on any finite element grid function supported by MFEM, including [NURBS meshes](nurbs.md).
   - The [VTK](http://www.vtk.org/) unstructured mesh format, for triangular, quadrilateral, tetrahedral and hexahedral meshes. See the [curvilinear VTK tutorial](curvilinear-vtk-meshes.md) for more details. Some examples of VTK meshes can be found in MFEM's [data directory](https://github.com/mfem/mfem/blob/master/data).
+  - The [Gmsh](http://gmsh.info/) ASCII and binary formats for 2D and 3D meshes.
+  - The [CUBIT](https://cubit.sandia.gov/) meshes through the Genesis (NetCDF) binary format.
   - The [NETGEN](http://sourceforge.net/projects/netgen-mesher/) triangular and tetrahedral mesh formats.
   - The [TrueGrid](http://www.truegrid.com/) hexahedral mesh format.
 
