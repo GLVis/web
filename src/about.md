@@ -7,7 +7,7 @@ GLVis originates from previous research effort in the (unreleased) [AggieFEM/aFE
 - [Robert Anderson](http://people.llnl.gov/anderson110)
 - Ido Akkerman
 - [Thomas Brunner](http://people.llnl.gov/brunner6)
-- [Jakub Červený](http://people.llnl.gov/cerveny1)
+- [Jakub Červený](https://www.linkedin.com/in/jcerveny)
 - [Veselin Dobrev](http://people.llnl.gov/dobrev1)
 - Truman Ellis
 - [Aaron Fisher](http://people.llnl.gov/fisher47)
