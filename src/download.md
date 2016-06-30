@@ -19,7 +19,7 @@ or [comments](https://github.com/glvis/glvis/issues/new?labels=comment).
 
   **Filename** | **Version** | **Release Date** | **Size** | **[SLOC](http://cloc.sourceforge.net)** | **Notes**
   ------------ | ----------- | ---------------- | -------- | --------------------------------------- | ---------
-  [glvis-3.2.tgz](http://goo.gl/hzupg1) | v3.2 | Jun 2016 | 182M | 25K |  |
+  [glvis-3.2.tgz](http://goo.gl/hzupg1) | v3.2 | Jun 2016 | 182K | 25K |  |
   [glvis-3.1.tgz](http://goo.gl/gQZuu9) | v3.1 | Feb 2016 | 178K | 24K |
   [glvis-3.0.tgz](http://goo.gl/HcdvqY) | v3.0 | Jan 2015 | 174K | 23K |
   [glvis-d32411e0e4.tgz](http://goo.gl/XlXptO) | N/A | Jul 2014 | 171K | 22K | Development release
