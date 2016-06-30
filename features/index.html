@@ -176,6 +176,7 @@ GLVis uses OpenGL with interactive refinement to accurately represent curved hig
 <li>triangular, quadrilateral, tetrahedral and hexahedral meshes,</li>
 <li>general <a href="../mesh-formats/">curvilinear</a> and <a href="../nurbs/">NURBS</a> meshes,</li>
 <li>input in unstructured <a href="../curvilinear-vtk-meshes/">VTK mesh format</a>,</li>
+<li>support for Gmsh, CUBIT, NETGEN and TrueGrid meshes,</li>
 <li>arbitrary high-order, scalar and vector finite element and NURBS solutions,</li>
 <li>accurate cutting planes and level lines/surfaces,</li>
 <li>visualization of parallel meshes and solutions.</li>
@@ -200,7 +201,8 @@ When started without any options, GLVis <a href="../options-and-use/#server-mode
 <li>simultaneous visualization of <a href="http://mfem.org/examples?darcy">multiple fields/meshes</a> in separate GLVis windows,</li>
 <li><a href="http://mfem.org/examples?rk">persistent</a> visualization of time-evolving fields,</li>
 <li>local visualization of <a href="../parallel-visualization/">parallel</a> meshes and solutions sent to the server by separate socket connections from each core of a remote parallel machine,</li>
-<li>saving and displaying of <a href="../options-and-use/#server-mode">socket stream data</a>.</li>
+<li>saving and displaying of <a href="../options-and-use/#server-mode">socket stream data</a>,</li>
+<li>support for <a href="../building/#using-secure-sockets">secure sockets</a> using GnuTLS.</li>
 </ul>
 <p>GLVis can also run a <a href="../options-and-use/#glvis-scripts">batch sequence</a> of commands (GLVis scripts), which enable precise control of particular visualization scenes, and can be useful for making animations.</p>
 <h2 id="open-source">Open Source</h2>
