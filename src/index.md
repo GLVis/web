@@ -22,7 +22,7 @@ GLVis is based on the [MFEM](http://mfem.org) library and is currently used in t
 
 Date         | Message
 ------------ | -----------------------------------------------------------------
-Jun 29, 2016 | Version 3.2 [released](https://raw.githubusercontent.com/glvis/glvis/master/CHANGELOG).
+Jun 30, 2016 | Version 3.2 [released](https://raw.githubusercontent.com/glvis/glvis/master/CHANGELOG).
 Mar 4, 2016  | New LLNL OSS [Blog](http://software.llnl.gov/news) and [Twitter](https://twitter.com/LLNL_OpenSource).
 Feb 5, 2016  | Version 3.1 released.
 
