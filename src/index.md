@@ -39,8 +39,8 @@ Feb 5, 2016  | Version 3.1 released.
 / [Sources](https://github.com/glvis/glvis)
 
 [<button type="button" class="btn btn-success">
-**Download glvis-3.1.tgz**
-</button>](http://goo.gl/gQZuu9)
+**Download glvis-3.2.tgz**
+</button>](http://goo.gl/hzupg1)
 
 For older releases see the [download](download.md) section.
 
