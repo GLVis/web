@@ -6,8 +6,8 @@
 / [Sources](https://github.com/glvis/glvis)
 
 [<button type="button" class="btn btn-success">
-**Download glvis-3.2.tgz**
-</button>](http://goo.gl/hzupg1)
+**Download glvis-3.3.tgz**
+</button>](http://goo.gl/C0Oadw)
 
 Please use the GitHub [issue tracker](https://github.com/glvis/glvis/issues)
 to report [bugs](https://github.com/glvis/glvis/issues/new?labels=bug)
@@ -19,6 +19,7 @@ or [comments](https://github.com/glvis/glvis/issues/new?labels=comment).
 
   **Filename** | **Version** | **Release Date** | **Size** | **[SLOC](http://cloc.sourceforge.net)** | **Notes**
   ------------ | ----------- | ---------------- | -------- | --------------------------------------- | ---------
+  [glvis-3.3.tgz](http://goo.gl/C0Oadw) | v3.3 | Jan 2017 | XXXK | XXK |  |
   [glvis-3.2.tgz](http://goo.gl/hzupg1) | v3.2 | Jun 2016 | 182K | 25K |  |
   [glvis-3.1.tgz](http://goo.gl/gQZuu9) | v3.1 | Feb 2016 | 178K | 24K |
   [glvis-3.0.tgz](http://goo.gl/HcdvqY) | v3.0 | Jan 2015 | 174K | 23K |

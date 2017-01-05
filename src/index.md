@@ -22,11 +22,13 @@ GLVis is based on the [MFEM](http://mfem.org) library and is currently used in t
 
 Date         | Message
 ------------ | -----------------------------------------------------------------
-Jun 30, 2016 | Version 3.2 [released](https://raw.githubusercontent.com/glvis/glvis/master/CHANGELOG).
-Mar 4, 2016  | New LLNL OSS [Blog](http://software.llnl.gov/news) and [Twitter](https://twitter.com/LLNL_OpenSource).
-Feb 5, 2016  | Version 3.1 released.
+Jan XX, 2017 | Version 3.3 [released](https://raw.githubusercontent.com/glvis/glvis/master/CHANGELOG).
+Dec 15, 2016 | [Postdoc position](http://careers-ext.llnl.gov/jobs/6264056-post-dr-research-staff-1) for [exascale computing](https://exascaleproject.org/2016/11/11/ecp_co-design_centers) with MFEM.
+Jun 30, 2016 | Version 3.2 released.
 
 [comment]: # (Mar 16, 2016 | Postdoc position [available](http://careers-ext.llnl.gov/jobs/5242192-postdoctoral-research-staff-member) on the [MFEM](http://mfem.org) team.)
+[comment]: # (Mar 4, 2016  | New LLNL OSS [Blog](http://software.llnl.gov/news) and [Twitter](https://twitter.com/LLNL_OpenSource).)
+[comment]: # (Feb 5, 2016  | Version 3.1 released.)
 [comment]: # (Aug 18, 2015 | Moved to [GitHub](https://github.com/glvis/glvis) and [glvis.org](http://glvis.org).)
 [comment]: # (Jan 26, 2015 | Version 3.0 released.)
 
@@ -39,8 +41,8 @@ Feb 5, 2016  | Version 3.1 released.
 / [Sources](https://github.com/glvis/glvis)
 
 [<button type="button" class="btn btn-success">
-**Download glvis-3.2.tgz**
-</button>](http://goo.gl/hzupg1)
+**Download glvis-3.3.tgz**
+</button>](http://goo.gl/C0Oadw)
 
 For older releases see the [download](download.md) section.
 
