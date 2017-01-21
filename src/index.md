@@ -13,7 +13,8 @@ GLVis is a _lightweight_ tool for _accurate_ and _flexible_ finite element visua
  * Visualization of [parallel](parallel-visualization.md) meshes and solutions.
  * ... and [many more](features.md).
 
-GLVis is based on the [MFEM](http://mfem.org) library and is currently used in the [BLAST](http://www.llnl.gov/casc/blast), _[hypre](http://www.llnl.gov/casc/hypre)_ and [XBraid](http://www.llnl.gov/casc/xbraid) projects. See also our [Gallery](gallery.md).
+GLVis is based on the [MFEM](http://mfem.org) library and is currently used in the [BLAST](http://www.llnl.gov/casc/blast), _[hypre](http://www.llnl.gov/casc/hypre)_ and [XBraid](http://www.llnl.gov/casc/xbraid) projects. See also our [Gallery](gallery.md) and
+project [news updates](news.md).
 
 </div><div class="col-md-6 news-table" markdown="1">
 
@@ -36,9 +37,9 @@ Jun 30, 2016 | Version 3.2 released.
 ## Latest Release
 
 [New features](https://raw.githubusercontent.com/glvis/glvis/master/CHANGELOG)
-/ [User documentation](https://raw.githubusercontent.com/glvis/glvis/master/README)
-/ [Code documentation](http://glvis.github.io/doxygen/html/index.html)
-/ [Sources](https://github.com/glvis/glvis)
+┊ [User documentation](https://raw.githubusercontent.com/glvis/glvis/master/README)
+┊ [Code documentation](http://glvis.github.io/doxygen/html/index.html)
+┊ [Sources](https://github.com/glvis/glvis)
 
 [<button type="button" class="btn btn-success">
 **Download glvis-3.3.tgz**
@@ -50,10 +51,10 @@ For older releases see the [download](download.md) section.
 ## Documentation
 
 [Building](building.md)
-/ [Mesh formats](mesh-formats.md)
-/ [Parallel visualization](parallel-visualization.md)
-/ [VTK](curvilinear-vtk-meshes.md)
-/ [NURBS](nurbs.md)
+┊ [Mesh formats](mesh-formats.md)
+┊ [Parallel visualization](parallel-visualization.md)
+┊ [VTK](curvilinear-vtk-meshes.md)
+┊ [NURBS](nurbs.md)
 
 New users should start with the [options and general use](options-and-use.md) tutorial.
 
