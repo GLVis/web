@@ -23,7 +23,7 @@ project [news updates](news.md).
 
 Date         | Message
 ------------ | -----------------------------------------------------------------
-Jan XX, 2017 | Version 3.3 [released](https://raw.githubusercontent.com/glvis/glvis/master/CHANGELOG).
+Jan 28, 2017 | Version 3.3 [released](https://raw.githubusercontent.com/glvis/glvis/master/CHANGELOG).
 Dec 15, 2016 | [Postdoc position](http://careers-ext.llnl.gov/jobs/6264056-post-dr-research-staff-1) for [exascale computing](https://exascaleproject.org/2016/11/11/ecp_co-design_centers) with MFEM.
 Jun 30, 2016 | Version 3.2 released.
 
