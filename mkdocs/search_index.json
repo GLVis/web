@@ -217,12 +217,12 @@
         }, 
         {
             "location": "/about/", 
-            "text": "About GLVis\n\n\nGLVis originates from previous research effort in the (unreleased) \nAggieFEM/aFEM\n project.\n\n\nPlease cite with:\n\n\n@misc{glvis-tool,\n  title = {{GLVis}: Accurate finite element visualization},\n  howpublished = {\\url{glvis.org}}\n}\n\n\n\n\nContributors\n\n\n\n\nRobert Anderson\n\n\nIdo Akkerman\n\n\nThomas Brunner\n\n\nJakub \u010cerven\u00fd\n\n\nVeselin Dobrev\n\n\nTruman Ellis\n\n\nAaron Fisher\n\n\nTzanio Kolev\n \n Project Leader\n\n\nIlya Lashuk\n\n\nRobert Rieben\n\n\nJoachim Sch\u00f6berl\n\n\nMark Stowell\n\n\nVladimir Tomov\n\n\nStanimire Tomov\n\n\nUmberto Villa\n\n\n\n\nLicense\n\n\n\n\nGNU Lesser GPL v2.1\n\n\n\n\n\n\nThis work performed under the auspices of the U.S. Department of Energy\nby Lawrence Livermore Laboratory under Contract DE-AC52-07NA27344.\n\n\nSoftware release number: LLNL-CODE-443271\n\n\n\n\nWebsite built with \nMkDocs\n, \nBootstrap\n\nand \nBootswatch\n. Hosted on \nGitHub\n.", 
+            "text": "About GLVis\n\n\nGLVis originates from previous research effort in the (unreleased) \nAggieFEM/aFEM\n project.\n\n\nPlease cite with:\n\n\n@misc{glvis-tool,\n  title = {{GLVis}: OpenGL Finite Element Visualization Tool},\n  howpublished = {\\url{glvis.org}},\n  doi = {10.11578/dc.20171025.1249}\n}\n\n\n\n\nContributors\n\n\n\n\nRobert Anderson\n\n\nIdo Akkerman\n\n\nThomas Brunner\n\n\nJakub \u010cerven\u00fd\n\n\nVeselin Dobrev\n\n\nTruman Ellis\n\n\nAaron Fisher\n\n\nTzanio Kolev\n \n Project Leader\n\n\nIlya Lashuk\n\n\nRobert Rieben\n\n\nJoachim Sch\u00f6berl\n\n\nMark Stowell\n\n\nVladimir Tomov\n\n\nStanimire Tomov\n\n\nUmberto Villa\n\n\n\n\nLicense\n\n\n\n\nGNU Lesser GPL v2.1\n\n\n\n\n\n\nThis work performed under the auspices of the U.S. Department of Energy\nby Lawrence Livermore Laboratory under Contract DE-AC52-07NA27344.\n\n\nSoftware release number: LLNL-CODE-443271.\n\n\nDOI: \n10.11578/dc.20171025.1249\n.\n\n\n\n\nWebsite built with \nMkDocs\n, \nBootstrap\n\nand \nBootswatch\n. Hosted on \nGitHub\n.", 
             "title": "About"
         }, 
         {
             "location": "/about/#about-glvis", 
-            "text": "GLVis originates from previous research effort in the (unreleased)  AggieFEM/aFEM  project.  Please cite with:  @misc{glvis-tool,\n  title = {{GLVis}: Accurate finite element visualization},\n  howpublished = {\\url{glvis.org}}\n}", 
+            "text": "GLVis originates from previous research effort in the (unreleased)  AggieFEM/aFEM  project.  Please cite with:  @misc{glvis-tool,\n  title = {{GLVis}: OpenGL Finite Element Visualization Tool},\n  howpublished = {\\url{glvis.org}},\n  doi = {10.11578/dc.20171025.1249}\n}", 
             "title": "About GLVis"
         }, 
         {
@@ -232,7 +232,7 @@
         }, 
         {
             "location": "/about/#license", 
-            "text": "GNU Lesser GPL v2.1    This work performed under the auspices of the U.S. Department of Energy\nby Lawrence Livermore Laboratory under Contract DE-AC52-07NA27344.  Software release number: LLNL-CODE-443271   Website built with  MkDocs ,  Bootstrap \nand  Bootswatch . Hosted on  GitHub .", 
+            "text": "GNU Lesser GPL v2.1    This work performed under the auspices of the U.S. Department of Energy\nby Lawrence Livermore Laboratory under Contract DE-AC52-07NA27344.  Software release number: LLNL-CODE-443271.  DOI:  10.11578/dc.20171025.1249 .   Website built with  MkDocs ,  Bootstrap \nand  Bootswatch . Hosted on  GitHub .", 
             "title": "License"
         }, 
         {
