@@ -44,7 +44,7 @@ Jun 30, 2016 | Version 3.2 [released](https://github.com/glvis/glvis/blob/v3.2/C
 
 [<button type="button" class="btn btn-success">
 **Download glvis-3.4.tgz**
-</button>](http://goo.gl/A2wFVQ)
+</button>](https://bit.ly/glvis-3-4)
 
 For older releases see the [download](download.md) section.
 
