@@ -15,7 +15,7 @@ This page collects screenshots from various simulations that have used GLVis vis
 
 ![](img/gallery/triple-pt-rz-2-web.png)
 
-*Axisymmetric problem with revolved 2D mesh and solution, plus [coloring grid functions](options-and-use.md#visualizing-functions) emphasizing mesh elements.*
+*Axisymmetric problem with revolved 2D mesh and solution, plus [coloring grid functions](options-and-use.md#visualizing-functions) emphasizing mesh elements. See also the [video](https://youtu.be/SxKHWlKIIOs).*
 
 ----
 
