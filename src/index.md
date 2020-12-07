@@ -23,11 +23,12 @@ project [news updates](news.md).
 
 Date         | Message
 ------------ | -----------------------------------------------------------------
+Dec 11, 2020 | Version 4.0 [released](https://github.com/glvis/glvis/blob/v4.0/CHANGELOG).
 May 29, 2018 | Version 3.4 [released](https://github.com/glvis/glvis/blob/v3.4/CHANGELOG).
 Jan 28, 2017 | Version 3.3 [released](https://github.com/glvis/glvis/blob/v3.3/CHANGELOG).
-Jun 30, 2016 | Version 3.2 [released](https://github.com/glvis/glvis/blob/v3.2/CHANGELOG).
 
 [comment]: # (Dec 15, 2016 | [Postdoc position](http://careers-ext.llnl.gov/jobs/6264056-post-dr-research-staff-1) for [exascale computing](https://exascaleproject.org/2016/11/11/ecp_co-design_centers) with MFEM.)
+[comment]: # (Jun 30, 2016 | Version 3.2 [released](https://github.com/glvis/glvis/blob/v3.2/CHANGELOG).)
 [comment]: # (Mar 16, 2016 | Postdoc position [available](http://careers-ext.llnl.gov/jobs/5242192-postdoctoral-research-staff-member) on the [MFEM](http://mfem.org) team.)
 [comment]: # (Mar 4, 2016  | New LLNL OSS [Blog](http://software.llnl.gov/news) and [Twitter](https://twitter.com/LLNL_OpenSource).)
 [comment]: # (Feb 5, 2016  | Version 3.1 released.)
@@ -43,8 +44,8 @@ Jun 30, 2016 | Version 3.2 [released](https://github.com/glvis/glvis/blob/v3.2/C
 ┊ [Sources](https://github.com/glvis/glvis)
 
 [<button type="button" class="btn btn-success">
-**Download glvis-3.4.tgz**
-</button>](https://bit.ly/glvis-3-4)
+**Download glvis-4.0.tgz**
+</button>](https://bit.ly/glvis-4-0)
 
 For older releases see the [download](download.md) section.
 
