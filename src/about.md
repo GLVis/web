@@ -39,8 +39,7 @@ Please cite with:
 
 ## License
 
-- [GNU Lesser GPL v2.1](http://www.gnu.org/licenses/lgpl-2.1.html)
-
+- [BSD](https://github.com/glvis/glvis/blob/master/LICENSE)
 
 <br>
 

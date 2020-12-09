@@ -38,8 +38,8 @@ Jan 28, 2017 | Version 3.3 [released](https://github.com/glvis/glvis/blob/v3.3/C
 
 ## Latest Release
 
-[New features](https://raw.githubusercontent.com/glvis/glvis/master/CHANGELOG)
-┊ [User documentation](https://raw.githubusercontent.com/glvis/glvis/master/README)
+[New features](https://github.com/glvis/glvis/blob/v4.0/CHANGELOG)
+┊ [User documentation](https://github.com/glvis/glvis/blob/v4.0/README)
 ┊ [Code documentation](http://glvis.github.io/doxygen/html/index.html)
 ┊ [Sources](https://github.com/glvis/glvis)
 
