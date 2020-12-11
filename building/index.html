@@ -55,6 +55,7 @@
             
             
                 <li >
+                    <!-- Replace "nav_item.url|url" with "nav_item.url" for older mkdocs (before 1.0) -->
                     <a href="../features/">Features</a>
                 </li>
             
@@ -118,6 +119,7 @@
             
             
                 <li >
+                    <!-- Replace "nav_item.url|url" with "nav_item.url" for older mkdocs (before 1.0) -->
                     <a href="../gallery/">Gallery</a>
                 </li>
             
@@ -126,6 +128,7 @@
             
             
                 <li >
+                    <!-- Replace "nav_item.url|url" with "nav_item.url" for older mkdocs (before 1.0) -->
                     <a href="../download/">Download</a>
                 </li>
             
@@ -158,6 +161,8 @@
     
         <li class="main active"><a href="#building-glvis">Building GLVis</a></li>
         
+            <li><a href="#dependencies">Dependencies</a></li>
+        
             <li><a href="#compilation">Compilation</a></li>
         
             <li><a href="#testing-and-rebuilding">Testing and rebuilding</a></li>
@@ -171,42 +176,57 @@
 
 <h1 id="building-glvis">Building GLVis</h1>
 <p>A simple tutorial how to build and run GLVis together with MFEM. For more details, see the <a href="https://raw.githubusercontent.com/glvis/glvis/master/INSTALL">INSTALL</a> file.</p>
+<h2 id="dependencies">Dependencies</h2>
+<p>Starting with version 4.0, GLVis requires the following dependencies in order to build and run: <a href="https://www.libsdl.org/download-2.0.php">SDL2</a>, <a href="http://glew.sourceforge.net/">GLEW</a>, <a href="https://github.com/g-truc/glm">GLM</a>, <a href="https://www.freetype.org/">Freetype</a>, and <a href="https://www.freedesktop.org/wiki/Software/fontconfig/">Fontconfig</a>. Optional dependencies include libpng and/or libtiff for taking screenshots.</p>
+<p>Most of these dependencies can be installed through your system's package manager:</p>
+<h3 id="ubuntudebian-apt-based">Ubuntu/Debian (apt-based)</h3>
+<pre><code class="sh">apt-get install libfontconfig1-dev libfreetype-dev libsdl2-dev libglew-dev libglm-dev libpng-dev
+</code></pre>
+
+<h3 id="fedorarhel">Fedora/RHEL</h3>
+<pre><code class="sh">dnf install fontconfig-devel freetype-devel SDL2-devel glew-devel glm-devel libpng-devel
+</code></pre>
+
+<h3 id="mac-os-x-homebrew">Mac OS X (Homebrew)</h3>
+<pre><code class="sh">brew install fontconfig freetype sdl2 glew glm libpng
+</code></pre>
+
 <h2 id="compilation">Compilation</h2>
-<p>Download MFEM and GLVis (below we assume that we are working with versions 3.0)</p>
+<p>Download MFEM and GLVis (below we assume that we are working with version 4.0)</p>
 <ul>
 <li><a href="http://mfem.org">http://mfem.org</a></li>
 <li><a href="http://glvis.org">http://glvis.org</a></li>
 </ul>
 <p>Put everything in the same directory:</p>
 <pre><code class="sh">~&gt; ls
-glvis-3.0.tgz   mfem-3.0.tgz
+glvis-4.0.tgz   mfem-4.2.tgz
 </code></pre>
 
 <p>Build the serial version of MFEM:</p>
-<pre><code class="sh">~&gt; tar -zxvf mfem-3.0.tgz
-~&gt; cd mfem-3.0
-~/mfem-3.0&gt; make serial -j
+<pre><code class="sh">~&gt; tar -zxvf mfem-4.2.tgz
+~&gt; cd mfem-4.2
+~/mfem-4.2&gt; make serial -j
 </code></pre>
 
 <p>Build GLVis:</p>
-<pre><code class="sh">~&gt; tar -zxvf glvis-3.0.tgz
-~&gt; cd glvis-3.0
-~/glvis-3.0&gt; make MFEM_DIR=../mfem-3.0 -j
+<pre><code class="sh">~&gt; tar -zxvf glvis-4.0.tgz
+~&gt; cd glvis-4.0
+~/glvis-4.0&gt; make MFEM_DIR=../mfem-4.2 -j
 </code></pre>
 
-<p>That's it! The <code>glvis</code> executable can be found in the <code>glvis-3.0</code> directory.</p>
+<p>That's it! The <code>glvis</code> executable can be found in the <code>glvis-4.0</code> directory.</p>
 <h2 id="testing-and-rebuilding">Testing and rebuilding</h2>
 <p>To test the build, visualize a mesh with</p>
-<pre><code class="sh">~/glvis-3.0&gt; ./glvis -m ../mfem-3.0/data/escher.mesh
+<pre><code class="sh">~/glvis-4.0&gt; ./glvis -m ../mfem-4.2/data/escher.mesh
 </code></pre>
 
 <p>To start a GLVis server, open a <strong>new terminal</strong> and start glvis without arguments</p>
-<pre><code class="sh">~/glvis-3.0&gt; ./glvis
+<pre><code class="sh">~/glvis-4.0&gt; ./glvis
 </code></pre>
 
 <p>To rebuild GLVis after changes in MFEM (e.g. if MFEM has rebuild in parallel), do:</p>
-<pre><code class="sh">~/glvis-3.0&gt; make clean
-~/glvis-3.0&gt; make MFEM_DIR=../mfem-3.0 -j
+<pre><code class="sh">~/glvis-4.0&gt; make clean
+~/glvis-4.0&gt; make MFEM_DIR=../mfem-4.2 -j
 </code></pre>
 
 <h2 id="using-secure-sockets">Using secure sockets</h2>
@@ -260,6 +280,8 @@ command line options.</p></div>
     
         <li class="main active"><a href="#building-glvis">Building GLVis</a></li>
         
+            <li><a href="#dependencies">Dependencies</a></li>
+        
             <li><a href="#compilation">Compilation</a></li>
         
             <li><a href="#testing-and-rebuilding">Testing and rebuilding</a></li>
@@ -288,7 +310,6 @@ command line options.</p></div>
         <script src="../js/highlight.pack.js"></script>
         <script src="../js/base.js"></script>
         <script src="../js/retina.min.js"></script>
-        <script src="../search/require.js"></script>
-        <script src="../search/search.js"></script>
+        <script src="../search/main.js"></script>
     </body>
 </html>

@@ -55,6 +55,7 @@
             
             
                 <li >
+                    <!-- Replace "nav_item.url|url" with "nav_item.url" for older mkdocs (before 1.0) -->
                     <a href="../features/">Features</a>
                 </li>
             
@@ -118,6 +119,7 @@
             
             
                 <li >
+                    <!-- Replace "nav_item.url|url" with "nav_item.url" for older mkdocs (before 1.0) -->
                     <a href="../gallery/">Gallery</a>
                 </li>
             
@@ -126,6 +128,7 @@
             
             
                 <li >
+                    <!-- Replace "nav_item.url|url" with "nav_item.url" for older mkdocs (before 1.0) -->
                     <a href="../download/">Download</a>
                 </li>
             
@@ -242,8 +245,8 @@ All Options:
         Attempt to fix the orientations of inverted elements.
    -a, --real-attributes, -ap, --processor-attributes, current option: --processor-attributes
         When opening a parallel mesh, use the real mesh attributes or replace them with the processor rank.
-   -grt &lt;int&gt;, --geometry-refiner-type &lt;int&gt;, current value: 0
-        Set of points to use when refining geometry: 0 = uniform, 1 = Gauss-Lobatto.
+   -grt &lt;int&gt;, --geometry-refiner-type &lt;int&gt;, current value: 3
+        Set of points to use when refining geometry: 3 = uniform, 1 = Gauss-Lobatto, (see mfem::Quadrature1D).
    -sc, --save-coloring, -no-sc, --dont-save-coloring, current option: --dont-save-coloring
         Save the mesh coloring generated when opening only a mesh.
    -p &lt;int&gt;, --listen-port &lt;int&gt;, current value: 19916
@@ -263,13 +266,15 @@ All Options:
    -c &lt;string&gt;, --plot-caption &lt;string&gt;, current value: (none)
         Set the plot caption (visible when colorbar is visible).
    -fn &lt;string&gt;, --font &lt;string&gt;, current value: (default)
-        Set the font: &lt;font-name&gt;[-&lt;font-size&gt;].
+        Set the font: [&lt;font-name&gt;[:style=&lt;style&gt;]][-&lt;font-size&gt;], e.g. -fn &quot;Helvetica:style=Bold-16&quot;.
    -ms &lt;int&gt;, --multisample &lt;int&gt;, current value: 4
         Set the multisampling mode (toggled with the 'A' key).
    -lw &lt;double&gt;, --line-width &lt;double&gt;, current value: 1
         Set the line width (multisampling off).
-   -mslw &lt;double&gt;, --multisample-line-width &lt;double&gt;, current value: 1.4
+   -mslw &lt;double&gt;, --multisample-line-width &lt;double&gt;, current value: 1
         Set the line width (multisampling on).
+   -oldgl, --legacy-gl, -anygl, --any-gl, current option: --any-gl
+        Only try to create a legacy OpenGL (&lt; 2.1) context.
 </code></pre>
 
 <h2 id="server-mode">Server mode</h2>
@@ -612,7 +617,6 @@ to see the animation):</p>
         <script src="../js/highlight.pack.js"></script>
         <script src="../js/base.js"></script>
         <script src="../js/retina.min.js"></script>
-        <script src="../search/require.js"></script>
-        <script src="../search/search.js"></script>
+        <script src="../search/main.js"></script>
     </body>
 </html>
