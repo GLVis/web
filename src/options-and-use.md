@@ -69,8 +69,8 @@ All Options:
         Attempt to fix the orientations of inverted elements.
    -a, --real-attributes, -ap, --processor-attributes, current option: --processor-attributes
         When opening a parallel mesh, use the real mesh attributes or replace them with the processor rank.
-   -grt <int>, --geometry-refiner-type <int>, current value: 0
-        Set of points to use when refining geometry: 0 = uniform, 1 = Gauss-Lobatto.
+   -grt <int>, --geometry-refiner-type <int>, current value: 3
+        Set of points to use when refining geometry: 3 = uniform, 1 = Gauss-Lobatto, (see mfem::Quadrature1D).
    -sc, --save-coloring, -no-sc, --dont-save-coloring, current option: --dont-save-coloring
         Save the mesh coloring generated when opening only a mesh.
    -p <int>, --listen-port <int>, current value: 19916
@@ -90,13 +90,15 @@ All Options:
    -c <string>, --plot-caption <string>, current value: (none)
         Set the plot caption (visible when colorbar is visible).
    -fn <string>, --font <string>, current value: (default)
-        Set the font: <font-name>[-<font-size>].
+        Set the font: [<font-name>[:style=<style>]][-<font-size>], e.g. -fn "Helvetica:style=Bold-16".
    -ms <int>, --multisample <int>, current value: 4
         Set the multisampling mode (toggled with the 'A' key).
    -lw <double>, --line-width <double>, current value: 1
         Set the line width (multisampling off).
-   -mslw <double>, --multisample-line-width <double>, current value: 1.4
+   -mslw <double>, --multisample-line-width <double>, current value: 1
         Set the line width (multisampling on).
+   -oldgl, --legacy-gl, -anygl, --any-gl, current option: --any-gl
+        Only try to create a legacy OpenGL (< 2.1) context.
 ```
 
 ## Server mode

@@ -48,4 +48,4 @@ GLVis can also run a [batch sequence](options-and-use.md#glvis-scripts) of comma
 
 ## Open Source
 
-GLVis is an open-source software, and can be freely used under the terms of the [LGPL 2.1](https://www.gnu.org/licenses/lgpl-2.1.html) license.
+GLVis is an open-source software, and can be freely used under the terms of the [BSD](https://github.com/glvis/glvis/blob/master/LICENSE) license.

@@ -5,11 +5,13 @@ docs_dir: 'src'
 markdown_extensions:
 - extra  # allow markdown in <div markdown="1">
 - fenced_code  # GitHub style code blocks, e.g. ```python, see http://highlightjs.readthedocs.org/en/latest/css-classes-reference.html for a list of languages
+- footnotes
+- attr_list  # Allow us to add link attributes
 
 repo_url: https://github.com/glvis/glvis
-remote_name: github
+remote_name: origin
 
-pages:
+nav:
 - Home: index.md
 - Features: features.md
 - Documentation:

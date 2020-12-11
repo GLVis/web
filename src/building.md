@@ -2,9 +2,32 @@
 
 A simple tutorial how to build and run GLVis together with MFEM. For more details, see the [INSTALL](https://raw.githubusercontent.com/glvis/glvis/master/INSTALL) file.
 
+## Dependencies
+
+Starting with version 4.0, GLVis requires the following dependencies in order to build and run: [SDL2](https://www.libsdl.org/download-2.0.php), [GLEW](http://glew.sourceforge.net/), [GLM](https://github.com/g-truc/glm), [Freetype](https://www.freetype.org/), and [Fontconfig](https://www.freedesktop.org/wiki/Software/fontconfig/). Optional dependencies include libpng and/or libtiff for taking screenshots.
+
+Most of these dependencies can be installed through your system's package manager:
+
+### Ubuntu/Debian (apt-based)
+
+```sh
+apt-get install libfontconfig1-dev libfreetype-dev libsdl2-dev libglew-dev libglm-dev libpng-dev
+```
+
+### Fedora/RHEL
+
+```sh
+dnf install fontconfig-devel freetype-devel SDL2-devel glew-devel glm-devel libpng-devel
+```
+
+### Mac OS X (Homebrew)
+```sh
+brew install fontconfig freetype sdl2 glew glm libpng
+```
+
 ## Compilation
 
-Download MFEM and GLVis (below we assume that we are working with versions 3.0)
+Download MFEM and GLVis (below we assume that we are working with version 4.0)
 
   - [http://mfem.org](http://mfem.org)
   - [http://glvis.org](http://glvis.org)
@@ -12,42 +35,42 @@ Download MFEM and GLVis (below we assume that we are working with versions 3.0)
 Put everything in the same directory:
 ```sh
 ~> ls
-glvis-3.0.tgz   mfem-3.0.tgz
+glvis-4.0.tgz   mfem-4.2.tgz
 ```
 
 Build the serial version of MFEM:
 ```sh
-~> tar -zxvf mfem-3.0.tgz
-~> cd mfem-3.0
-~/mfem-3.0> make serial -j
+~> tar -zxvf mfem-4.2.tgz
+~> cd mfem-4.2
+~/mfem-4.2> make serial -j
 ```
 
 Build GLVis:
 ```sh
-~> tar -zxvf glvis-3.0.tgz
-~> cd glvis-3.0
-~/glvis-3.0> make MFEM_DIR=../mfem-3.0 -j
+~> tar -zxvf glvis-4.0.tgz
+~> cd glvis-4.0
+~/glvis-4.0> make MFEM_DIR=../mfem-4.2 -j
 ```
 
-That's it! The `glvis` executable can be found in the `glvis-3.0` directory.
+That's it! The `glvis` executable can be found in the `glvis-4.0` directory.
 
 ## Testing and rebuilding
 
 To test the build, visualize a mesh with
 ```sh
-~/glvis-3.0> ./glvis -m ../mfem-3.0/data/escher.mesh
+~/glvis-4.0> ./glvis -m ../mfem-4.2/data/escher.mesh
 ```
 
 To start a GLVis server, open a **new terminal** and start glvis without arguments
 ```sh
-~/glvis-3.0> ./glvis
+~/glvis-4.0> ./glvis
 ```
 
 To rebuild GLVis after changes in MFEM (e.g. if MFEM has rebuild in parallel), do:
 
 ```sh
-~/glvis-3.0> make clean
-~/glvis-3.0> make MFEM_DIR=../mfem-3.0 -j
+~/glvis-4.0> make clean
+~/glvis-4.0> make MFEM_DIR=../mfem-4.2 -j
 ```
 
 ## Using secure sockets

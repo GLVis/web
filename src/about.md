@@ -13,26 +13,33 @@ Please cite with:
 
 ## Contributors
 
+- [Ido Akkerman](https://www.researchgate.net/profile/Ido_Akkerman/info)
 - [Robert Anderson](http://people.llnl.gov/anderson110)
-- Ido Akkerman
+- [Julian Andrej](https://github.com/jandrej)
+- [Ernesto Aranda](https://github.com/e-aranda)
+- [Thomas Benson](https://github.com/benson31)
 - [Thomas Brunner](http://people.llnl.gov/brunner6)
+- [Jean-Sylvain Camier](http://people.llnl.gov/camier1)
 - [Jakub Červený](https://www.linkedin.com/in/jcerveny)
+- [Lisandro Dalcin](https://ecrc.kaust.edu.sa/Pages/Dalcin.aspx)
 - [Veselin Dobrev](http://people.llnl.gov/dobrev1)
-- Truman Ellis
+- [Truman Ellis](https://github.com/trumanellis)
 - [Aaron Fisher](http://people.llnl.gov/fisher47)
 - [Tzanio Kolev](http://people.llnl.gov/kolev1) &mdash; Project Leader
-- Ilya Lashuk
+- [Ilya Lashuk](https://scholar.google.com/citations?user=5KQiAUoAAAAJ&hl=en)
 - [Robert Rieben](http://people.llnl.gov/rieben1)
 - [Joachim Schöberl](http://www.asc.tuwien.ac.at/~schoeberl/wiki/index.php/Joachim_Sch%C3%B6berl)
+- [Tom Stitt](https://github.com/tomstitt)
 - [Mark Stowell](http://people.llnl.gov/stowell1)
 - [Vladimir Tomov](http://people.llnl.gov/tomov2)
 - [Stanimire Tomov](http://icl.cs.utk.edu/~tomov)
 - [Umberto Villa](http://users.ices.utexas.edu/~uvilla/)
+- [Max Yang](https://github.com/kanye-quest)
+- [Stefano Zampini](https://ecrc.kaust.edu.sa/Pages/Zampini.aspx)
 
 ## License
 
-- [GNU Lesser GPL v2.1](http://www.gnu.org/licenses/lgpl-2.1.html)
-
+- [BSD](https://github.com/glvis/glvis/blob/master/LICENSE)
 
 <br>
 
