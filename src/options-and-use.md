@@ -203,8 +203,8 @@ glvis -saved glvis-saved.0001
 ```
 
 Below is the result for the above socket data using the following GLVis
-keystrokes in the OpenGL window: `AmttII` followed by multiple refinements with
-`i` and move/zoom adjustments with the mouse.
+keystrokes in the OpenGL window: `AmttOO` followed by multiple refinements with
+`o` and move/zoom adjustments with the mouse.
 
 ![](img/glvis-saved.png)
 
@@ -296,7 +296,7 @@ quadrilateral into the unit square:
 
 The above plot was produced with:
 ```sh
-glvis -m quad.vtk -g quad-vec.gf -k "fRjlAmeIIiiiiiiiiiiibbvuuuuuuuuuuu"
+glvis -m quad.vtk -g quad-vec.gf -k "RjlAmeOOooooooooooobbvuuuuuuuuuuu************"
 ```
 The transformation between the two domains can be further explored with the `b`
 and `n` keys.
@@ -369,7 +369,7 @@ solution quad.vtk quad-vec.gf
    view 0 0
    viewcenter 0 0
    zoom 1.95
-   keys fAmeIIiiiiiiiiiiibbvuuuuuuuuuuu
+   keys AmeOOooooooooooobbvuuuuuuuuuuu
 }
 
 # Take multiple screenshots. Executed after pressing the space bar.
