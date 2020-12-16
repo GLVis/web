@@ -294,7 +294,7 @@ Ordering: 1
 <pre><code class="sh">glvis -m square-disc-nurbs.mesh
 </code></pre>
 
-<p>which after several refinements with the "<code>i</code>" key looks like</p>
+<p>which after pressing "<code>e</code>", "<code>m</code>", "<code>A</code>", and several refinements with the "<code>o</code>" key looks like</p>
 <p><img alt="" src="../img/glvis-square-disc-nurbs.png" /></p>
 <p>To explain MFEM's NURBS mesh file format, we first note that the topological part of the mesh (the <code>elements</code> and <code>boundary</code> sections) describe the 4 NURBS patches visible above. We use the vertex numbers as labels, so we only need the number of vertices.</p>
 <p>In the NURBS case we need to also provide description of the edges on the patch boundaries and associate a knot vector with each of them. This is done in the <code>edges</code> section where the first index in each row refers to the knot vector id (from the following <code>knotvectors</code> section), while the remaining two indexes are the edge vertex numbers.</p>
