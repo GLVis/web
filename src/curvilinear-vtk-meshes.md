@@ -33,13 +33,13 @@ SCALARS material int
 LOOKUP_TABLE default
 1
 ```
-Visualizing it with "`glvis -m quad.vtk`" and typing "`Aemiii`" in the GLVis window we get:
+Visualizing it with "`glvis -m quad.vtk`" and typing "`Aemooo`" in the GLVis window we get:
 
 ![](img/quad-vtk.png)
 
-The "`i`" key increases the reference element subdivision which gives an increasingly better approximation of the actual curvature of the element. To view the curvature of the mapping inside the element we can use the "I" key, e.g.,
+The "`o`" key increases the reference element subdivision which gives an increasingly better approximation of the actual curvature of the element. To view the curvature of the mapping inside the element we can use the "O" key, e.g.,
 ```sh
-glvis -m quad.vtk -k "AemIIiii"
+glvis -m quad.vtk -k "AemOOooo"
 ```
 ![](img/quad-vtk-2.png)
 
@@ -57,10 +57,10 @@ glvis -m square-disc-p2.vtk -k "Am"
 
 As well as [quadratic tetrahedral](https://github.com/mfem/mfem/blob/master/data/escher-p2.vtk) and [quadratic hexahedral](https://github.com/mfem/mfem/blob/master/data/fichera-q2.vtk) VTK meshes:
 ```sh
-glvis -m escher-p2.vtk -k "Aaaooooo**************"
+glvis -m escher-p2.vtk -k "Aaaaooooo**************"
 ```
 ![](img/escher-p2-vtk.png)
 ```sh
-glvis -m fichera-q2.vtk -k "Aaaooooo******"
+glvis -m fichera-q2.vtk -k "Aaaaooooo*****"
 ```
 ![](img/fichera-q2-vtk.png)

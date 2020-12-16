@@ -127,7 +127,7 @@ This above file, as well as other examples of NURBS meshes, can be found in [MFE
 ```sh
 glvis -m square-disc-nurbs.mesh
 ```
-which after several refinements with the "`i`" key looks like
+which after pressing "`e`", "`m`", "`A`", and several refinements with the "`o`" key looks like
 
 ![](img/glvis-square-disc-nurbs.png)
 

@@ -173,7 +173,7 @@ Some possible [finite element collection](https://github.com/mfem/mfem/blob/mast
 
 For example, the [escher-p3.mesh](https://github.com/mfem/mfem/blob/master/data/escher-p3.mesh) from MFEM's [data directory](https://github.com/mfem/mfem/blob/master/data) describes a tetrahedral mesh with nodes given by a P3 vector Lagrangian finite element function. Visualizing this mesh with
 ```sh
-glvis -m escher-p3.mesh -k "Aaaoooooooooo**************tt"
+glvis -m escher-p3.mesh -k "Aaaaoooooooooo**************tt"
 ```
 we get:
 
