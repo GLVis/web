@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <script src="./keys.js"></script>
+    <script src="./example_stream.js"></script>
+    <link rel="icon" type="image/png" href="https://glvis.org/img/favicon.ico">
+  </head>
+
+  <body>
+    <div align="center" style="padding-top: 10pm">
+      <div
+        style="
+          white-space: pre;
+          display: inline-block;
+          height: 480px;
+          width: 40ch;
+          border: 4px solid #ccc;
+          overflow: auto;
+          font-family: monospace;
+        "
+        id="keys-div"
+      ></div>
+      <div
+        style="display: inline-block; border: 4px solid #ccc"
+        id="glvis-div"
+        tabindex="0"
+      ></div>
+    </div>
+
+    <script type="text/javascript">
+      document.getElementById("keys-div").innerHTML = keys_str;
+      var div = document.getElementById("glvis-div");
+      var canvas = undefined;
+      var glvis = undefined;
+      require(["../src/index.js"], function (mod) {
+        glvis = mod;
+        canvas = glvis.setupCanvas(div, 640, 480);
+        glvis.displayStream(div, canvas, example_stream);
+      });
+    </script>
+
+    <div align="center">
+      <input
+        type="file"
+        id="load_stream"
+        onchange="glvis.loadStream(event, div, canvas)"
+      />
+    </div>
+  </body>
+</html>
