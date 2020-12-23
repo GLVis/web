@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/async/3.2.0/async.min.js"></script>
+    <script src="../src/glvis.js"></script>
+    <script src="../src/index.js"></script>
+    <script src="../src/helpers.js"></script>
+    <script src="./keys.js"></script>
+    <script src="./example_stream.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://glvis.org/img/favicon.ico"
+    />
+  </head>
+
+  <body>
+    <div align="center">
+      <div id="main" tabindex="0"></div>
+    </div>
+
+    <div style="position: absolute; right: 4px; bottom: 4px">
+      <button id="toggle-fullscreen" class="icon-btn">
+        <i class="fas fa-expand-alt"></i>
+      </button>
+    </div>
+
+    <!--https://www.w3schools.com/howto/howto_js_sidenav.asp-->
+    <div id="setup-side-nav" class="sidenav">
+      <a
+        href="javascript:void(0)"
+        class="closebtn"
+        onclick="closeNav('setup-side-nav')"
+        >&times;</a
+      >
+
+      <div align="center" class="full-width">
+        <h3 align="center">Load visualization file</h3>
+        <input
+          type="file"
+          id="load-file"
+          onchange="glvis.loadStream(event, glv)"
+          hidden
+        />
+        <label for="load-file" class="menu-button">Load File</label>
+      </div>
+
+      <div align="center" class="full-width">
+        <h3 align="center">Connect to Server</h3>
+        <p align="center">
+          Display streaming content from MFEM. This requires m2w.py as an
+          intermediary.
+        </p>
+
+        <div>
+          <input type="text" id="host-text" value="localhost" />
+        </div>
+
+        <div>
+          <input type="text" id="port-text" value="8080" />
+        </div>
+
+        <div>
+          <label
+            class="menu-button"
+            type="button"
+            id="conn-btn"
+            onclick="connect()"
+            >Connect</label
+          >
+        </div>
+      </div>
+
+      <!-- delay slider-->
+      <!---
+      <div class="full-width">
+        <h4 align="center">Stream update delay</h4>
+        <input type="range" min="50" max="1000" value="100" step="50" class="slider" id="delay-range">
+        <div align="center" id="delay-value"></div>
+      </div>
+      -->
+    </div>
+
+    <div id="help-side-nav" class="sidenav">
+      <a
+        href="javascript:void(0)"
+        class="closebtn"
+        onclick="closeNav('help-side-nav')"
+        >&times;</a
+      >
+
+      <div
+        style="
+          white-space: pre;
+          display: inline-block;
+          width: 40ch;
+          height: 90%;
+          overflow: auto;
+          font-family: monospace;
+          border: dotted;
+          border-width: thin;
+        "
+        id="keys-div"
+      ></div>
+    </div>
+
+    <div id="ctrl-side-nav" class="sidenav">
+      <a
+        href="javascript:void(0)"
+        class="closebtn"
+        onclick="closeNav('ctrl-side-nav')"
+        >&times;</a
+      >
+      <p></p>
+
+      <div align="center">
+        <!--&#x21DA-->
+        <button type="button" onclick="glv.sendKey('p')">(left)</button>
+        switch color palette
+        <!--&#x21DB-->
+        <button type="button" onclick="glv.sendKey('P')">(right)</button>
+      </div>
+
+      <p></p>
+      <div align="center">
+        <button type="button" onclick="glv.sendKey('r')">Reset 3D View</button>
+      </div>
+
+      <p></p>
+      <div align="center">
+        Light:
+        <input
+          type="radio"
+          id="off"
+          name="light"
+          oninput="glv.sendKey('l')"
+        /><label for="off">Off</label>
+        <input
+          type="radio"
+          id="on"
+          name="light"
+          checked="checked"
+          oninput="glv.sendKey('l')"
+        /><label for="on">On</label>
+      </div>
+
+      <p></p>
+      <div align="center">
+        Colorbar:
+        <input
+          type="radio"
+          id="off"
+          name="colorbar"
+          checked="checked"
+          oninput="glv.sendKey('c')"
+        /><label for="off">Off</label>
+        <input
+          type="radio"
+          id="on"
+          name="colorbar"
+          oninput="glv.sendKey('c')"
+        /><label for="on">On</label>
+      </div>
+
+      <p></p>
+      <div align="center">
+        Perspective:
+        <input
+          type="radio"
+          id="off"
+          name="perspective"
+          oninput="glv.sendKey('j')"
+        /><label for="off">Off</label>
+        <input
+          type="radio"
+          id="on"
+          name="perspective"
+          checked="checked"
+          oninput="glv.sendKey('j')"
+        /><label for="on">On</label>
+      </div>
+
+      <p></p>
+      <div align="center">
+        Axis:
+        <input
+          type="radio"
+          id="off"
+          name="axis"
+          checked="checked"
+          oninput="glv.sendKey('a')"
+        /><label for="off">Off</label>
+        <input
+          type="radio"
+          id="on"
+          name="axis"
+          oninput="glv.sendKey('a')"
+        /><label for="on">On</label>
+        <input
+          type="radio"
+          id="min"
+          name="axis"
+          oninput="glv.sendKey('a')"
+        /><label for="min">Minimal</label>
+        <input
+          type="radio"
+          id="gr"
+          name="axis"
+          oninput="glv.sendKey('a')"
+        /><label for="gr">Gray</label>
+      </div>
+
+      <p></p>
+      <div align="center">
+        Mesh:
+        <input
+          type="radio"
+          id="off"
+          name="mesh"
+          checked="checked"
+          oninput="glv.sendKey('m')"
+        /><label for="off">Off</label>
+        <input
+          type="radio"
+          id="on"
+          name="mesh"
+          oninput="glv.sendKey('m')"
+        /><label for="on">On</label>
+        <input
+          type="radio"
+          id="ll"
+          name="mesh"
+          oninput="glv.sendKey('m')"
+        /><label for="ll">Level Lines</label>
+      </div>
+    </div>
+
+    <div id="about-side-nav" class="sidenav">
+      <a
+        href="javascript:void(0)"
+        class="closebtn"
+        onclick="closeNav('about-side-nav')"
+        >&times;</a
+      >
+      <a href="https://glvis.org">Homepage</a>
+      <a href="https://github.com/glvis/glvis-js">GitHub</a>
+    </div>
+
+    <div class="vertical">
+      <span class="side-button" onclick="openNav('setup-side-nav')">Setup</span>
+      <span class="side-button" onclick="openNav('help-side-nav', '40ch')"
+        >Help</span
+      >
+      <span onclick="openNav('ctrl-side-nav')">Control</span>
+      <span onclick="openNav('about-side-nav')">About</span>
+    </div>
+
+    <script type="text/javascript">
+      var main_div = document.getElementById("main");
+      // delay control
+      // TODO: doesn't work
+      /*
+      var delay_slider = document.getElementById("delay-range");  
+      var delay_value_div = document.getElementById("delay-value");
+      function update_delay_value() {
+        delay_slider.value = delay_slider.value;
+        delay_value_div.innerHTML = `${delay_slider.value} ms`;
+      }
+      delay_slider.onchange = update_delay_value;
+      update_delay_value();
+      */
+
+      // nav setup
+      function openNav(id, width = "250px") {
+        document.getElementById(id).style.width = width;
+        //main_div.style.marginRight = width;
+      }
+      function closeNav(id) {
+        document.getElementById(id).style.width = "0";
+        //main_div.style.marginRight = "0";
+      }
+
+      // websocket setup
+      var ws = undefined;
+      var que = async.queue(async function (msg) {
+        glv.displayStream(msg);
+        await new Promise((r) => setTimeout(r, 50));
+      });
+
+      function connect() {
+        if (ws !== undefined && ws.readyState == 1) {
+          ws.close();
+          return;
+        }
+
+        const host = document.getElementById("host-text").value;
+        const port = document.getElementById("port-text").value;
+        var btn = document.getElementById("conn-btn");
+
+        const addr = `ws:\/\/${host}:${port}`;
+        console.log(`trying to connect to ${addr}`);
+        ws = new WebSocket(addr);
+
+        ws.addEventListener("open", function (event) {
+          var url = event.target.url;
+          console.log(`connected to ${url}`);
+          btn.innerHTML = "Disconnect";
+        });
+        ws.addEventListener("close", function (event) {
+          console.log("disconnected");
+          btn.innerHTML = "Connect";
+        });
+        ws.addEventListener("message", function (event) {
+          console.log(`got message from ${event.origin}`);
+          que.push(event.data);
+        });
+      }
+
+      // glvis-js setup
+      document.getElementById("keys-div").innerHTML = keys_str;
+      var glv = new glvis.State(main_div);
+      glv.displayStream(example_stream);
+
+      function updateWindowSize() {
+        glv.setSize(1, 1);
+        const w = document.documentElement.clientWidth | window.innerWidth;
+        const h = document.documentElement.clientHeight | window.innerHeight;
+        console.log(w, h);
+        glv.setSize(w - 10, h - 10);
+      }
+
+      window.onresize = updateWindowSize;
+      updateWindowSize();
+
+      document.getElementById("toggle-fullscreen").onclick = function () {
+        if (document.fullscreenEnabled) {
+          var elem = document.documentElement;
+          if (document.fullscreenElement === null) {
+            openFullscreen(elem);
+          } else {
+            closeFullscreen(elem);
+          }
+        } else {
+          console.warn("full screen not allowed");
+        }
+      };
+    </script>
+  </body>
+</html>
