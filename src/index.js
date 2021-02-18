@@ -1,4 +1,4 @@
-// Copyright (c) 2010-2020, Lawrence Livermore National Security, LLC. Produced
+// Copyright (c) 2010-2021, Lawrence Livermore National Security, LLC. Produced
 // at the Lawrence Livermore National Laboratory. All Rights reserved. See files
 // LICENSE and NOTICE for details. LLNL-CODE-443271.
 //
@@ -32,6 +32,15 @@
     root["glvis"] = factory(root["glvis"]);
   }
 })(this, function (emglvis) {
+  function rand_id() {
+    const arr = new Uint8Array(10);
+    window.crypto.getRandomValues(arr);
+    return arr.reduce(
+      (cur, next) => cur + next.toString(36).padStart(2, "0"),
+      ""
+    );
+  }
+
   class State {
     constructor(div, width = 640, height = 480, canvas = undefined) {
       if (div === undefined) {
@@ -72,7 +81,7 @@
     setupCanvas(width, height) {
       if (this.canvas_ === undefined) {
         this.canvas_ = document.createElement("canvas");
-        this.canvas_.id = "glvis-canvas";
+        this.canvas_.id = `glvis-canvas-${rand_id()}`;
       }
       this.setCanvasSize(width, height);
       this.canvas_.innerHTML = "Your browser doesn't support HTML canvas";
@@ -128,21 +137,18 @@
       this._startVis(g);
     }
 
-    displayStream(stream) {
+    async displayStream(stream) {
       const index = stream.indexOf("\n");
       const data_type = stream.substr(0, index);
       const data_str = stream.substr(index + 1);
-      this.display(data_type, data_str);
+      await this.display(data_type, data_str);
     }
 
-    async updateStream(stream) {
+    async update(data_type, data_str) {
       if (!this.emsetup_) {
-        this.displayStream(stream);
+        this.display(data_type, data_str);
         return;
       }
-      const index = stream.indexOf("\n");
-      const data_type = stream.substr(0, index);
-      const data_str = stream.substr(index + 1);
       var g = await this.emglv_;
       if (g.updateVisualization(data_type, data_str) != 0) {
         console.log("unable to update stream, starting a new one");
@@ -150,14 +156,31 @@
       }
     }
 
-    sendKey(key) {
-      if (this.canvas_ !== undefined) {
-        var e = new KeyboardEvent("keypress", {
-          bubbles: true,
-          charCode: key.charCodeAt(0),
-        });
-        this.canvas_.dispatchEvent(e);
+    async updateStream(stream) {
+      const index = stream.indexOf("\n");
+      const data_type = stream.substr(0, index);
+      const data_str = stream.substr(index + 1);
+      await this.update(data_type, data_str);
+    }
+
+    async sendKey(key, ctrl = false, shift = false, alt = false) {
+      var key_code = undefined;
+      if (typeof key === "string") {
+        key_code = key.charCodeAt(0);
+        console.log(`sending key '${key[0]}' (key_code=${key_code})`);
+      } else if (typeof key === "number") {
+        key_code = key;
+        console.log(`sending key_code=${key_code}`);
+      } else {
+        throw "unsupported type";
       }
+      var g = await this.emglv_;
+      g.processKey(key_code, ctrl, shift, alt);
+    }
+
+    async sendKeyStr(keys) {
+      var g = await this.emglv_;
+      g.processKeys(keys);
     }
 
     async loadUrl(url) {
@@ -172,18 +195,13 @@
         return;
       }
       console.log(`loading ${url}`);
-      this.displayStream(text);
+      await this.displayStream(text);
     }
 
-    loadStream(e) {
-      var reader = new FileReader();
-      var filename = e.target.files[0];
-      var that = this;
-      reader.onload = function (e) {
-        console.log("loading " + filename);
-        that.displayStream(e.target.result);
-      };
-      reader.readAsText(filename);
+    async loadStream(e) {
+      const filename = e.target.files[0];
+      const data = await new Response(filename).text();
+      await this.displayStream(data);
     }
 
     setTouchDevice(status) {
@@ -203,10 +221,11 @@
   }
 
   return {
-    emglvis: glvis,
+    emglvis: emglvis,
     State: State,
     info: function () {
       console.log("hi from GLVis!");
     },
+    rand_id: rand_id,
   };
 });
