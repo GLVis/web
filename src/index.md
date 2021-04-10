@@ -7,14 +7,23 @@ GLVis is a _lightweight_ tool for _accurate_ and _flexible_ finite element visua
 
 ## Features
 
- * Accurate functional representation of many [finite elements](http://mfem.org/features/#higher-order-finite-element-spaces).
+ * Accurate functional representation of many [finite elements](https://mfem.org/features/#higher-order-finite-element-spaces).
  * Support for [arbitrary high-order](mesh-formats.md#curvilinear-and-more-general-meshes) and [NURBS](nurbs.md) meshes.
+ * Desktop, [Web](https://glvis.org/live) and [Jupyter](https://github.com/GLVis/pyglvis) versions from the same code base.
  * [Server mode](options-and-use.md#server-mode) accepting multiple socket connections.
  * Visualization of [parallel](parallel-visualization.md) meshes and solutions.
  * ... and [many more](features.md).
 
-GLVis is based on the [MFEM](http://mfem.org) library and is currently used in the [BLAST](http://www.llnl.gov/casc/blast), _[hypre](http://www.llnl.gov/casc/hypre)_ and [XBraid](http://www.llnl.gov/casc/xbraid) projects. See also our [Gallery](gallery.md) and
+GLVis is based on the [MFEM](https://mfem.org) library and is currently used in the [BLAST](http://www.llnl.gov/casc/blast), _[hypre](http://www.llnl.gov/casc/hypre)_ and [XBraid](http://www.llnl.gov/casc/xbraid) projects. See also our [Gallery](gallery.md) and
 project [news updates](news.md).
+
+## Contact
+
+Use the GitHub [issue tracker](https://github.com/glvis/glvis/issues)
+to report [bugs](https://github.com/glvis/glvis/issues/new?labels=bug)
+or post [questions](https://github.com/glvis/glvis/issues/new?labels=question)
+or [comments](https://github.com/glvis/glvis/issues/new?labels=comment).
+See&nbsp;the [About](about.md) page for citation information.
 
 </div><div class="col-md-6 news-table" markdown="1">
 
@@ -23,10 +32,12 @@ project [news updates](news.md).
 
 Date         | Message
 ------------ | -----------------------------------------------------------------
+Feb 19, 2021 | Web version at [glvis.org/live](https://glvis.org/live).
+Feb 17, 2021 | Jupyter support: [`pip install glvis`](https://github.com/GLVis/pyglvis).
 Dec 11, 2020 | Version 4.0 [released](https://github.com/glvis/glvis/blob/v4.0/CHANGELOG).
-May 29, 2018 | Version 3.4 [released](https://github.com/glvis/glvis/blob/v3.4/CHANGELOG).
-Jan 28, 2017 | Version 3.3 [released](https://github.com/glvis/glvis/blob/v3.3/CHANGELOG).
 
+[comment]: # (May 29, 2018 | Version 3.4 [released](https://github.com/glvis/glvis/blob/v3.4/CHANGELOG).)
+[comment]: # (Jan 28, 2017 | Version 3.3 [released](https://github.com/glvis/glvis/blob/v3.3/CHANGELOG).)
 [comment]: # (Dec 15, 2016 | [Postdoc position](http://careers-ext.llnl.gov/jobs/6264056-post-dr-research-staff-1) for [exascale computing](https://exascaleproject.org/2016/11/11/ecp_co-design_centers) with MFEM.)
 [comment]: # (Jun 30, 2016 | Version 3.2 [released](https://github.com/glvis/glvis/blob/v3.2/CHANGELOG).)
 [comment]: # (Mar 16, 2016 | Postdoc position [available](http://careers-ext.llnl.gov/jobs/5242192-postdoctoral-research-staff-member) on the [MFEM](http://mfem.org) team.)
@@ -34,7 +45,6 @@ Jan 28, 2017 | Version 3.3 [released](https://github.com/glvis/glvis/blob/v3.3/C
 [comment]: # (Feb 5, 2016  | Version 3.1 released.)
 [comment]: # (Aug 18, 2015 | Moved to [GitHub](https://github.com/glvis/glvis) and [glvis.org](http://glvis.org).)
 [comment]: # (Jan 26, 2015 | Version 3.0 released.)
-
 
 ## Latest Release
 
@@ -46,6 +56,10 @@ Jan 28, 2017 | Version 3.3 [released](https://github.com/glvis/glvis/blob/v3.3/C
 [<button type="button" class="btn btn-success">
 **Download glvis-4.0.tgz**
 </button>](https://bit.ly/glvis-4-0)
+&nbsp;&nbsp;&nbsp;
+[<button type="button" class="btn">
+**Use web version**
+</button>](https://glvis.org/live)
 
 For older releases see the [download](download.md) section.
 
@@ -54,7 +68,7 @@ For older releases see the [download](download.md) section.
 
 [Building](building.md)
 ┊ [Mesh formats](mesh-formats.md)
-┊ [Parallel visualization](parallel-visualization.md)
+┊ [Parallel](parallel-visualization.md)
 ┊ [VTK](curvilinear-vtk-meshes.md)
 ┊ [NURBS](nurbs.md)
 
@@ -62,14 +76,13 @@ New users should start with the [options and general use](options-and-use.md) tu
 
 We also recommend reading the [MFEM project](http://mfem.org) documentation.
 
-
-## Contact
-
-Use the GitHub [issue tracker](https://github.com/glvis/glvis/issues)
-to report [bugs](https://github.com/glvis/glvis/issues/new?labels=bug)
-or post [questions](https://github.com/glvis/glvis/issues/new?labels=question)
-or [comments](https://github.com/glvis/glvis/issues/new?labels=comment).
-See&nbsp;the [About](about.md) page for citation information.
+## Desktop, Web and Jupyter Versions
+<img src="img/glvis-versions.png" usemap="#versionsmap" style="max-height:180px;margin-left:0px;margin-top:10px">
+<map name="versionsmap">
+  <area shape="rect" coords="11,5,148,132" alt="glvis.org" href="https://glvis.org/download/">
+  <area shape="rect" coords="177,4,317,134" alt="glvis.org/live" href="https://glvis.org/live">
+  <area shape="rect" coords="345,4,485,136" alt="pip install glvis" href="https://mybinder.org/v2/gh/GLVis/pyglvis/HEAD?filepath=examples%2Fex1.ipynb">
+</map>
 
 </div>
 
