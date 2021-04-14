@@ -61,8 +61,7 @@ Dec 11, 2020 | Version 4.0 [released](https://github.com/glvis/glvis/blob/v4.0/C
 **Use web version**
 </button>](https://glvis.org/live)
 
-For older releases see the [download](download.md) section.
-
+[Older releases](download.md) ┊ [glvis.js](https://github.com/glvis/glvis-js) ┊ [pyglvis](https://github.com/glvis/pyglvis)
 
 ## Documentation
 
@@ -81,7 +80,7 @@ We also recommend reading the [MFEM project](http://mfem.org) documentation.
 <map name="versionsmap">
   <area shape="rect" coords="11,5,148,132" alt="glvis.org" href="https://glvis.org/download/">
   <area shape="rect" coords="177,4,317,134" alt="glvis.org/live" href="https://glvis.org/live">
-  <area shape="rect" coords="345,4,485,136" alt="pip install glvis" href="https://mybinder.org/v2/gh/GLVis/pyglvis/HEAD?filepath=examples%2Fex1.ipynb">
+  <area shape="rect" coords="345,4,485,136" alt="pip install glvis" href="https://mybinder.org/v2/gh/GLVis/pyglvis/HEAD?filepath=examples">
 </map>
 
 </div>
