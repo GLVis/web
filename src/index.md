@@ -1,6 +1,6 @@
-<!--<div class="col-md-12">-->
+<div class="col-md-6" markdown="1">
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" markdown="1">
+<div id="myCarousel" class="carousel slide" data-ride="carousel" markdown="1"  style="margin-top:-10px;margin-bottom:0px;height:360px;">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -11,13 +11,24 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      [<img class="d-block w-100" src="img/slide1.png">](gallery.md)
+      [<img class="d-block w-100" src="img/logo-300.png" >](gallery.md)
     </div>
     <div class="item">
-      <img class="d-block w-100" src="img/slide2.png">
-    </div>
+      [<img class="d-block w-100" src="img/slide2.png">](gallery.md)
+      <div class="carousel-caption d-none" style="margin-top:-20px;">
+        Accurate representation of many [finite elements](https://mfem.org/features/#higher-order-finite-element-spaces), support for [arbitrary high-order](mesh-formats.md#curvilinear-and-more-general-meshes) and [NURBS](nurbs.md) meshes
+      </div>
+  </div>
     <div class="item">
-      <img class="d-block w-100" src="img/slide3.png">
+      <img class="d-block w-100" src="img/slide3.png" usemap="#versionsmap">
+      <map name="versionsmap">
+        <area shape="rect" coords="11,5,148,132" alt="glvis.org" href="https://glvis.org/download/">
+	<area shape="rect" coords="177,4,317,134" alt="glvis.org/live" href="https://glvis.org/live">
+	<area shape="rect" coords="345,4,485,136" alt="pip install glvis" href="https://mybinder.org/v2/gh/GLVis/pyglvis/HEAD?filepath=examples">
+      </map>
+      <div class="carousel-caption d-none" style="margin-top:-15px;">
+        Desktop, [Web](https://glvis.org/live) and [Jupyter](https://github.com/GLVis/pyglvis) versions from the same code base
+      </div>
     </div>
   </div>
 
@@ -32,10 +43,9 @@
   </a>
 </div>
 
-<div class="col-md-12" markdown="1">
 GLVis is a _lightweight_ tool for _accurate_ and _flexible_ finite element visualization.
-</div>
-<div class="col-md-6" markdown="1">
+
+
 ## Features
 
  * Accurate functional representation of many [finite elements](https://mfem.org/features/#higher-order-finite-element-spaces).
@@ -45,8 +55,37 @@ GLVis is a _lightweight_ tool for _accurate_ and _flexible_ finite element visua
  * Visualization of [parallel](parallel-visualization.md) meshes and solutions.
  * ... and [many more](features.md).
 
-GLVis is based on the [MFEM](https://mfem.org) library and is currently used in the [BLAST](http://www.llnl.gov/casc/blast), _[hypre](http://www.llnl.gov/casc/hypre)_ and [XBraid](http://www.llnl.gov/casc/xbraid) projects. See also our [Gallery](gallery.md) and
+GLVis is based on the [MFEM](https://mfem.org) library and is used in the [BLAST](http://www.llnl.gov/casc/blast), _[hypre](http://www.llnl.gov/casc/hypre)_ and other projects.
+See also our [Gallery](gallery.md) and
 project [news updates](news.md).
+
+</div><div class="col-md-6 news-table" markdown="1">
+
+## News
+
+Date         | Message
+------------ | -----------------------------------------------------------------
+Feb 19, 2021 | Web version at [glvis.org/live](https://glvis.org/live).
+Feb 17, 2021 | Jupyter support: [`pip install glvis`](https://github.com/GLVis/pyglvis).
+Dec 11, 2020 | Version 4.0 [released](https://github.com/glvis/glvis/blob/v4.0/CHANGELOG).
+Dec 11, 2020 | Switched to a BSD license.
+
+## Latest Release
+
+[New features](https://github.com/glvis/glvis/blob/v4.0/CHANGELOG)
+┊ [User documentation](https://github.com/glvis/glvis/blob/v4.0/README)
+┊ [Code documnetation](http://glvis.github.io/doxygen/html/index.html)
+┊ [Sources](https://github.com/glvis/glvis)
+
+[<button type="button" class="btn btn-success">
+**Download glvis-4.0.tgz**
+</button>](https://bit.ly/glvis-4-0)
+&nbsp;&nbsp;&nbsp;
+[<button type="button" class="btn">
+**Use web version**
+</button>](https://glvis.org/live)
+
+[Older releases](download.md) ┊ [glvis.js](https://github.com/glvis/glvis-js) ┊ [pyglvis](https://github.com/glvis/pyglvis)
 
 ## Documentation
 
@@ -59,33 +98,6 @@ project [news updates](news.md).
 New users should start with the [options and general use](options-and-use.md) tutorial.
 
 We also recommend reading the [MFEM project](http://mfem.org) documentation.
-
-</div><div class="col-md-6 news-table" markdown="1">
-
-## News
-
-Date         | Message
------------- | -----------------------------------------------------------------
-Feb 19, 2021 | Web version at [glvis.org/live](https://glvis.org/live).
-Feb 17, 2021 | Jupyter support: [`pip install glvis`](https://github.com/GLVis/pyglvis).
-Dec 11, 2020 | Version 4.0 [released](https://github.com/glvis/glvis/blob/v4.0/CHANGELOG).
-
-## Latest Release
-
-[New features](https://github.com/glvis/glvis/blob/v4.0/CHANGELOG)
-┊ [User documentation](https://github.com/glvis/glvis/blob/v4.0/README)
-┊ [Code docs](http://glvis.github.io/doxygen/html/index.html)
-┊ [Sources](https://github.com/glvis/glvis)
-
-[<button type="button" class="btn btn-success">
-**Download glvis-4.0.tgz**
-</button>](https://bit.ly/glvis-4-0)
-&nbsp;&nbsp;&nbsp;
-[<button type="button" class="btn">
-**Use web version**
-</button>](https://glvis.org/live)
-
-[Older releases](download.md) ┊ [glvis.js](https://github.com/glvis/glvis-js) ┊ [pyglvis](https://github.com/glvis/pyglvis)
 
 ## Contact
 
