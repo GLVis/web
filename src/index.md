@@ -74,7 +74,7 @@ Dec 11, 2020 | Switched to a BSD license.
 
 [New features](https://github.com/glvis/glvis/blob/v4.0/CHANGELOG)
 ┊ [User documentation](https://github.com/glvis/glvis/blob/v4.0/README)
-┊ [Code documnetation](http://glvis.github.io/doxygen/html/index.html)
+┊ [Code documentation](http://glvis.github.io/doxygen/html/index.html)
 ┊ [Sources](https://github.com/glvis/glvis)
 
 [<button type="button" class="btn btn-success">
