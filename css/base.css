@@ -230,6 +230,9 @@ body {
 .carousel-control.right {
   background-image: none;
 }
+.carousel-control {
+  opacity: 0.3;
+}
 /* The default indicators are invisible on white background */
 .carousel .carousel-indicators li {
   border: none;
