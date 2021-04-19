@@ -2,6 +2,8 @@
 
 &nbsp;       | |
 ------------ | -----------------------------------------------------------------
+Feb 19, 2021 | Web version at [glvis.org/live](https://glvis.org/live).
+Feb 17, 2021 | Jupyter support: [`pip install glvis`](https://github.com/GLVis/pyglvis).
 Dec 11, 2020 | Version 4.0 [released](https://github.com/glvis/glvis/blob/v4.0/CHANGELOG).
 Dec 11, 2020 | Switched to a BSD software license.
 May 29, 2018 | Version 3.4 [released](https://github.com/glvis/glvis/blob/v3.4/CHANGELOG).
