@@ -9,7 +9,7 @@
 **Download glvis-4.0.tgz**
 </button>](https://bit.ly/glvis-4-0)
 &nbsp;&nbsp;&nbsp;
-[<button type="button" class="btn">
+[<button type="button" class="btn btn-primary">
 **Use web version**
 </button>](https://glvis.org/live)
 
