@@ -8,6 +8,10 @@
 [<button type="button" class="btn btn-success">
 **Download glvis-4.0.tgz**
 </button>](https://bit.ly/glvis-4-0)
+&nbsp;&nbsp;&nbsp;
+[<button type="button" class="btn btn-primary">
+**Use web version**
+</button>](https://glvis.org/live)
 
 Please use the GitHub [issue tracker](https://github.com/glvis/glvis/issues)
 to report [bugs](https://github.com/glvis/glvis/issues/new?labels=bug)

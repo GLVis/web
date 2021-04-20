@@ -1,40 +1,72 @@
 <div class="col-md-6" markdown="1">
 
-[![GLVis logo](img/logo-300.png)](gallery.md)
+<div id="myCarousel" class="carousel slide" data-ride="carousel" markdown="1"  style="margin-top:-10px;margin-bottom:0px;height:360px;">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      [<img class="d-block w-100" src="img/logo-300.png" >](gallery.md)
+    </div>
+    <div class="item">
+      [<img class="d-block w-100" src="img/slide2.png">](gallery.md)
+      <div class="carousel-caption d-none" style="margin-top:-20px;">
+        Accurate representation of many [finite elements](https://mfem.org/features/#higher-order-finite-element-spaces), support for [arbitrary high-order](mesh-formats.md#curvilinear-and-more-general-meshes) and [NURBS](nurbs.md) meshes
+      </div>
+  </div>
+    <div class="item">
+      <img class="d-block w-100" src="img/slide3.png" usemap="#versionsmap">
+      <map name="versionsmap">
+        <area shape="rect" coords="11,5,148,132" alt="glvis.org" href="https://glvis.org/download/">
+	<area shape="rect" coords="177,4,317,134" alt="glvis.org/live" href="https://glvis.org/live">
+	<area shape="rect" coords="345,4,485,136" alt="pip install glvis" href="https://mybinder.org/v2/gh/GLVis/pyglvis/HEAD?filepath=examples">
+      </map>
+      <div class="carousel-caption d-none" style="margin-top:-15px;">
+        Desktop, [Web](https://glvis.org/live) and [Jupyter](https://mybinder.org/v2/gh/GLVis/pyglvis/HEAD?filepath=examples) versions from the same code base
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
 GLVis is a _lightweight_ tool for _accurate_ and _flexible_ finite element visualization.
 
 
 ## Features
 
- * Accurate functional representation of many [finite elements](http://mfem.org/features/#higher-order-finite-element-spaces).
+ * Accurate functional representation of many [finite elements](https://mfem.org/features/#higher-order-finite-element-spaces).
  * Support for [arbitrary high-order](mesh-formats.md#curvilinear-and-more-general-meshes) and [NURBS](nurbs.md) meshes.
+ * Desktop, [Web](https://glvis.org/live) and [Jupyter](https://mybinder.org/v2/gh/GLVis/pyglvis/HEAD?filepath=examples) versions from the same code base.
  * [Server mode](options-and-use.md#server-mode) accepting multiple socket connections.
  * Visualization of [parallel](parallel-visualization.md) meshes and solutions.
  * ... and [many more](features.md).
 
-GLVis is based on the [MFEM](http://mfem.org) library and is currently used in the [BLAST](http://www.llnl.gov/casc/blast), _[hypre](http://www.llnl.gov/casc/hypre)_ and [XBraid](http://www.llnl.gov/casc/xbraid) projects. See also our [Gallery](gallery.md) and
-project [news updates](news.md).
+GLVis is based on the [MFEM](https://mfem.org) library and is used in the [BLAST](http://www.llnl.gov/casc/blast), _[hypre](http://www.llnl.gov/casc/hypre)_ and other projects. See also our [Gallery](gallery.md) and project [news updates](news.md).
 
 </div><div class="col-md-6 news-table" markdown="1">
-
 
 ## News
 
 Date         | Message
 ------------ | -----------------------------------------------------------------
+Feb 19, 2021 | Web version at [glvis.org/live](https://glvis.org/live).
+Feb 17, 2021 | Jupyter support: [`pip install glvis`](https://github.com/GLVis/pyglvis).
 Dec 11, 2020 | Version 4.0 [released](https://github.com/glvis/glvis/blob/v4.0/CHANGELOG).
-May 29, 2018 | Version 3.4 [released](https://github.com/glvis/glvis/blob/v3.4/CHANGELOG).
-Jan 28, 2017 | Version 3.3 [released](https://github.com/glvis/glvis/blob/v3.3/CHANGELOG).
-
-[comment]: # (Dec 15, 2016 | [Postdoc position](http://careers-ext.llnl.gov/jobs/6264056-post-dr-research-staff-1) for [exascale computing](https://exascaleproject.org/2016/11/11/ecp_co-design_centers) with MFEM.)
-[comment]: # (Jun 30, 2016 | Version 3.2 [released](https://github.com/glvis/glvis/blob/v3.2/CHANGELOG).)
-[comment]: # (Mar 16, 2016 | Postdoc position [available](http://careers-ext.llnl.gov/jobs/5242192-postdoctoral-research-staff-member) on the [MFEM](http://mfem.org) team.)
-[comment]: # (Mar 4, 2016  | New LLNL OSS [Blog](http://software.llnl.gov/news) and [Twitter](https://twitter.com/LLNL_OpenSource).)
-[comment]: # (Feb 5, 2016  | Version 3.1 released.)
-[comment]: # (Aug 18, 2015 | Moved to [GitHub](https://github.com/glvis/glvis) and [glvis.org](http://glvis.org).)
-[comment]: # (Jan 26, 2015 | Version 3.0 released.)
-
+Dec 11, 2020 | Switched to a BSD license.
 
 ## Latest Release
 
@@ -46,22 +78,24 @@ Jan 28, 2017 | Version 3.3 [released](https://github.com/glvis/glvis/blob/v3.3/C
 [<button type="button" class="btn btn-success">
 **Download glvis-4.0.tgz**
 </button>](https://bit.ly/glvis-4-0)
+&nbsp;&nbsp;&nbsp;
+[<button type="button" class="btn btn-primary">
+**Use web version**
+</button>](https://glvis.org/live)
 
-For older releases see the [download](download.md) section.
-
+[Older releases](download.md) ┊ [glvis.js](https://github.com/glvis/glvis-js) ┊ [pyglvis](https://github.com/glvis/pyglvis)
 
 ## Documentation
 
 [Building](building.md)
 ┊ [Mesh formats](mesh-formats.md)
-┊ [Parallel visualization](parallel-visualization.md)
+┊ [Parallel](parallel-visualization.md)
 ┊ [VTK](curvilinear-vtk-meshes.md)
 ┊ [NURBS](nurbs.md)
 
 New users should start with the [options and general use](options-and-use.md) tutorial.
 
 We also recommend reading the [MFEM project](http://mfem.org) documentation.
-
 
 ## Contact
 
@@ -71,6 +105,4 @@ or post [questions](https://github.com/glvis/glvis/issues/new?labels=question)
 or [comments](https://github.com/glvis/glvis/issues/new?labels=comment).
 See&nbsp;the [About](about.md) page for citation information.
 
-</div>
-
-<div class="col-md-12"></div>
+</div><div class="col-md-12 bottom"></div>
