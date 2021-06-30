@@ -1,0 +1,3 @@
+[submodule "src/glvis-data"]
+	path = src/glvis-data
+	url = https://github.com/GLVis/glvis-data.git
