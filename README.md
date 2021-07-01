@@ -2,7 +2,19 @@
 
 This repo contains the GLVis website [MkDocs](http://www.mkdocs.org/) sources.
 
-To make changes to the website:
+To clone, included submodules
+
+```
+git clone --recurse-submodules git@github.com:GLVis/glvis-js.git
+```
+
+If you've already cloned you can pull submodules with:
+
+```
+git submodule update --init --recursive
+```
+
+To make changes to the website pages:
 
 - use MkDocs v1.0.4 with Markdown v2.6.8, PyYAML v3.13 and futures v3.3.0, e.g.
   * `pip install --upgrade --user mkdocs==1.0.4`
