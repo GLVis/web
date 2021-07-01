@@ -2,7 +2,7 @@
 
 This repo contains the GLVis website [MkDocs](http://www.mkdocs.org/) sources.
 
-To clone, included submodules
+To clone, including submodules
 
 ```
 git clone --recurse-submodules git@github.com:GLVis/web.git
