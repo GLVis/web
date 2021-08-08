@@ -42,7 +42,7 @@
             </button>
 
             <!-- Main title -->
-            <a class="navbar-brand" href="http://glvis.org">GLVis</a>
+            <a class="navbar-brand" href="http://glvis.org/">GLVis</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -180,17 +180,14 @@
 <p>Starting with version 4.0, GLVis requires the following dependencies in order to build and run: <a href="https://www.libsdl.org/download-2.0.php">SDL2</a>, <a href="http://glew.sourceforge.net/">GLEW</a>, <a href="https://github.com/g-truc/glm">GLM</a>, <a href="https://www.freetype.org/">Freetype</a>, and <a href="https://www.freedesktop.org/wiki/Software/fontconfig/">Fontconfig</a>. Optional dependencies include libpng and/or libtiff for taking screenshots.</p>
 <p>Most of these dependencies can be installed through your system's package manager:</p>
 <h3 id="ubuntudebian-apt-based">Ubuntu/Debian (apt-based)</h3>
-<pre><code class="sh">apt-get install libfontconfig1-dev libfreetype-dev libsdl2-dev libglew-dev libglm-dev libpng-dev
+<pre><code class="language-sh">apt-get install libfontconfig1-dev libfreetype-dev libsdl2-dev libglew-dev libglm-dev libpng-dev
 </code></pre>
-
 <h3 id="fedorarhel">Fedora/RHEL</h3>
-<pre><code class="sh">dnf install fontconfig-devel freetype-devel SDL2-devel glew-devel glm-devel libpng-devel
+<pre><code class="language-sh">dnf install fontconfig-devel freetype-devel SDL2-devel glew-devel glm-devel libpng-devel
 </code></pre>
-
 <h3 id="mac-os-x-homebrew">Mac OS X (Homebrew)</h3>
-<pre><code class="sh">brew install fontconfig freetype sdl2 glew glm libpng
+<pre><code class="language-sh">brew install fontconfig freetype sdl2 glew glm libpng
 </code></pre>
-
 <h2 id="compilation">Compilation</h2>
 <p>Download MFEM and GLVis (below we assume that we are working with version 4.0)</p>
 <ul>
@@ -198,54 +195,46 @@
 <li><a href="http://glvis.org">http://glvis.org</a></li>
 </ul>
 <p>Put everything in the same directory:</p>
-<pre><code class="sh">~&gt; ls
+<pre><code class="language-sh">~&gt; ls
 glvis-4.0.tgz   mfem-4.2.tgz
 </code></pre>
-
 <p>Build the serial version of MFEM:</p>
-<pre><code class="sh">~&gt; tar -zxvf mfem-4.2.tgz
+<pre><code class="language-sh">~&gt; tar -zxvf mfem-4.2.tgz
 ~&gt; cd mfem-4.2
 ~/mfem-4.2&gt; make serial -j
 </code></pre>
-
 <p>Build GLVis:</p>
-<pre><code class="sh">~&gt; tar -zxvf glvis-4.0.tgz
+<pre><code class="language-sh">~&gt; tar -zxvf glvis-4.0.tgz
 ~&gt; cd glvis-4.0
 ~/glvis-4.0&gt; make MFEM_DIR=../mfem-4.2 -j
 </code></pre>
-
 <p>That's it! The <code>glvis</code> executable can be found in the <code>glvis-4.0</code> directory.</p>
 <h2 id="testing-and-rebuilding">Testing and rebuilding</h2>
 <p>To test the build, visualize a mesh with</p>
-<pre><code class="sh">~/glvis-4.0&gt; ./glvis -m ../mfem-4.2/data/escher.mesh
+<pre><code class="language-sh">~/glvis-4.0&gt; ./glvis -m ../mfem-4.2/data/escher.mesh
 </code></pre>
-
 <p>To start a GLVis server, open a <strong>new terminal</strong> and start glvis without arguments</p>
-<pre><code class="sh">~/glvis-4.0&gt; ./glvis
+<pre><code class="language-sh">~/glvis-4.0&gt; ./glvis
 </code></pre>
-
 <p>To rebuild GLVis after changes in MFEM (e.g. if MFEM has rebuild in parallel), do:</p>
-<pre><code class="sh">~/glvis-4.0&gt; make clean
+<pre><code class="language-sh">~/glvis-4.0&gt; make clean
 ~/glvis-4.0&gt; make MFEM_DIR=../mfem-4.2 -j
 </code></pre>
-
 <h2 id="using-secure-sockets">Using secure sockets</h2>
 <p>As of version 3.2, GLVis can be built with support for secure sockets using the
 <a href="https://gnutls.org">GnuTLS library</a> through MFEM's <code>class socketstream</code>. This
 option may be useful in multi-user environment to prevent users from
 sending/receiving visualization data to/from other users. To enable this
 support, first configure MFEM version 3.2 or later with</p>
-<pre><code class="sh">~/mfem-3.2&gt; make config MFEM_USE_GNUTLS=YES
+<pre><code class="language-sh">~/mfem-3.2&gt; make config MFEM_USE_GNUTLS=YES
 </code></pre>
-
 <p>For more details consult MFEM's
 <a href="https://raw.githubusercontent.com/mfem/mfem/master/INSTALL"><code>INSTALL</code></a> file.
 After configuration, build MFEM and GLVis as usual:</p>
-<pre><code class="sh">~/mfem-3.2&gt; make -j
+<pre><code class="language-sh">~/mfem-3.2&gt; make -j
 ~/mfem-3.2&gt; cd ../glvis-3.2
 ~/glvis-3.2&gt; make clean &amp;&amp; make MFEM_DIR=../mfem-3.2 -j
 </code></pre>
-
 <p>In order to use the secure sockets with the GLVis server and client applications
 like MFEM's
 <a href="https://raw.githubusercontent.com/mfem/mfem/master/examples/ex1.cpp">Example 1</a>,
@@ -253,15 +242,14 @@ one needs to generate GLVis server and client key pairs. The simplest way to do
 that is to use the
 <a href="https://raw.githubusercontent.com/glvis/glvis/master/glvis-keygen.sh"><code>glvis-keygen.sh</code></a>
 script in the main GLVis directory:</p>
-<pre><code class="sh">~/glvis-3.2&gt; bash glvis-keygen.sh &quot;User Name&quot; &quot;user@host.org&quot;
+<pre><code class="language-sh">~/glvis-3.2&gt; bash glvis-keygen.sh &quot;User Name&quot; &quot;user@host.org&quot;
 </code></pre>
-
 <p>The key generation requires the <code>gpg2</code> tool from <a href="https://gnupg.org/">GnuPG</a>.
 The generated keys are saved in <code>~/.config/glvis/server</code> and
 <code>~/.config/glvis/client</code>.</p>
 <p>With this option enabled, GLVis will use secure sockets by default, as indicated
 by the additional message after the logo:</p>
-<pre><code class="text">~/glvis-3.2&gt; ./glvis
+<pre><code class="language-text">~/glvis-3.2&gt; ./glvis
 
        _/_/_/  _/      _/      _/  _/
     _/        _/      _/      _/        _/_/_/
@@ -272,7 +260,6 @@ by the additional message after the logo:</p>
 Generating DH params (1024 bits) ... done.
 Waiting for data on port 19916 ...
 </code></pre>
-
 <p>The secure sockets can be disabled with the <code>-no-sec</code> or <code>--standard-sockets</code>
 command line options.</p></div>
             <div class="col-md-3 hidden-xs hidden-sm"><div class="bs-sidebar hidden-print affix well" role="complementary">
