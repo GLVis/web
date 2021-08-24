@@ -95,7 +95,7 @@ Feb 17, 2021 | Jupyter support: [`pip install glvis`](https://github.com/GLVis/p
 
 New users should start with the [options and general use](options-and-use.md) tutorial.
 
-We also recommend reading the [MFEM project](http://mfem.org) documentation.
+We also recommend reading the [MFEM project](https://mfem.org) documentation.
 
 ## Contact
 

@@ -33,9 +33,3 @@ or [comments](https://github.com/glvis/glvis/issues/new?labels=comment).
   [glvis-v1.2.tgz](https://goo.gl/QLcnzW) | v1.2 | Apr 2011 | 150K | 19K |
   [glvis-v1.1.tgz](https://goo.gl/n7wMF9) | v1.1 | Sep 2010 | 148K | 19K |
   [glvis-v1.0.tgz](https://goo.gl/a5slBh) | v1.0 | Jul 2010 | 144K | 18K | _initial release_
-
-
-[comment]: # ([glvis-d32411e0e4.tgz](https://goo.gl/XlXptO) | N/A | Jul 2014 | 171K | 22K | Development release)
-[comment]: # ([glvis-d15634d151.tgz](https://goo.gl/YcpXYl) | N/A | Jul 2013 | 170K | 22K | Development release)
-
-<!-- GLVis originates from the previous research effort in the (unreleased) [AggieFEM/aFEM](http://www.math.tamu.edu/research/vigre/archive/2000c-Lazarov.html) project. -->
