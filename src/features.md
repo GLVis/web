@@ -46,6 +46,13 @@ When started without any options, GLVis [establishes a server](options-and-use.m
 
 GLVis can also run a [batch sequence](options-and-use.md#glvis-scripts) of commands (GLVis scripts), which enable precise control of particular visualization scenes, and can be useful for making animations.
 
+## Native and Web Versions
+
+<img class="floatpad" src="../img/glvis_app.png" width="130">
+GLVis runs natively on Mac, Linux, and Windows, and can run in the browser using the [web
+version](https://glvis.org/live). GLVis can also be built as a native Mac app bundle that can be
+added to the Dock, double-clicked in the Finder, etc.
+
 ## Open Source
 
 GLVis is an open-source software, and can be freely used under the terms of the [BSD](https://github.com/glvis/glvis/blob/master/LICENSE) license.
