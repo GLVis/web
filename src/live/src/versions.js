@@ -1,5 +1,5 @@
 const versions = {
-  emscripten: "2.0.26",
-  mfem: "v4.3-115-g8f25a46d5",
-  glvis: "v4.0-241-g2f0c790",
+  emscripten: "2.0.29",
+  mfem: "v4.3-431-g12c7976b2",
+  glvis: "v4.1",
 };
