@@ -51,8 +51,8 @@ GLVis can also run a [batch sequence](options-and-use.md#glvis-scripts) of comma
 <img class="floatpad" src="../img/glvis_app.png" width="130">
 GLVis runs natively on Mac, Linux, and Windows. It can also run a browser, using
 the [web version](https://glvis.org/live), or a Jupyter notebook, using
-[pyglvis](https://github.com/glvis/pyglvis). On Mac, GLVis can be built as a
-native app bundle that can be added to the Dock, double-clicked in the Finder,
+[pyglvis](https://github.com/glvis/pyglvis) or [xeus-glvis](https://github.com/glvis/xeus-glvis).
+On Mac, GLVis can be built as a native app bundle that can be added to the Dock, double-clicked in the Finder,
 etc.
 
 ## Open Source
