@@ -2,6 +2,8 @@
 
 &nbsp;       | |
 ------------ | -----------------------------------------------------------------
+Aug 31, 2021 | Version 4.1 [released](https://github.com/glvis/glvis/blob/v4.1/CHANGELOG).
+Jul 10, 2021 | The inaugural [MFEM Community Workshop](workshop.md) will take place on October 20th, 2021.
 Feb 19, 2021 | Web version at [glvis.org/live](https://glvis.org/live).
 Feb 17, 2021 | Jupyter support: [`pip install glvis`](https://github.com/GLVis/pyglvis).
 Dec 11, 2020 | Version 4.0 [released](https://github.com/glvis/glvis/blob/v4.0/CHANGELOG).

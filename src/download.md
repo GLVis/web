@@ -1,13 +1,13 @@
 ## Latest Release
 
-[New features](https://github.com/glvis/glvis/blob/v4.0/CHANGELOG)
-┊ [User documentation](https://github.com/glvis/glvis/blob/v4.0/README)
+[New features](https://github.com/glvis/glvis/blob/v4.1/CHANGELOG)
+┊ [User documentation](https://github.com/glvis/glvis/blob/v4.1/README)
 ┊ [Code documentation](http://glvis.github.io/doxygen/html/index.html)
 ┊ [Sources](https://github.com/glvis/glvis)
 
 [<button type="button" class="btn btn-success">
-**Download glvis-4.0.tgz**
-</button>](https://bit.ly/glvis-4-0)
+**Download glvis-4.1.tgz**
+</button>](https://bit.ly/glvis-4-1)
 &nbsp;&nbsp;&nbsp;
 [<button type="button" class="btn btn-primary">
 **Use web version**
@@ -22,6 +22,7 @@ or [comments](https://github.com/glvis/glvis/issues/new?labels=comment).
 
  **Filename** | **Version** | **Release Date** | **Size** | **[SLOC](https://github.com/AlDanial/cloc)** | **Notes** |
  ------------ | ----------- | ---------------- | -------- | --------------------------------------- | --------- |
+  [glvis-4.1.tgz](https://bit.ly/glvis-4-1)   | v4.1 | Aug 2021 | 2.4M | 34K  |  |
   [glvis-4.0.tgz](https://bit.ly/glvis-4-0)   | v4.0 | Dec 2020 | 1.3M | 33K  | _modern OpenGL, BSD license_ |
   [glvis-3.4.tgz](https://bit.ly/glvis-3-4)   | v3.4 | May 2018 | 199K | 27K |  |
   [glvis-3.3.tgz](https://goo.gl/C0Oadw) | v3.3 | Jan 2017 | 180K | 25K |  |
@@ -32,9 +33,3 @@ or [comments](https://github.com/glvis/glvis/issues/new?labels=comment).
   [glvis-v1.2.tgz](https://goo.gl/QLcnzW) | v1.2 | Apr 2011 | 150K | 19K |
   [glvis-v1.1.tgz](https://goo.gl/n7wMF9) | v1.1 | Sep 2010 | 148K | 19K |
   [glvis-v1.0.tgz](https://goo.gl/a5slBh) | v1.0 | Jul 2010 | 144K | 18K | _initial release_
-
-
-[comment]: # ([glvis-d32411e0e4.tgz](https://goo.gl/XlXptO) | N/A | Jul 2014 | 171K | 22K | Development release)
-[comment]: # ([glvis-d15634d151.tgz](https://goo.gl/YcpXYl) | N/A | Jul 2013 | 170K | 22K | Development release)
-
-<!-- GLVis originates from the previous research effort in the (unreleased) [AggieFEM/aFEM](http://www.math.tamu.edu/research/vigre/archive/2000c-Lazarov.html) project. -->
