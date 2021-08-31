@@ -22,7 +22,7 @@ or [comments](https://github.com/glvis/glvis/issues/new?labels=comment).
 
  **Filename** | **Version** | **Release Date** | **Size** | **[SLOC](https://github.com/AlDanial/cloc)** | **Notes** |
  ------------ | ----------- | ---------------- | -------- | --------------------------------------- | --------- |
-  [glvis-4.1.tgz](https://bit.ly/glvis-4-1)   | v4.1 | Aug 2021 | X.XM | XXK  |  |
+  [glvis-4.1.tgz](https://bit.ly/glvis-4-1)   | v4.1 | Aug 2021 | 2.4M | 34K  |  |
   [glvis-4.0.tgz](https://bit.ly/glvis-4-0)   | v4.0 | Dec 2020 | 1.3M | 33K  | _modern OpenGL, BSD license_ |
   [glvis-3.4.tgz](https://bit.ly/glvis-3-4)   | v3.4 | May 2018 | 199K | 27K |  |
   [glvis-3.3.tgz](https://goo.gl/C0Oadw) | v3.3 | Jan 2017 | 180K | 25K |  |
