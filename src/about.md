@@ -18,6 +18,7 @@ Please cite with:
 - [Julian Andrej](https://github.com/jandrej)
 - [Ernesto Aranda](https://github.com/e-aranda)
 - [Thomas Benson](https://github.com/benson31)
+- [Adrien Bernede](https://github.com/adrienbernede)
 - [Thomas Brunner](http://people.llnl.gov/brunner6)
 - [Jean-Sylvain Camier](http://people.llnl.gov/camier1)
 - [Jakub Červený](https://www.linkedin.com/in/jcerveny)
@@ -27,6 +28,7 @@ Please cite with:
 - [Aaron Fisher](http://people.llnl.gov/fisher47)
 - [Tzanio Kolev](http://people.llnl.gov/kolev1) &mdash; Project Leader
 - [Ilya Lashuk](https://scholar.google.com/citations?user=5KQiAUoAAAAJ&hl=en)
+- [Will Pazner](https://pazner.github.io)
 - [Robert Rieben](http://people.llnl.gov/rieben1)
 - [Joachim Schöberl](http://www.asc.tuwien.ac.at/~schoeberl/wiki/index.php/Joachim_Sch%C3%B6berl)
 - [Tom Stitt](https://github.com/tomstitt)
