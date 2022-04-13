@@ -63,21 +63,21 @@ GLVis is based on the [MFEM](https://mfem.org) library and is used in the [BLAST
 
 Date         | Message
 ------------ | -----------------------------------------------------------------
-Aug 31, 2021 | Version 4.1 [released](https://github.com/glvis/glvis/blob/v4.1/CHANGELOG).
-Jul 10, 2021 | [MFEM Community Workshop](https://mfem.org/workshop)	 in October.
+Apr 21, 2022 | Version 4.2 [released](https://github.com/glvis/glvis/blob/v4.2/CHANGELOG).
+Jan 20, 2022 | New [FEM@LLNL seminar](seminar.md) series.
 Feb 19, 2021 | Web version at [glvis.org/live](https://glvis.org/live).
 Feb 17, 2021 | Jupyter support: [`pip install glvis`](https://github.com/GLVis/pyglvis).
 
 ## Latest Release
 
-[New features](https://github.com/glvis/glvis/blob/v4.1/CHANGELOG)
-┊ [User documentation](https://github.com/glvis/glvis/blob/v4.1/README)
+[New features](https://github.com/glvis/glvis/blob/v4.2/CHANGELOG)
+┊ [User documentation](https://github.com/glvis/glvis/blob/v4.2/README)
 ┊ [Code documentation](http://glvis.github.io/doxygen/html/index.html)
 ┊ [Sources](https://github.com/glvis/glvis)
 
 [<button type="button" class="btn btn-success">
-**Download glvis-4.1.tgz**
-</button>](https://bit.ly/glvis-4-1)
+**Download glvis-4.2.tgz**
+</button>](https://bit.ly/glvis-4-2)
 &nbsp;&nbsp;&nbsp;
 [<button type="button" class="btn btn-primary">
 **Use web version**
