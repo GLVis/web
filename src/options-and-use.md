@@ -77,7 +77,7 @@ All Options:
         Specify the port number on which to accept connections.
    -sec, --secure-sockets, -no-sec, --standard-sockets, current option: --standard-sockets
         Enable or disable GnuTLS secure sockets.
-   -mac, --save-stream, -no-mac, --dont-save-stream, current option: --dont-save-stream
+   -save, --save-stream, -no-save, --dont-save-stream, current option: --dont-save-stream
         In server mode, save incoming data to a file before visualization.
    -saved <string>, --saved-stream <string>, current value: (none)
         Load a GLVis stream saved to a file.
@@ -118,15 +118,21 @@ By default, the server is established on
 [port 19916](https://github.com/glvis/glvis/blob/master/glvis.cpp#L1137), but
 this can be changed with the `-p` option.
 
+<!--
 On legacy Mac machines with OS X Leopard, the server needs to be started with
 ```sh
-glvis -mac
+glvis -save
 ```
 This is due to the fact that Mac OS X returns an error when [fork() is called
 without an immediate exec()](http://developer.apple.com/library/mac/#technotes/tn2083/_index.html#//apple_ref/doc/uid/DTS10003794-CH1-SUBSUBSECTION66).
 *Note that this option is not necessary on newer versions of OS X.*
+-->
 
-A side effect of the `-mac` option is that all socket streams will be saved in
+To save the incoming data, the server needs to be started with
+```sh
+glvis -save
+```
+With the `-save` option, all socket streams will be saved in
 incrementally named files `glvis-saved.0001`, `glvis-saved.0002`, and so on.
 These socket files consist of a
 [data type identifier](https://github.com/glvis/glvis/blob/master/glvis.cpp#L111)
