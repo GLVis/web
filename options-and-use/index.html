@@ -189,8 +189,8 @@
   <code>glvis -np 4 -m mesh -g sol</code> (assuming data saved in files: <code>mesh.000000</code>,
   ... , <code>mesh.000003</code> and <code>sol.000000</code>, ...  , <code>sol.000003</code>)</li>
 <li>Use <code>glvis -h</code> to get help on all command line options.</li>
-<li>See <a href="https://raw.githubusercontent.com/glvis/glvis/master/README">README</a>
-  for a detail of the keystroke commands accepted in the GLVis interactive
+<li>See <a href="https://github.com/glvis/glvis/blob/master/README.md#key-commands">README.md</a>
+  for a detailed description of the keystroke commands accepted in the GLVis interactive
   window.</li>
 </ul>
 <p>Some of the command-line options of GLVis and its general use are described in
@@ -253,7 +253,7 @@ All Options:
         Specify the port number on which to accept connections.
    -sec, --secure-sockets, -no-sec, --standard-sockets, current option: --standard-sockets
         Enable or disable GnuTLS secure sockets.
-   -mac, --save-stream, -no-mac, --dont-save-stream, current option: --dont-save-stream
+   -save, --save-stream, -no-save, --dont-save-stream, current option: --dont-save-stream
         In server mode, save incoming data to a file before visualization.
    -saved &lt;string&gt;, --saved-stream &lt;string&gt;, current value: (none)
         Load a GLVis stream saved to a file.
@@ -290,14 +290,21 @@ application without any options:</p>
 <p>By default, the server is established on
 <a href="https://github.com/glvis/glvis/blob/master/glvis.cpp#L1137">port 19916</a>, but
 this can be changed with the <code>-p</code> option.</p>
-<p>On legacy Mac machines with OS X Leopard, the server needs to be started with</p>
-<pre><code class="sh">glvis -mac
+<!--
+On legacy Mac machines with OS X Leopard, the server needs to be started with
+
+wzxhzdk:2
+
+This is due to the fact that Mac OS X returns an error when [fork() is called
+without an immediate exec()](http://developer.apple.com/library/mac/#technotes/tn2083/_index.html#//apple_ref/doc/uid/DTS10003794-CH1-SUBSUBSECTION66).
+*Note that this option is not necessary on newer versions of OS X.*
+-->
+
+<p>To save the incoming data, the server needs to be started with</p>
+<pre><code class="sh">glvis -save
 </code></pre>
 
-<p>This is due to the fact that Mac OS X returns an error when <a href="http://developer.apple.com/library/mac/#technotes/tn2083/_index.html#//apple_ref/doc/uid/DTS10003794-CH1-SUBSUBSECTION66">fork() is called
-without an immediate exec()</a>.
-<em>Note that this option is not necessary on newer versions of OS X.</em></p>
-<p>A side effect of the <code>-mac</code> option is that all socket streams will be saved in
+<p>With the <code>-save</code> option, all socket streams will be saved in
 incrementally named files <code>glvis-saved.0001</code>, <code>glvis-saved.0002</code>, and so on.
 These socket files consist of a
 <a href="https://github.com/glvis/glvis/blob/master/glvis.cpp#L111">data type identifier</a>
