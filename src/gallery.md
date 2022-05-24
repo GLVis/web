@@ -29,6 +29,12 @@ This page collects screenshots from various simulations that have used GLVis vis
 
 *One of the eight order (Q8) basis functions on the reference square. The sub-refinement in GLVis (key 'i') allows for the correct visualization of such high-order functions.*
 
+----
+
+![](img/gallery/sculpture-ar.jpg)
+
+*GLVis model opened in augmented reality with the [glTF model viewer](https://modelviewer.dev/editor).*
+
 </div><div class="col-md-5"  markdown="1">
 
 [![](img/gallery/triple-point_BLAST_q8q7.png)](img/gallery/triple-pt-np128.gif)
@@ -37,9 +43,9 @@ This page collects screenshots from various simulations that have used GLVis vis
 
 ----
 
-![](img/gallery/fem2d-2.png)
+[![](img/gallery/sculptures.jpg)](img/gallery/sculptures-full.jpg)
 
-*Level lines in 2D. Simulation with [MFEM](http://mfem.org).*
+*Raytraced glTF model in Blender which was exported from GLVis with the 'G' key. The mesh faces have been cut with 'Ctrl+F3'*
 
 ----
 
@@ -52,6 +58,12 @@ This page collects screenshots from various simulations that have used GLVis vis
 [![](img/gallery/partition-2048-a.png)](img/gallery/partition-2048-a.png)
 
 *Parallel partitioning of a non-conforming adaptively refined mesh between 2048 processors based on splitting a space-filling (Hilbert) curve.*
+
+----
+
+![](img/gallery/fem2d-2.png)
+
+*Level lines in 2D. Simulation with [MFEM](http://mfem.org).*
 
 </div><div class="col-md-3"  markdown="1">
 

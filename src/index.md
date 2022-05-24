@@ -18,7 +18,7 @@
       <div class="carousel-caption d-none" style="margin-top:-20px;">
         Accurate representation of many [finite elements](https://mfem.org/features/#higher-order-finite-element-spaces), support for [arbitrary high-order](mesh-formats.md#curvilinear-and-more-general-meshes) and [NURBS](nurbs.md) meshes
       </div>
-  </div>
+    </div>
     <div class="item">
       <img class="d-block w-100" src="img/slide3.png" usemap="#versionsmap">
       <map name="versionsmap">
@@ -28,6 +28,12 @@
       </map>
       <div class="carousel-caption d-none" style="margin-top:-15px;">
         Desktop, [Web](https://glvis.org/live) and [Jupyter](https://mybinder.org/v2/gh/GLVis/pyglvis/HEAD?filepath=examples) versions from the same code base
+      </div>
+    </div>
+    <div class="item">
+      [<img class="d-block w-100" src="img/slide4.jpg">](gallery.md)
+      <div class="carousel-caption d-none" style="margin-top:-20px;">
+        [glTF](https://www.khronos.org/gltf) export to [Blender](https://www.blender.org) and [augmented reality](https://modelviewer.dev/editor) tools
       </div>
     </div>
   </div>
@@ -63,26 +69,28 @@ GLVis is based on the [MFEM](https://mfem.org) library and is used in the [BLAST
 
 Date         | Message
 ------------ | -----------------------------------------------------------------
-Aug 31, 2021 | Version 4.1 [released](https://github.com/glvis/glvis/blob/v4.1/CHANGELOG).
-Jul 10, 2021 | [MFEM Community Workshop](https://mfem.org/workshop)	 in October.
+May 23, 2022 | Version 4.2 [released](https://github.com/glvis/glvis/blob/v4.2/CHANGELOG).
+Jan 20, 2022 | New [FEM@LLNL seminar](seminar.md) series.
 Feb 19, 2021 | Web version at [glvis.org/live](https://glvis.org/live).
 Feb 17, 2021 | Jupyter support: [`pip install glvis`](https://github.com/GLVis/pyglvis).
 
 ## Latest Release
 
-[New features](https://github.com/glvis/glvis/blob/v4.1/CHANGELOG)
-┊ [User documentation](https://github.com/glvis/glvis/blob/v4.1/README)
+[New features](https://github.com/glvis/glvis/blob/v4.2/CHANGELOG)
+┊ [User documentation](https://github.com/glvis/glvis/blob/v4.2/README.md)
 ┊ [Code documentation](http://glvis.github.io/doxygen/html/index.html)
 ┊ [Sources](https://github.com/glvis/glvis)
 
 [<button type="button" class="btn btn-success">
-**Download glvis-4.1.tgz**
-</button>](https://bit.ly/glvis-4-1)
+**Download glvis-4.2.tgz**
+</button>](https://bit.ly/glvis-4-2)
 &nbsp;&nbsp;&nbsp;
 [<button type="button" class="btn btn-primary">
 **Use web version**
 </button>](https://glvis.org/live)
 
+[<i class="fa fa-apple"></i>](https://bit.ly/glvis-mac) [Mac](https://bit.ly/glvis-mac) ┊
+[<i class="fa fa-windows"></i>](https://bit.ly/glvis-win) [Windows](https://bit.ly/glvis-win) ┊
 [Older releases](download.md) ┊ [glvis.js](https://github.com/glvis/glvis-js) ┊ [pyglvis](https://github.com/glvis/pyglvis)
 
 ## Documentation
