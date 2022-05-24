@@ -2,7 +2,7 @@
 
 &nbsp;       | |
 ------------ | -----------------------------------------------------------------
-Apr 21, 2022 | Version 4.2 [released](https://github.com/glvis/glvis/blob/v4.2/CHANGELOG).
+May 23, 2022 | Version 4.2 [released](https://github.com/glvis/glvis/blob/v4.2/CHANGELOG).
 Jan 20, 2022 | [FEM@LLNL seminar series](seminar.md) starting.
 Aug 31, 2021 | Version 4.1 [released](https://github.com/glvis/glvis/blob/v4.1/CHANGELOG).
 Jul 10, 2021 | The inaugural [MFEM Community Workshop](workshop.md) will take place on October 20th, 2021.

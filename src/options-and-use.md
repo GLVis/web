@@ -10,8 +10,8 @@
   `glvis -np 4 -m mesh -g sol` (assuming data saved in files: `mesh.000000`,
   ... , `mesh.000003` and `sol.000000`, ...  , `sol.000003`)
   - Use `glvis -h` to get help on all command line options.
-  - See [README](https://raw.githubusercontent.com/glvis/glvis/master/README)
-  for a detail of the keystroke commands accepted in the GLVis interactive
+  - See [README.md](https://github.com/glvis/glvis/blob/master/README.md#key-commands)
+  for a detailed description of the keystroke commands accepted in the GLVis interactive
   window.
 
 Some of the command-line options of GLVis and its general use are described in

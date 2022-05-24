@@ -22,7 +22,7 @@ GLVis uses OpenGL with interactive refinement to accurately represent curved hig
 ## Lightweight and Convenient
 
 <img class="floatpad" src="../img/gallery/ball-nurbs-np16.png" width="240">
-GLVis has a fast [keystroke-based](https://raw.githubusercontent.com/glvis/glvis/master/README) interface and uses modern OpenGL that takes advantage of
+GLVis has a fast [keystroke-based](https://github.com/glvis/glvis/blob/master/README.md#key-commands) interface and uses modern OpenGL that takes advantage of
  hardware acceleration in modern GPUs.
 It has a number of convenient features, including:
 
