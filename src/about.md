@@ -27,7 +27,9 @@ Please cite with:
 - [Truman Ellis](https://github.com/trumanellis)
 - [Aaron Fisher](http://people.llnl.gov/fisher47)
 - [Tzanio Kolev](http://people.llnl.gov/kolev1) &mdash; Project Leader
+- [Justin Laughlin](https://www.linkedin.com/in/justin-laughlin)
 - [Ilya Lashuk](https://scholar.google.com/citations?user=5KQiAUoAAAAJ&hl=en)
+- [Jan Nikl](https://github.com/najlkin)
 - [Will Pazner](https://pazner.github.io)
 - [Robert Rieben](http://people.llnl.gov/rieben1)
 - [Joachim Schöberl](http://www.asc.tuwien.ac.at/~schoeberl/wiki/index.php/Joachim_Sch%C3%B6berl)
