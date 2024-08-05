@@ -364,6 +364,111 @@ Note that the data in this type of solution files starts from the second line
 is similar, with all the x-components of the field listed first, followed by
 all the y-components, etc.
 
+## Visualizing quadrature data
+
+GLVis can also visualize quadrature data (`QuadratureFunction` in MFEM). As an
+example, we may modify the Laplace problem from [example 1](https://mfem.org/examples/#ex1)
+in MFEM to produce the following quadrature data for linear elements on
+`data/star-q2.mesh` mesh in the MFEM directory:
+```text
+QuadratureSpace
+Type: default_quadrature
+Order: 2
+VDim: 1
+
+0.31230931
+0.26439977
+0.26899615
+0.21618069
+0.31395881
+0.26847144
+0.27055581
+0.21422246
+0.31382331
+0.27104673
+0.26796573
+0.21605458
+0.3123637
+0.26757589
+0.26559942
+0.21459966
+0.31153282
+0.26609827
+0.26447499
+0.21646139
+0.19469524
+0.052168431
+0.15524982
+0.041599065
+0.11105477
+0.029757035
+0.029757035
+0.0079733734
+0.19964714
+0.15657668
+0.05349529
+0.041954596
+0.19860568
+0.053216231
+0.15268989
+0.040913132
+0.10716797
+0.028715571
+0.028715571
+0.0076943141
+0.20085128
+0.15329159
+0.053817938
+0.041074359
+0.20141928
+0.053970134
+0.15541141
+0.041642362
+0.10928779
+0.029283575
+0.029283575
+0.0078465102
+0.19809997
+0.154522
+0.053080726
+0.041404046
+0.19810132
+0.053081088
+0.15452705
+0.041405398
+0.10929283
+0.029284927
+0.029284927
+0.0078468725
+0.19597197
+0.15395649
+0.052510531
+0.041252518
+0.19674926
+0.052718805
+0.15685739
+0.04202981
+0.11219373
+0.030062219
+0.030062219
+0.0080551473
+0.19500042
+0.15638879
+0.052250205
+0.041904249
+```
+
+Saving the example as `star.qf`. These quadrature data can be then visualized
+by the following command:
+```sh
+./glvis -m star-q2.mesh -q star.qf
+```
+This produces these three different representations of the quadrature data,
+which can be switched by `Q` key:
+| LOR             |  Interpolation |  Projection |
+:-------------------------:|:-------------------------:|:-------------------------:
+![](img/star-q2-qf-lor.png) | ![](img/star-q2-qf-interp.png) | ![](img/star-q2-qf-proj.png)
+
 ## GLVis scripts
 
 GLVis can also run a batch sequence of commands, called GLVis scripts, which
