@@ -43,6 +43,10 @@ Visualize mesh and solution (grid function):
    glvis -m <mesh_file> -g <grid_function_file> [-gc <component>]
 Visualize parallel mesh and solution (grid function):
    glvis -np <#proc> -m <mesh_prefix> [-g <grid_function_prefix>]
+Visualize mesh and quadrature function:
+   glvis -m <mesh_file> -q <quadrature_function_file> [-qc <component>]
+Visualize parallel mesh and quadrature function:
+   glvis -np <#proc> -m <mesh_prefix> [-q <quadrature_function_prefix>]
 
 All Options:
    -h, --help
@@ -53,6 +57,10 @@ All Options:
         Solution (GridFunction) file to visualize.
    -gc <int>, --grid-function-component <int>, current value: -1
         Select a grid function component, [0-<num-comp>) or -1 for all.
+   -q <string>, --quadrature-function <string>, current value: (none)
+        Quadrature function file to visualize.
+   -qc <int>, --quadrature-function-component <int>, current value: -1
+        Select a quadrature function component, [0-<num-comp>) or -1 for all.
    -s <string>, --scalar-solution <string>, current value: (none)
         Scalar solution (vertex values) file to visualize.
    -v <string>, --vector-solution <string>, current value: (none)
@@ -99,6 +107,8 @@ All Options:
         Set the line width (multisampling on).
    -oldgl, --legacy-gl, -anygl, --any-gl, current option: --any-gl
         Only try to create a legacy OpenGL (< 2.1) context.
+   -hidpi, --high-dpi, -nohidpi, --no-high-dpi, current option: --high-dpi
+        Enable/disable support for HiDPI at runtime, if supported.
 ```
 
 ## Server mode
