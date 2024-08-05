@@ -458,8 +458,8 @@ VDim: 1
 0.041904249
 ```
 
-Saving the example as `star.qf`. These quadrature data can be then visualized
-by the following command:
+Saving the example as `star.qf`, these quadrature data can be then visualized
+by the following command (assuming a link to `star-q2.mesh` is in the directory):
 ```sh
 ./glvis -m star-q2.mesh -q star.qf
 ```
