@@ -15,6 +15,7 @@ GLVis uses OpenGL with interactive refinement to accurately represent curved hig
   - input in unstructured [VTK mesh format](curvilinear-vtk-meshes.md),
   - support for Gmsh, CUBIT, NETGEN and TrueGrid meshes,
   - arbitrary high-order, scalar and vector finite element and NURBS solutions,
+  - quadrature data represented multiple ways,
   - accurate cutting planes and level lines/surfaces,
   - visualization of parallel meshes and solutions.
 
