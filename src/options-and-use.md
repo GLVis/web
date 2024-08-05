@@ -369,7 +369,8 @@ all the y-components, etc.
 GLVis can also visualize quadrature data (`QuadratureFunction` in MFEM). As an
 example, we may modify the Laplace problem from [example 1](https://mfem.org/examples/#ex1)
 in MFEM to produce the following quadrature data for linear elements on
-`data/star-q2.mesh` mesh in the MFEM directory:
+[data/star-q2.mesh](https://github.com/mfem/mfem/blob/master/data/star-q2.mesh)
+mesh:
 ```text
 QuadratureSpace
 Type: default_quadrature
