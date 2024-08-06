@@ -69,7 +69,7 @@ GLVis is based on the [MFEM](https://mfem.org) library and is used in the [BLAST
 
 Date         | Message
 ------------ | -----------------------------------------------------------------
-Aug XX, 2024 | Version 4.3 [released](https://github.com/glvis/glvis/blob/v4.3/CHANGELOG).
+Aug 7, 2024 | Version 4.3 [released](https://github.com/glvis/glvis/blob/v4.3/CHANGELOG).
 Jan 20, 2022 | New [FEM@LLNL seminar](https://mfem.org/seminar/) series.
 Feb 19, 2021 | Web version at [glvis.org/live](https://glvis.org/live).
 Feb 17, 2021 | Jupyter support: [`pip install glvis`](https://github.com/GLVis/pyglvis).
