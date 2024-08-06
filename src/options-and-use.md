@@ -147,7 +147,7 @@ incrementally named files `glvis-saved.0001`, `glvis-saved.0002`, and so on.
 These socket files consist of a data type identifier:
 `mesh`, `solution`, `psolution`, `quadrature` or `pquadrature`,
 followed by a mesh and a finite element function. For example:
-```text
+```sh
 solution
 
 MFEM mesh v1.0
@@ -255,7 +255,7 @@ The result is:
 
 As another example, consider the finite element grid function `quad.gf` embedded
 in the socket stream `glvis-saved.0001` discussed above:
-```text
+```sh
 FiniteElementSpace
 FiniteElementCollection: Quadratic
 VDim: 1
@@ -279,7 +279,7 @@ will produce identical result to `glvis -saved glvis-saved.0001`.
 
 Vector-valued grid functions are also supported. For example, consider the
 following data saved in a file named `quad-vec.gf`
-```text
+```sh
 FiniteElementSpace
 FiniteElementCollection: Quadratic
 VDim: 2
@@ -332,7 +332,7 @@ scalar and vector case are handled by the `-s` and `-v` options respectively.
 Here is an example with the
 [beam-quad.mesh](https://github.com/mfem/mfem/blob/master/data/beam-quad.mesh)
 mesh file and a solution saved in a file `beam-quad.sol`:
-```text
+```sh
 solution
 1
 2
@@ -371,7 +371,7 @@ example, we may modify the Laplace problem from [Example 1](https://mfem.org/exa
 in MFEM to produce the following quadrature data for linear elements on
 [data/star-q2.mesh](https://github.com/mfem/mfem/blob/master/data/star-q2.mesh)
 mesh:
-```text
+```sh
 QuadratureSpace
 Type: default_quadrature
 Order: 2
