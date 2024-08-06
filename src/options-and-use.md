@@ -125,7 +125,7 @@ application without any options:
 glvis
 ```
 By default, the server is established on
-[port 19916](https://github.com/glvis/glvis/blob/master/glvis.cpp#L1137), but
+[port 19916](https://github.com/glvis/glvis/blob/master/glvis.cpp#L1329), but
 this can be changed with the `-p` option.
 
 <!--
@@ -144,11 +144,11 @@ glvis -save
 ```
 With the `-save` option, all socket streams will be saved in
 incrementally named files `glvis-saved.0001`, `glvis-saved.0002`, and so on.
-These socket files consist of a
-[data type identifier](https://github.com/glvis/glvis/blob/master/glvis.cpp#L111)
+These socket files consist of a data type identifier:
+`mesh`, `solution`, `psolution`, `quadrature` or `pquadrature`,
 followed by a mesh and a finite element function. For example:
 ```text
-fem2d_gf_data
+solution
 
 MFEM mesh v1.0
 
@@ -219,8 +219,8 @@ glvis -saved glvis-saved.0001
 ```
 
 Below is the result for the above socket data using the following GLVis
-keystrokes in the OpenGL window: `AmttOO` followed by multiple refinements with
-`o` and move/zoom adjustments with the mouse.
+keystrokes in the OpenGL window: <kbd>AmttOO</kbd> followed by multiple refinements with
+<kbd>o</kbd> and move/zoom adjustments with the mouse.
 
 ![](img/glvis-saved.png)
 
@@ -314,8 +314,8 @@ The above plot was produced with:
 ```sh
 glvis -m quad.vtk -g quad-vec.gf -k "RjlAmeOOooooooooooobbvuuuuuuuuuuu************"
 ```
-The transformation between the two domains can be further explored with the `b`
-and `n` keys.
+The transformation between the two domains can be further explored with the <kbd>b</kbd>
+and <kbd>n</kbd> keys.
 
 One can also visualize the different components of a vector field as scalar
 functions using the `-gc` option, e.g.
@@ -367,7 +367,7 @@ all the y-components, etc.
 ## Visualizing quadrature data
 
 GLVis can also visualize quadrature data (`QuadratureFunction` in MFEM). As an
-example, we may modify the Laplace problem from [example 1](https://mfem.org/examples/#ex1)
+example, we may modify the Laplace problem from [Example 1](https://mfem.org/examples/#ex1)
 in MFEM to produce the following quadrature data for linear elements on
 [data/star-q2.mesh](https://github.com/mfem/mfem/blob/master/data/star-q2.mesh)
 mesh:
@@ -459,16 +459,17 @@ VDim: 1
 0.041904249
 ```
 
-Saving the example as `star.qf`, these quadrature data can be then visualized
+Saving the example as `star.qf`, this quadrature data can be then visualized
 by the following command (assuming a link to `star-q2.mesh` is in the directory):
 ```sh
 ./glvis -m star-q2.mesh -q star.qf
 ```
-This produces these three different representations of the quadrature data,
-which can be switched by `Q` key:
-| LOR             |  Interpolation |  Projection |
-:-------------------------:|:-------------------------:|:-------------------------:
-![](img/star-q2-qf-lor.png) | ![](img/star-q2-qf-interp.png) | ![](img/star-q2-qf-proj.png)
+This produces the following different representations of the quadrature data,
+which can be switched by pressing the <kbd>Q</kbd> key:
+
+| LOR |  Interpolation |  Projection |
+| --- | -------------- | ----------- |
+| ![](img/star-q2-qf-lor.png) | ![](img/star-q2-qf-interp.png) | ![](img/star-q2-qf-proj.png) |
 
 ## GLVis scripts
 
@@ -533,7 +534,7 @@ configuration) with
 to save a picture in the specified format. There are a number of additional
 script commands available, the complete list of which can be found (and
 extended) by examining the
-[glvis.cpp source code](https://github.com/glvis/glvis/blob/master/glvis.cpp#L636).
+[glvis.cpp source code](https://github.com/glvis/glvis/blob/master/glvis.cpp#L505).
 
 Executing
 ```sh
