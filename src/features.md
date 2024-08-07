@@ -7,7 +7,7 @@ Though depending on MFEM for its finite element dictionary, GLVis can be used in
 ## Accurate Visualization
 
 <img class="floatpad" src="../img/gallery/fem2d-2.png" width="260">
-GLVis uses OpenGL with interactive refinement to accurately represent curved high-order [meshes](options-and-use.md#visualizing-meshes) and a wide variety of finite element [grid functions](options-and-use.md#visualizing-functions) defined on them. GLVis is based on the modular finite element methods library [MFEM](http://mfem.org), which supports in particular:
+GLVis uses OpenGL with interactive refinement to accurately represent curved high-order [meshes](options-and-use.md#visualizing-meshes) and a wide variety of finite element [grid functions](options-and-use.md#visualizing-functions) or [quadrature data](options-and-use.md#visualizing-quadrature-data) defined on them. GLVis is based on the modular finite element methods library [MFEM](http://mfem.org), which supports in particular:
 
   - 1D, 2D, 3D volume and surface meshes,
   - triangular, quadrilateral, tetrahedral and hexahedral meshes,
@@ -15,6 +15,7 @@ GLVis uses OpenGL with interactive refinement to accurately represent curved hig
   - input in unstructured [VTK mesh format](curvilinear-vtk-meshes.md),
   - support for Gmsh, CUBIT, NETGEN and TrueGrid meshes,
   - arbitrary high-order, scalar and vector finite element and NURBS solutions,
+  - quadrature data represented multiple ways,
   - accurate cutting planes and level lines/surfaces,
   - visualization of parallel meshes and solutions.
 

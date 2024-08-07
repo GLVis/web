@@ -25,6 +25,12 @@ This page collects screenshots from various simulations that have used GLVis vis
 
 ----
 
+[![](img/gallery/quadrature-lor.png)](img/gallery/quadrature-lor.png)
+
+*Quadrature data visualization on a [low-order-refined](https://mfem.org/tutorial/solvers/#low-order-refined-methods) (LOR) mesh. Several different visualization options are available via key 'Q'.*
+
+----
+
 ![](img/gallery/q8.png)
 
 *One of the eight order (Q8) basis functions on the reference square. The sub-refinement in GLVis (key 'i') allows for the correct visualization of such high-order functions.*

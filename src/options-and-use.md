@@ -43,6 +43,10 @@ Visualize mesh and solution (grid function):
    glvis -m <mesh_file> -g <grid_function_file> [-gc <component>]
 Visualize parallel mesh and solution (grid function):
    glvis -np <#proc> -m <mesh_prefix> [-g <grid_function_prefix>]
+Visualize mesh and quadrature function:
+   glvis -m <mesh_file> -q <quadrature_function_file> [-qc <component>]
+Visualize parallel mesh and quadrature function:
+   glvis -np <#proc> -m <mesh_prefix> [-q <quadrature_function_prefix>]
 
 All Options:
    -h, --help
@@ -53,6 +57,10 @@ All Options:
         Solution (GridFunction) file to visualize.
    -gc <int>, --grid-function-component <int>, current value: -1
         Select a grid function component, [0-<num-comp>) or -1 for all.
+   -q <string>, --quadrature-function <string>, current value: (none)
+        Quadrature function file to visualize.
+   -qc <int>, --quadrature-function-component <int>, current value: -1
+        Select a quadrature function component, [0-<num-comp>) or -1 for all.
    -s <string>, --scalar-solution <string>, current value: (none)
         Scalar solution (vertex values) file to visualize.
    -v <string>, --vector-solution <string>, current value: (none)
@@ -99,6 +107,8 @@ All Options:
         Set the line width (multisampling on).
    -oldgl, --legacy-gl, -anygl, --any-gl, current option: --any-gl
         Only try to create a legacy OpenGL (< 2.1) context.
+   -hidpi, --high-dpi, -nohidpi, --no-high-dpi, current option: --high-dpi
+        Enable/disable support for HiDPI at runtime, if supported.
 ```
 
 ## Server mode
@@ -115,7 +125,7 @@ application without any options:
 glvis
 ```
 By default, the server is established on
-[port 19916](https://github.com/glvis/glvis/blob/master/glvis.cpp#L1137), but
+[port 19916](https://github.com/glvis/glvis/blob/v4.3/glvis.cpp#L1329), but
 this can be changed with the `-p` option.
 
 <!--
@@ -134,11 +144,11 @@ glvis -save
 ```
 With the `-save` option, all socket streams will be saved in
 incrementally named files `glvis-saved.0001`, `glvis-saved.0002`, and so on.
-These socket files consist of a
-[data type identifier](https://github.com/glvis/glvis/blob/master/glvis.cpp#L111)
+These socket files consist of a data type identifier:
+`mesh`, `solution`, `psolution`, `quadrature` or `pquadrature`,
 followed by a mesh and a finite element function. For example:
-```text
-fem2d_gf_data
+```sh
+solution
 
 MFEM mesh v1.0
 
@@ -209,8 +219,8 @@ glvis -saved glvis-saved.0001
 ```
 
 Below is the result for the above socket data using the following GLVis
-keystrokes in the OpenGL window: `AmttOO` followed by multiple refinements with
-`o` and move/zoom adjustments with the mouse.
+keystrokes in the OpenGL window: <kbd>AmttOO</kbd> followed by multiple refinements with
+<kbd>o</kbd> and move/zoom adjustments with the mouse.
 
 ![](img/glvis-saved.png)
 
@@ -245,7 +255,7 @@ The result is:
 
 As another example, consider the finite element grid function `quad.gf` embedded
 in the socket stream `glvis-saved.0001` discussed above:
-```text
+```sh
 FiniteElementSpace
 FiniteElementCollection: Quadratic
 VDim: 1
@@ -269,7 +279,7 @@ will produce identical result to `glvis -saved glvis-saved.0001`.
 
 Vector-valued grid functions are also supported. For example, consider the
 following data saved in a file named `quad-vec.gf`
-```text
+```sh
 FiniteElementSpace
 FiniteElementCollection: Quadratic
 VDim: 2
@@ -304,8 +314,8 @@ The above plot was produced with:
 ```sh
 glvis -m quad.vtk -g quad-vec.gf -k "RjlAmeOOooooooooooobbvuuuuuuuuuuu************"
 ```
-The transformation between the two domains can be further explored with the `b`
-and `n` keys.
+The transformation between the two domains can be further explored with the <kbd>b</kbd>
+and <kbd>n</kbd> keys.
 
 One can also visualize the different components of a vector field as scalar
 functions using the `-gc` option, e.g.
@@ -322,7 +332,7 @@ scalar and vector case are handled by the `-s` and `-v` options respectively.
 Here is an example with the
 [beam-quad.mesh](https://github.com/mfem/mfem/blob/master/data/beam-quad.mesh)
 mesh file and a solution saved in a file `beam-quad.sol`:
-```text
+```sh
 solution
 1
 2
@@ -353,6 +363,113 @@ Note that the data in this type of solution files starts from the second line
 (the first line contains an identifier). The vector format for the `-v` option
 is similar, with all the x-components of the field listed first, followed by
 all the y-components, etc.
+
+## Visualizing quadrature data
+
+GLVis can also visualize quadrature data (`QuadratureFunction` in MFEM). As an
+example, we may modify the Laplace problem from [Example 1](https://mfem.org/examples/#ex1)
+in MFEM to produce the following quadrature data for linear elements on
+[data/star-q2.mesh](https://github.com/mfem/mfem/blob/master/data/star-q2.mesh)
+mesh:
+```sh
+QuadratureSpace
+Type: default_quadrature
+Order: 2
+VDim: 1
+
+0.31230931
+0.26439977
+0.26899615
+0.21618069
+0.31395881
+0.26847144
+0.27055581
+0.21422246
+0.31382331
+0.27104673
+0.26796573
+0.21605458
+0.3123637
+0.26757589
+0.26559942
+0.21459966
+0.31153282
+0.26609827
+0.26447499
+0.21646139
+0.19469524
+0.052168431
+0.15524982
+0.041599065
+0.11105477
+0.029757035
+0.029757035
+0.0079733734
+0.19964714
+0.15657668
+0.05349529
+0.041954596
+0.19860568
+0.053216231
+0.15268989
+0.040913132
+0.10716797
+0.028715571
+0.028715571
+0.0076943141
+0.20085128
+0.15329159
+0.053817938
+0.041074359
+0.20141928
+0.053970134
+0.15541141
+0.041642362
+0.10928779
+0.029283575
+0.029283575
+0.0078465102
+0.19809997
+0.154522
+0.053080726
+0.041404046
+0.19810132
+0.053081088
+0.15452705
+0.041405398
+0.10929283
+0.029284927
+0.029284927
+0.0078468725
+0.19597197
+0.15395649
+0.052510531
+0.041252518
+0.19674926
+0.052718805
+0.15685739
+0.04202981
+0.11219373
+0.030062219
+0.030062219
+0.0080551473
+0.19500042
+0.15638879
+0.052250205
+0.041904249
+```
+
+Saving the example as `star.qf`, this quadrature data can be then visualized
+by the following command (assuming a link to `star-q2.mesh` is in the directory):
+```sh
+./glvis -m star-q2.mesh -q star.qf
+```
+This produces the following different representations of the quadrature data,
+which can be switched by pressing the <kbd>Q</kbd> key:
+
+| LOR |  Interpolation |  Projection |
+| --- | -------------- | ----------- |
+| ![](img/star-q2-qf-lor.png) | ![](img/star-q2-qf-interp.png) | ![](img/star-q2-qf-proj.png) |
 
 ## GLVis scripts
 
@@ -417,7 +534,7 @@ configuration) with
 to save a picture in the specified format. There are a number of additional
 script commands available, the complete list of which can be found (and
 extended) by examining the
-[glvis.cpp source code](https://github.com/glvis/glvis/blob/master/glvis.cpp#L636).
+[glvis.cpp source code](https://github.com/glvis/glvis/blob/v4.3/glvis.cpp#L505).
 
 Executing
 ```sh
