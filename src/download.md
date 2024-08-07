@@ -2,7 +2,6 @@
 
 [New features](https://github.com/glvis/glvis/blob/v4.3/CHANGELOG)
 ┊ [User documentation](https://github.com/glvis/glvis/blob/v4.3/README.md)
-┊ [Code documentation](http://glvis.github.io/doxygen/html/index.html)
 ┊ [Sources](https://github.com/glvis/glvis)
 
 [<button type="button" class="btn btn-success">
