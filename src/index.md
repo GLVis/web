@@ -88,6 +88,7 @@ Feb 17, 2021 | Jupyter support: [`pip install glvis`](https://github.com/GLVis/p
 **Use web version**
 </button>](https://glvis.org/live)
 
+[<i class="fa fa-apple"></i>](https://bit.ly/glvis-mac) [Mac](https://bit.ly/glvis-mac) ┊
 [<i class="fa fa-windows"></i>](https://bit.ly/glvis-win) [Windows](https://bit.ly/glvis-win) ┊
 [Older releases](download.md) ┊ [glvis.js](https://github.com/glvis/glvis-js) ┊ [pyglvis](https://github.com/glvis/pyglvis)
 
@@ -113,6 +114,3 @@ See&nbsp;the [About](about.md) page for citation information.
 
 </div><div class="col-md-12 bottom"></div>
 
-<!--
-[<i class="fa fa-apple"></i>](https://bit.ly/glvis-mac) [Mac](https://bit.ly/glvis-mac) ┊
--->

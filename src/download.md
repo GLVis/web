@@ -8,12 +8,10 @@
 **<i class="fa fa-download"></i>&nbsp; glvis-4.3.tgz**
 </button>](https://bit.ly/glvis-4-3)
 &nbsp;&nbsp;&nbsp;
-<!--
 [<button type="button" class="btn btn-success">
 **<i class="fa fa-apple"></i>&nbsp; Mac**
 </button>](https://bit.ly/glvis-mac)
 &nbsp;&nbsp;&nbsp;
--->
 [<button type="button" class="btn btn-success">
 **<i class="fa fa-windows"></i>&nbsp; Windows**
 </button>](https://bit.ly/glvis-win)
