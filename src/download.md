@@ -9,10 +9,12 @@
 **<i class="fa fa-download"></i>&nbsp; glvis-4.3.tgz**
 </button>](https://bit.ly/glvis-4-3)
 &nbsp;&nbsp;&nbsp;
+<!--
 [<button type="button" class="btn btn-success">
 **<i class="fa fa-apple"></i>&nbsp; Mac**
 </button>](https://bit.ly/glvis-mac)
 &nbsp;&nbsp;&nbsp;
+-->
 [<button type="button" class="btn btn-success">
 **<i class="fa fa-windows"></i>&nbsp; Windows**
 </button>](https://bit.ly/glvis-win)
@@ -31,7 +33,7 @@ or [comments](https://github.com/glvis/glvis/issues/new?labels=comment).
 
  **Filename** | **Version** | **Release Date** | **Size** | **[SLOC](https://github.com/AlDanial/cloc)** | **Notes** |
  ------------ | ----------- | ---------------- | -------- | --------------------------------------- | --------- |
-  [glvis-4.3.tgz](https://bit.ly/glvis-4-3)   | v4.3 | Aug 2024 | X.XM | XXK  | _quadrature data visualization_ |
+  [glvis-4.3.tgz](https://bit.ly/glvis-4-3)   | v4.3 | Aug 2024 | 2.4M | 39K  | _quadrature data visualization_ |
   [glvis-4.2.tgz](https://bit.ly/glvis-4-2)   | v4.2 | May 2022 | 2.4M | 37K  | _glTF export_ |
   [glvis-4.1.tgz](https://bit.ly/glvis-4-1)   | v4.1 | Aug 2021 | 2.4M | 34K  |  |
   [glvis-4.0.tgz](https://bit.ly/glvis-4-0)   | v4.0 | Dec 2020 | 1.3M | 33K  | _modern OpenGL, BSD license_ |
