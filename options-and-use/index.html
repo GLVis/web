@@ -23,6 +23,14 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
 
+	<!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NS5XV5TFM6"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NS5XV5TFM6');
+        </script>
         
     </head>
 
@@ -171,6 +179,8 @@
         
             <li><a href="#visualizing-functions">Visualizing functions</a></li>
         
+            <li><a href="#visualizing-quadrature-data">Visualizing quadrature data</a></li>
+        
             <li><a href="#glvis-scripts">GLVis scripts</a></li>
         
     
@@ -219,6 +229,10 @@ Visualize mesh and solution (grid function):
    glvis -m &lt;mesh_file&gt; -g &lt;grid_function_file&gt; [-gc &lt;component&gt;]
 Visualize parallel mesh and solution (grid function):
    glvis -np &lt;#proc&gt; -m &lt;mesh_prefix&gt; [-g &lt;grid_function_prefix&gt;]
+Visualize mesh and quadrature function:
+   glvis -m &lt;mesh_file&gt; -q &lt;quadrature_function_file&gt; [-qc &lt;component&gt;]
+Visualize parallel mesh and quadrature function:
+   glvis -np &lt;#proc&gt; -m &lt;mesh_prefix&gt; [-q &lt;quadrature_function_prefix&gt;]
 
 All Options:
    -h, --help
@@ -229,6 +243,10 @@ All Options:
         Solution (GridFunction) file to visualize.
    -gc &lt;int&gt;, --grid-function-component &lt;int&gt;, current value: -1
         Select a grid function component, [0-&lt;num-comp&gt;) or -1 for all.
+   -q &lt;string&gt;, --quadrature-function &lt;string&gt;, current value: (none)
+        Quadrature function file to visualize.
+   -qc &lt;int&gt;, --quadrature-function-component &lt;int&gt;, current value: -1
+        Select a quadrature function component, [0-&lt;num-comp&gt;) or -1 for all.
    -s &lt;string&gt;, --scalar-solution &lt;string&gt;, current value: (none)
         Scalar solution (vertex values) file to visualize.
    -v &lt;string&gt;, --vector-solution &lt;string&gt;, current value: (none)
@@ -275,6 +293,8 @@ All Options:
         Set the line width (multisampling on).
    -oldgl, --legacy-gl, -anygl, --any-gl, current option: --any-gl
         Only try to create a legacy OpenGL (&lt; 2.1) context.
+   -hidpi, --high-dpi, -nohidpi, --no-high-dpi, current option: --high-dpi
+        Enable/disable support for HiDPI at runtime, if supported.
 </code></pre>
 
 <h2 id="server-mode">Server mode</h2>
@@ -288,7 +308,7 @@ application without any options:</p>
 </code></pre>
 
 <p>By default, the server is established on
-<a href="https://github.com/glvis/glvis/blob/master/glvis.cpp#L1137">port 19916</a>, but
+<a href="https://github.com/glvis/glvis/blob/v4.3/glvis.cpp#L1329">port 19916</a>, but
 this can be changed with the <code>-p</code> option.</p>
 <!--
 On legacy Mac machines with OS X Leopard, the server needs to be started with
@@ -306,10 +326,10 @@ without an immediate exec()](http://developer.apple.com/library/mac/#technotes/t
 
 <p>With the <code>-save</code> option, all socket streams will be saved in
 incrementally named files <code>glvis-saved.0001</code>, <code>glvis-saved.0002</code>, and so on.
-These socket files consist of a
-<a href="https://github.com/glvis/glvis/blob/master/glvis.cpp#L111">data type identifier</a>
+These socket files consist of a data type identifier:
+<code>mesh</code>, <code>solution</code>, <code>psolution</code>, <code>quadrature</code> or <code>pquadrature</code>,
 followed by a mesh and a finite element function. For example:</p>
-<pre><code class="text">fem2d_gf_data
+<pre><code class="sh">solution
 
 MFEM mesh v1.0
 
@@ -379,8 +399,8 @@ be visualized later as follows:</p>
 </code></pre>
 
 <p>Below is the result for the above socket data using the following GLVis
-keystrokes in the OpenGL window: <code>AmttOO</code> followed by multiple refinements with
-<code>o</code> and move/zoom adjustments with the mouse.</p>
+keystrokes in the OpenGL window: <kbd>AmttOO</kbd> followed by multiple refinements with
+<kbd>o</kbd> and move/zoom adjustments with the mouse.</p>
 <p><img alt="" src="../img/glvis-saved.png" /></p>
 <h2 id="visualizing-meshes">Visualizing meshes</h2>
 <p>GLVis can also be employed in non-sever mode, e.g. to visualize a mesh file:</p>
@@ -407,7 +427,7 @@ glvis -m beam-hex.mesh -g GLVis_coloring.gf
 <p><img alt="" src="../img/beam-hex-sc.png" /></p>
 <p>As another example, consider the finite element grid function <code>quad.gf</code> embedded
 in the socket stream <code>glvis-saved.0001</code> discussed above:</p>
-<pre><code class="text">FiniteElementSpace
+<pre><code class="sh">FiniteElementSpace
 FiniteElementCollection: Quadratic
 VDim: 1
 Ordering: 0
@@ -430,7 +450,7 @@ Ordering: 0
 <p>will produce identical result to <code>glvis -saved glvis-saved.0001</code>.</p>
 <p>Vector-valued grid functions are also supported. For example, consider the
 following data saved in a file named <code>quad-vec.gf</code></p>
-<pre><code class="text">FiniteElementSpace
+<pre><code class="sh">FiniteElementSpace
 FiniteElementCollection: Quadratic
 VDim: 2
 Ordering: 0
@@ -463,8 +483,8 @@ quadrilateral into the unit square:</p>
 <pre><code class="sh">glvis -m quad.vtk -g quad-vec.gf -k &quot;RjlAmeOOooooooooooobbvuuuuuuuuuuu************&quot;
 </code></pre>
 
-<p>The transformation between the two domains can be further explored with the <code>b</code>
-and <code>n</code> keys.</p>
+<p>The transformation between the two domains can be further explored with the <kbd>b</kbd>
+and <kbd>n</kbd> keys.</p>
 <p>One can also visualize the different components of a vector field as scalar
 functions using the <code>-gc</code> option, e.g.</p>
 <pre><code class="text">glvis -m quad.vtk -g quad-vec.gf -gc 1
@@ -478,7 +498,7 @@ scalar and vector case are handled by the <code>-s</code> and <code>-v</code> op
 Here is an example with the
 <a href="https://github.com/mfem/mfem/blob/master/data/beam-quad.mesh">beam-quad.mesh</a>
 mesh file and a solution saved in a file <code>beam-quad.sol</code>:</p>
-<pre><code class="text">solution
+<pre><code class="sh">solution
 1
 2
 3
@@ -507,6 +527,122 @@ mesh file and a solution saved in a file <code>beam-quad.sol</code>:</p>
 (the first line contains an identifier). The vector format for the <code>-v</code> option
 is similar, with all the x-components of the field listed first, followed by
 all the y-components, etc.</p>
+<h2 id="visualizing-quadrature-data">Visualizing quadrature data</h2>
+<p>GLVis can also visualize quadrature data (<code>QuadratureFunction</code> in MFEM). As an
+example, we may modify the Laplace problem from <a href="https://mfem.org/examples/#ex1">Example 1</a>
+in MFEM to produce the following quadrature data for linear elements on
+<a href="https://github.com/mfem/mfem/blob/master/data/star-q2.mesh">data/star-q2.mesh</a>
+mesh:</p>
+<pre><code class="sh">QuadratureSpace
+Type: default_quadrature
+Order: 2
+VDim: 1
+
+0.31230931
+0.26439977
+0.26899615
+0.21618069
+0.31395881
+0.26847144
+0.27055581
+0.21422246
+0.31382331
+0.27104673
+0.26796573
+0.21605458
+0.3123637
+0.26757589
+0.26559942
+0.21459966
+0.31153282
+0.26609827
+0.26447499
+0.21646139
+0.19469524
+0.052168431
+0.15524982
+0.041599065
+0.11105477
+0.029757035
+0.029757035
+0.0079733734
+0.19964714
+0.15657668
+0.05349529
+0.041954596
+0.19860568
+0.053216231
+0.15268989
+0.040913132
+0.10716797
+0.028715571
+0.028715571
+0.0076943141
+0.20085128
+0.15329159
+0.053817938
+0.041074359
+0.20141928
+0.053970134
+0.15541141
+0.041642362
+0.10928779
+0.029283575
+0.029283575
+0.0078465102
+0.19809997
+0.154522
+0.053080726
+0.041404046
+0.19810132
+0.053081088
+0.15452705
+0.041405398
+0.10929283
+0.029284927
+0.029284927
+0.0078468725
+0.19597197
+0.15395649
+0.052510531
+0.041252518
+0.19674926
+0.052718805
+0.15685739
+0.04202981
+0.11219373
+0.030062219
+0.030062219
+0.0080551473
+0.19500042
+0.15638879
+0.052250205
+0.041904249
+</code></pre>
+
+<p>Saving the example as <code>star.qf</code>, this quadrature data can be then visualized
+by the following command (assuming a link to <code>star-q2.mesh</code> is in the directory):</p>
+<pre><code class="sh">./glvis -m star-q2.mesh -q star.qf
+</code></pre>
+
+<p>This produces the following different representations of the quadrature data,
+which can be switched by pressing the <kbd>Q</kbd> key:</p>
+<table>
+<thead>
+<tr>
+<th>LOR</th>
+<th>Interpolation</th>
+<th>Projection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../img/star-q2-qf-lor.png" /></td>
+<td><img alt="" src="../img/star-q2-qf-interp.png" /></td>
+<td><img alt="" src="../img/star-q2-qf-proj.png" /></td>
+</tr>
+</tbody>
+</table>
 <h2 id="glvis-scripts">GLVis scripts</h2>
 <p>GLVis can also run a batch sequence of commands, called GLVis scripts, which
 are useful for saving particular visualization scenes, as well as to generate
@@ -568,7 +704,7 @@ configuration) with
 to save a picture in the specified format. There are a number of additional
 script commands available, the complete list of which can be found (and
 extended) by examining the
-<a href="https://github.com/glvis/glvis/blob/master/glvis.cpp#L636">glvis.cpp source code</a>.</p>
+<a href="https://github.com/glvis/glvis/blob/v4.3/glvis.cpp#L505">glvis.cpp source code</a>.</p>
 <p>Executing</p>
 <pre><code class="sh">glvis -run quad-vec.glvs
 </code></pre>
@@ -599,6 +735,8 @@ to see the animation):</p>
             <li><a href="#visualizing-meshes">Visualizing meshes</a></li>
         
             <li><a href="#visualizing-functions">Visualizing functions</a></li>
+        
+            <li><a href="#visualizing-quadrature-data">Visualizing quadrature data</a></li>
         
             <li><a href="#glvis-scripts">GLVis scripts</a></li>
         
