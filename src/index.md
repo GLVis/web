@@ -24,10 +24,10 @@
       <map name="versionsmap">
         <area shape="rect" coords="11,5,148,132" alt="glvis.org" href="https://glvis.org/download/">
 	<area shape="rect" coords="177,4,317,134" alt="glvis.org/live" href="https://glvis.org/live">
-	<area shape="rect" coords="345,4,485,136" alt="pip install glvis" href="https://colab.research.google.com/github/GLVis/pyglvis/blob/main/examples/basic.ipynb">
+	<area shape="rect" coords="345,4,485,136" alt="pip install glvis" href="https://colab.research.google.com/github/GLVis/pyglvis/blob/main/examples/ex1.ipynb">
       </map>
       <div class="carousel-caption d-none" style="margin-top:-15px;">
-        Desktop, [Web](https://glvis.org/live) and [Jupyter](https://colab.research.google.com/github/GLVis/pyglvis/blob/main/examples/basic.ipynb) versions from the same code base
+        Desktop, [Web](https://glvis.org/live) and [Jupyter](https://colab.research.google.com/github/GLVis/pyglvis/blob/main/examples/ex1.ipynb) versions from the same code base
       </div>
     </div>
     <div class="item">
@@ -56,7 +56,7 @@ GLVis is a _lightweight_ tool for _accurate_ and _flexible_ finite element visua
 
  * Accurate functional representation of many [finite elements](https://mfem.org/features/#higher-order-finite-element-spaces).
  * Support for [arbitrary high-order](mesh-formats.md#curvilinear-and-more-general-meshes) and [NURBS](nurbs.md) meshes.
- * Desktop, [Web](https://glvis.org/live) and [Jupyter](https://colab.research.google.com/github/GLVis/pyglvis/blob/main/examples/basic.ipynb) versions from the same code base.
+ * Desktop, [Web](https://glvis.org/live) and [Jupyter](https://colab.research.google.com/github/GLVis/pyglvis/blob/main/examples/ex1.ipynb) versions from the same code base.
  * [Server mode](options-and-use.md#server-mode) accepting multiple socket connections.
  * Visualization of [parallel](parallel-visualization.md) meshes and solutions.
  * ... and [many more](features.md).
