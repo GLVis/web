@@ -2,6 +2,7 @@
 
 &nbsp;       | |
 ------------ | -----------------------------------------------------------------
+Sep 27, 2024 | Version 4.3.2 [released](https://github.com/glvis/glvis/blob/v4.3.2/CHANGELOG).
 Aug 7, 2024 | Version 4.3 [released](https://github.com/glvis/glvis/blob/v4.3/CHANGELOG).
 May 23, 2022 | Version 4.2 [released](https://github.com/glvis/glvis/blob/v4.2/CHANGELOG).
 Jan 20, 2022 | [FEM@LLNL seminar series](https://mfem.org/seminar/) starting.
