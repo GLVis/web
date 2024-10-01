@@ -1,4 +1,4 @@
-// Copyright (c) 2010-2021, Lawrence Livermore National Security, LLC. Produced
+// Copyright (c) 2010-2024, Lawrence Livermore National Security, LLC. Produced
 // at the Lawrence Livermore National Laboratory. All Rights reserved. See files
 // LICENSE and NOTICE for details. LLNL-CODE-443271.
 //
@@ -214,9 +214,14 @@
     }
 
     async loadStream(e) {
-      const filename = e.target.files[0];
-      const data = await new Response(filename).text();
-      await this.display(data);
+      const file = e.target.files[0];
+      const data = await new Response(file).text();
+      const extension = file.name.split('.').pop();
+      if (["mesh", "vtk", "msh"].includes(extension)) {
+        await this.display("mesh\n" + data);
+      } else {
+        await this.display(data);
+      }
     }
 
     setTouchDevice(status) {
