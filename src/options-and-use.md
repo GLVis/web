@@ -73,6 +73,8 @@ All Options:
         Run a GLVis script file.
    -k <string>, --keys <string>, current value: (none)
         Execute key shortcut commands in the GLVis window.
+   -pal <string>, --palettes <string>, current value: (none)
+        Palette file.
    -fo, --fix-orientations, -no-fo, --dont-fix-orientations, current option: --dont-fix-orientations
         Attempt to fix the orientations of inverted elements.
    -a, --real-attributes, -ap, --processor-attributes, current option: --processor-attributes
