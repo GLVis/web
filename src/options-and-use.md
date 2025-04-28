@@ -251,6 +251,11 @@ to a piece-wise constant function with different values in neighboring elements.
 This function can be generated and saved with the `-sc` option, which writes it
 in a file called `GLVis_coloring.gf`.
 
+Alternatively, the mesh can be loaded from a data collection (VisIt, Sidre, FMS,
+or Conduit). Path to the collection is provided through the respective command
+line parameter (`-visit`, `-sidre`, `-fms` or `-conduit`). Optionally, the
+cycle and protocol can be set by `-dc-cycle` and `-dc-prot` parameters.
+
 ## Visualizing functions
 
 There are several ways to visualize a function on a given mesh. For example we
@@ -338,7 +343,7 @@ gives after some manipulations the following plot:
 
 ![](img/quad-vec-sc1.png)
 
-Finally, GLVis supports the visualization of functions with values provided only
+Moreover, GLVis supports the visualization of functions with values provided only
 in the vertices of the mesh. *This is only supported for non-curved meshes!* The
 scalar and vector case are handled by the `-s` and `-v` options respectively.
 Here is an example with the
@@ -375,6 +380,10 @@ Note that the data in this type of solution files starts from the second line
 (the first line contains an identifier). The vector format for the `-v` option
 is similar, with all the x-components of the field listed first, followed by
 all the y-components, etc.
+
+Finally, the function can be loaded from a data collection. Start with loading
+the collection as for [visualization of mesh](#visualizing-meshes) and specify
+name of the field through the `-g` parameter.
 
 ## Visualizing quadrature data
 
@@ -482,6 +491,10 @@ which can be switched by pressing the <kbd>Q</kbd> key:
 | LOR |  Interpolation |  Projection |
 | --- | -------------- | ----------- |
 | ![](img/star-q2-qf-lor.png) | ![](img/star-q2-qf-interp.png) | ![](img/star-q2-qf-proj.png) |
+
+Finally, loading of quadratures from data collections is supported. Start with
+loading the collection as for [visualization of meshes](#visualizing-meshes)
+and specify name of the Q-field through the `-q` parameter. 
 
 ## GLVis scripts
 
