@@ -382,8 +382,8 @@ is similar, with all the x-components of the field listed first, followed by
 all the y-components, etc.
 
 Finally, the function can be loaded from a data collection. Start with loading
-the collection as for [visualization of mesh](#visualizing-meshes) and specify
-name of the field through the `-g` parameter.
+the collection as for [visualization of meshes](#visualizing-meshes) and
+specify name of the field through the `-g` parameter.
 
 ## Visualizing quadrature data
 
