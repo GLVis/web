@@ -251,6 +251,18 @@ All Options:
         Scalar solution (vertex values) file to visualize.
    -v &lt;string&gt;, --vector-solution &lt;string&gt;, current value: (none)
         Vector solution (vertex values) file to visualize.
+   -visit &lt;string&gt;, --visit-datafiles &lt;string&gt;, current value: (none)
+        VisIt collection to load
+   -sidre &lt;string&gt;, --sidre-datafiles &lt;string&gt;, current value: (none)
+        Sidre collection to load
+   -fms &lt;string&gt;, --fms-datafiles &lt;string&gt;, current value: (none)
+        FMS collection to load
+   -conduit &lt;string&gt;, --conduit-datafiles &lt;string&gt;, current value: (none)
+        Conduit collection to load
+   -dc-prot &lt;string&gt;, --data-collection-protocol &lt;string&gt;, current value: (default)
+        Protocol of the data collection to load
+   -dc-cycle &lt;int&gt;, --data-collection-cycle &lt;int&gt;, current value: 0
+        Cycle of the data collection to load
    -np &lt;int&gt;, --num-proc &lt;int&gt;, current value: 0
         Load mesh/solution from multiple processors.
    -d &lt;int&gt;, --pad-digits &lt;int&gt;, current value: 6
@@ -259,6 +271,8 @@ All Options:
         Run a GLVis script file.
    -k &lt;string&gt;, --keys &lt;string&gt;, current value: (none)
         Execute key shortcut commands in the GLVis window.
+   -pal &lt;string&gt;, --palettes &lt;string&gt;, current value: (none)
+        Palette file.
    -fo, --fix-orientations, -no-fo, --dont-fix-orientations, current option: --dont-fix-orientations
         Attempt to fix the orientations of inverted elements.
    -a, --real-attributes, -ap, --processor-attributes, current option: --processor-attributes
@@ -414,6 +428,10 @@ directly to the GLVis window, see, e.g., the examples in the
 to a piece-wise constant function with different values in neighboring elements.
 This function can be generated and saved with the <code>-sc</code> option, which writes it
 in a file called <code>GLVis_coloring.gf</code>.</p>
+<p>Alternatively, the mesh can be loaded from a data collection (VisIt, Sidre, FMS,
+or Conduit). Path to the collection is provided through the respective command
+line parameter (<code>-visit</code>, <code>-sidre</code>, <code>-fms</code> or <code>-conduit</code>). Optionally, the
+cycle and protocol can be set by <code>-dc-cycle</code> and <code>-dc-prot</code> parameters.</p>
 <h2 id="visualizing-functions">Visualizing functions</h2>
 <p>There are several ways to visualize a function on a given mesh. For example we
 can visualize the coloring function for the mesh
@@ -492,7 +510,7 @@ functions using the <code>-gc</code> option, e.g.</p>
 
 <p>gives after some manipulations the following plot:</p>
 <p><img alt="" src="../img/quad-vec-sc1.png" /></p>
-<p>Finally, GLVis supports the visualization of functions with values provided only
+<p>Moreover, GLVis supports the visualization of functions with values provided only
 in the vertices of the mesh. <em>This is only supported for non-curved meshes!</em> The
 scalar and vector case are handled by the <code>-s</code> and <code>-v</code> options respectively.
 Here is an example with the
@@ -527,6 +545,9 @@ mesh file and a solution saved in a file <code>beam-quad.sol</code>:</p>
 (the first line contains an identifier). The vector format for the <code>-v</code> option
 is similar, with all the x-components of the field listed first, followed by
 all the y-components, etc.</p>
+<p>Finally, the function can be loaded from a data collection. Start with loading
+the collection as for <a href="#visualizing-meshes">visualization of meshes</a> and
+specify name of the field through the <code>-g</code> parameter.</p>
 <h2 id="visualizing-quadrature-data">Visualizing quadrature data</h2>
 <p>GLVis can also visualize quadrature data (<code>QuadratureFunction</code> in MFEM). As an
 example, we may modify the Laplace problem from <a href="https://mfem.org/examples/#ex1">Example 1</a>
@@ -643,6 +664,9 @@ which can be switched by pressing the <kbd>Q</kbd> key:</p>
 </tr>
 </tbody>
 </table>
+<p>Finally, loading of quadratures from data collections is supported. Start with
+loading the collection as for <a href="#visualizing-meshes">visualization of meshes</a>
+and specify name of the Q-field through the <code>-q</code> parameter. </p>
 <h2 id="glvis-scripts">GLVis scripts</h2>
 <p>GLVis can also run a batch sequence of commands, called GLVis scripts, which
 are useful for saving particular visualization scenes, as well as to generate
