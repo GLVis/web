@@ -1,12 +1,12 @@
 ## Latest Release
 
-[New features](https://github.com/glvis/glvis/blob/v4.3.2/CHANGELOG)
-┊ [User documentation](https://github.com/glvis/glvis/blob/v4.3.2/README.md)
+[New features](https://github.com/glvis/glvis/blob/v4.4/CHANGELOG)
+┊ [User documentation](https://github.com/glvis/glvis/blob/v4.4/README.md)
 ┊ [Sources](https://github.com/glvis/glvis)
 
 [<button type="button" class="btn btn-success">
-**<i class="fa fa-download"></i>&nbsp; glvis-4.3.2.tgz**
-</button>](https://bit.ly/glvis-4-3-2)
+**<i class="fa fa-download"></i>&nbsp; glvis-4.4.tgz**
+</button>](https://bit.ly/glvis-4-4)
 &nbsp;&nbsp;&nbsp;
 [<button type="button" class="btn btn-success">
 **<i class="fa fa-apple"></i>&nbsp; Mac**
@@ -30,6 +30,7 @@ or [comments](https://github.com/glvis/glvis/issues/new?labels=comment).
 
  **Filename** | **Version** | **Release Date** | **Size** | **[SLOC](https://github.com/AlDanial/cloc)** | **Notes** |
  ------------ | ----------- | ---------------- | -------- | --------------------------------------- | --------- |
+  [glvis-4.4.tgz](https://bit.ly/glvis-4-4)   | v4.4 | May 2025 | 2.6M | 41K  |  |
   [glvis-4.3.2.tgz](https://bit.ly/glvis-4-3-2)   | v4.3.2 | Sep 2024 | 2.4M | 40K  |  |
   [glvis-4.3.tgz](https://bit.ly/glvis-4-3)   | v4.3 | Aug 2024 | 2.4M | 39K  | _quadrature data visualization_ |
   [glvis-4.2.tgz](https://bit.ly/glvis-4-2)   | v4.2 | May 2022 | 2.4M | 37K  | _glTF export_ |
