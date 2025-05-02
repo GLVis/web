@@ -12,14 +12,14 @@ For data saved in separate files, e.g. `mesh.000000`, ... , `mesh.000003` and `s
 ```sh
 glvis -np 4 -m mesh -g sol
 ```
-In other words, the actual mesh and solution file names are obtained from the above prefixes "`mesh`" and "`sol`" by appending "`.`" followed by a 6-digit processor/subdomain number padded with 0's, see e.g. [this example](https://github.com/mfem/mfem/blob/v4.7/examples/ex1p.cpp#L281). (Note that the related obsolete option -par3d was removed in version 2.0).
+In other words, the actual mesh and solution file names are obtained from the above prefixes "`mesh`" and "`sol`" by appending "`.`" followed by a 6-digit processor/subdomain number padded with 0's, see e.g. [this example](https://github.com/mfem/mfem/blob/v4.8/examples/ex1p.cpp#L286). (Note that the related obsolete option -par3d was removed in version 2.0).
 
 For results send by separate socket connections from each processor, the
 parallel format just adds a prefix specifying the total number of processors and the current processor id:
 ```sh
 parallel <num_proc> <myid>
 ```
-An example of this can be found [here](https://github.com/mfem/mfem/blob/v4.7/examples/ex1p.cpp#L300).
+An example of this can be found [here](https://github.com/mfem/mfem/blob/v4.8/examples/ex1p.cpp#L305).
 
 To illustrate the parallel visualization capabilities of GLVis, suppose that we have solves a simple Poisson problem on a 2x2 square grid using 2 processors. The processor mesh files generated, e.g. by [MFEM's Parallel Example 1](https://github.com/mfem/mfem/blob/master/examples/ex1p.cpp), are "`mesh.000000`":
 ```sh

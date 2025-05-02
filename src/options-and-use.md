@@ -139,7 +139,7 @@ application without any options:
 glvis
 ```
 By default, the server is established on
-[port 19916](https://github.com/glvis/glvis/blob/v4.3/glvis.cpp#L1329), but
+[port 19916](https://github.com/glvis/glvis/blob/v4.4/glvis.cpp#L1421), but
 this can be changed with the `-p` option.
 
 <!--
@@ -561,7 +561,7 @@ configuration) with
 to save a picture in the specified format. There are a number of additional
 script commands available, the complete list of which can be found (and
 extended) by examining the
-[glvis.cpp source code](https://github.com/glvis/glvis/blob/v4.3/glvis.cpp#L505).
+[glvis.cpp source code](https://github.com/glvis/glvis/blob/v4.4/glvis.cpp#L500).
 
 Executing
 ```sh
