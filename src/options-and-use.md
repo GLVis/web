@@ -238,6 +238,52 @@ keystrokes in the OpenGL window: <kbd>AmttOO</kbd> followed by multiple refineme
 
 ![](img/glvis-saved.png)
 
+There are many additional stream commands, which can be used. Their complete
+list is here:
+```text
+mesh <mesh> - Visualize the mesh.
+solution <mesh> <solution> - Visualize the solution.
+quadrature <mesh> <quadrature> - Visualize the quadrature.
+fem2d_data <mesh> <data> - Visualize the 2D scalar data.
+vfem2d_data <mesh> <data_x> <data_y> - Visualize the 2D vector data.
+vfem2d_data_keys <mesh> <data_x> <data_y> <keys> - Visualize the 2D vector data and apply control keys.
+fem3d_data <mesh> <data> - Visualize the 3D scalar data.
+vfem3d_data <mesh> <data_x> <data_y> <data_z> - Visualize the 3D vector data.
+vfem3d_data_keys <mesh> <data_x> <data_y> <data_z> <keys> - Visualize the 3D vector data and apply control keys.
+fem2d_gf_data <mesh> <solution> - Visualize the 2D scalar grid function.
+fem2d_gf_data_keys <mesh> <solution> <keys> - Visualize the 2D scalar grid function and apply control keys.
+vfem2d_gf_data <mesh> <solution> - Visualize the 2D vector grid function.
+vfem2d_gf_data_keys <mesh> <solution> <keys> - Visualize the 2D vector grid function and apply control keys.
+fem3d_gf_data <mesh> <solution> - Visualize the 3D scalar grid function.
+fem3d_gf_data_keys <mesh> <solution> <keys> - Visualize the 3D scalar grid function and apply control keys.
+vfem3d_gf_data <mesh> <solution> - Visualize the 3D vector grid function.
+vfem3d_gf_data_keys <mesh> <solution> <keys> - Visualize the 3D vector grid function and apply control keys.
+raw_scalar_2d <data> - Visualize the 2D scalar data (see stream_reader.cpp).
+parallel <num proc> <proc> - Prefix for distributed mesh/solution/quadrature.
+screenshot <file> - Take a screenshot, saving it to the file.
+viewcenter <x> <y> - Change the viewcenter.
+view <theta> <phi> - Change the solid angle of view.
+zoom <zoom> - Change the zoom factor.
+shading <flat/smooth/cool> - Change the shading algorithm.
+subdivisions <times> <dummy> - Change the refinement level.
+valuerange <min> <max> - Change the value range.
+autoscale <off/on/value/mesh> - Change the autoscale algorithm.
+levellines <min> <max> <num> - Set the level lines.
+axis_numberformat '<format>' - Set the axis number format.
+colorbar_numberformat '<format>' - Set the colorbar number format.
+window_size <w> <h> - Set the size of the window.
+window_geometry <x> <y> <w> <h> - Set the position and size of the window.
+window_title '<title>' - Set title of the window.
+keys <keys> - Send the control key sequence.
+palette <index> - Set the palette index.
+palette_repeat <times> - Set the repetition of the palette.
+camera <cam[0]> ... <cam[2]> <dir[0]> ... <dir[2]> <up[0]> ... <up[2]> - Set the camera position, direction and upward vector.
+plot_caption '<caption>' - Set the plot caption.
+axis_labels '<x label>' '<y label>' '<z label>' - Set labels of the axes.
+pause  - Stop the stream until space is pressed.
+autopause <0/off/1/on> - Turns off or on autopause.
+```
+
 ## Visualizing meshes
 
 GLVis can also be employed in non-sever mode, e.g. to visualize a mesh file:
@@ -558,10 +604,7 @@ function plotted, without changing any other visualization parameters, while
 [xwd](http://www.xfree86.org/current/xwd.1.html) depending on the build
 configuration) with
 [ImageMagick's convert utility](http://www.imagemagick.org/script/convert.php)
-to save a picture in the specified format. There are a number of additional
-script commands available, the complete list of which can be found (and
-extended) by examining the
-[glvis.cpp source code](https://github.com/glvis/glvis/blob/v4.4/glvis.cpp#L500).
+to save a picture in the specified format. 
 
 Executing
 ```sh
@@ -581,3 +624,41 @@ More examples of animations produced with GLVis scripts can be found at the
 [BLAST website](http://www.llnl.gov/casc/blast), e.g.,
 [here](http://computation.llnl.gov/sites/default/files/public/triple-pt-xy.gif) and
 [here](http://computation.llnl.gov/sites/default/files/public/triple-pt-rz.gif).
+
+There are a number of additional script commands available, the complete list is here:
+```text
+mesh <file> - Visualize the mesh.
+solution <mesh> <solution> - Visualize the solution.
+psolution <np> <mesh prefix> <keep attributes> <solution prefix> - Visualize the distributed solution.
+quadrature <mesh> <quadrature> - Visualize the quadrature.
+pquadrature <np> <mesh prefix> <keep attributes> <quadrature prefix> - Visualize the distributed quadrature.
+data_coll_mesh <type> <data coll> - Visualize the mesh from data collection.
+data_coll_field <type> <data coll> <field> - Visualize the field from data collection.
+data_coll_quad <type> <data coll> <quad> - Visualize the Q-field from data collection.
+data_coll_cycle <cycle> - Preset the cycle of the data collection.
+data_coll_protocol <protocol> - Preset the protocol of the data collection.
+screenshot <file> - Take a screenshot, saving it to the file.
+viewcenter <x> <y> - Change the viewcenter.
+perspective <on/off> - Turn on or off perspective projection.
+light <on/off> - Turn on or off light.
+view <theta> <phi> - Change the solid angle of view.
+zoom <zoom> - Change the zoom factor.
+shading <flat/smooth/cool> - Change the shading algorithm.
+subdivisions <times> <dummy> - Change the refinement level.
+valuerange <min> <max> - Change the value range.
+autoscale <off/on/value/mesh> - Change the autoscale algorithm.
+levellines <min> <max> <num> - Set the level lines.
+axis_numberformat '<format>' - Set the axis number format.
+colorbar_numberformat '<format>' - Set the colorbar number format.
+window <x> <y> <w> <h> - Set the position and size of the window.
+keys <keys> - Send the control key sequence.
+palette <index> - Set the palette index.
+palette_repeat <times> - Set the repetition of the palette.
+toggle_attributes <1/0> [[<1/0>] ...]; - Toggle visibility of the attributes.
+rotmat <[0,0]> <[1,0]> ... <[3,3]> - Set the rotation matrix.
+camera <cam[0]> ... <cam[2]> <dir[0]> ... <dir[2]> <up[0]> ... <up[2]> - Set the camera position, direction and upward vector.
+scale <scale> - Set the scaling factor.
+translate <x> <y> <z> - Set the translation coordinates.
+plot_caption '<caption>' - Set the plot caption.
+headless  - Change the session to headless.
+```
