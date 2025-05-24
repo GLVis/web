@@ -55,7 +55,7 @@ This page collects screenshots from various simulations that have used GLVis vis
 
 ----
 
-[![](img/gallery/tp-3d-ale-black.png)](http://computation.llnl.gov/)
+[![](img/gallery/tp-3d-ale-black.png)](https://computing.llnl.gov/projects/blast/triple-point-shock-interaction)
 
 *3D Arbitrary Lagrangian-Eulerian (ALE) simulation of a shock-triple point interaction with Q2-Q1 elements in the MFEM-based [BLAST](http://www.llnl.gov/casc/blast) shock hydrodynamics code. Shown are the cutting plane and level surface capabilities of GLVis.*
 

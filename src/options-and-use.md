@@ -579,5 +579,5 @@ to see the animation):
 
 More examples of animations produced with GLVis scripts can be found at the
 [BLAST website](http://www.llnl.gov/casc/blast), e.g.,
-[here](http://computation.llnl.gov/sites/default/files/public/triple-pt-xy.gif) and
-[here](http://computation.llnl.gov/sites/default/files/public/triple-pt-rz.gif).
+[here](https://computing.llnl.gov/sites/default/files/triple-pt-xy.gif) and
+[here](https://computing.llnl.gov/sites/default/files/triple-pt-rz.gif).
