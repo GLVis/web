@@ -660,5 +660,4 @@ camera <cam[0]> ... <cam[2]> <dir[0]> ... <dir[2]> <up[0]> ... <up[2]> - Set the
 scale <scale> - Set the scaling factor.
 translate <x> <y> <z> - Set the translation coordinates.
 plot_caption '<caption>' - Set the plot caption.
-headless  - Change the session to headless.
 ```
