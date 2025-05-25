@@ -416,6 +416,51 @@ be visualized later as follows:</p>
 keystrokes in the OpenGL window: <kbd>AmttOO</kbd> followed by multiple refinements with
 <kbd>o</kbd> and move/zoom adjustments with the mouse.</p>
 <p><img alt="" src="../img/glvis-saved.png" /></p>
+<p>There are many additional stream commands, which can be used. Their complete
+list is here:</p>
+<pre><code class="text">mesh &lt;mesh&gt; - Visualize the mesh.
+solution &lt;mesh&gt; &lt;solution&gt; - Visualize the solution.
+quadrature &lt;mesh&gt; &lt;quadrature&gt; - Visualize the quadrature.
+fem2d_data &lt;mesh&gt; &lt;data&gt; - Visualize the 2D scalar data.
+vfem2d_data &lt;mesh&gt; &lt;data_x&gt; &lt;data_y&gt; - Visualize the 2D vector data.
+vfem2d_data_keys &lt;mesh&gt; &lt;data_x&gt; &lt;data_y&gt; &lt;keys&gt; - Visualize the 2D vector data and apply control keys.
+fem3d_data &lt;mesh&gt; &lt;data&gt; - Visualize the 3D scalar data.
+vfem3d_data &lt;mesh&gt; &lt;data_x&gt; &lt;data_y&gt; &lt;data_z&gt; - Visualize the 3D vector data.
+vfem3d_data_keys &lt;mesh&gt; &lt;data_x&gt; &lt;data_y&gt; &lt;data_z&gt; &lt;keys&gt; - Visualize the 3D vector data and apply control keys.
+fem2d_gf_data &lt;mesh&gt; &lt;solution&gt; - Visualize the 2D scalar grid function.
+fem2d_gf_data_keys &lt;mesh&gt; &lt;solution&gt; &lt;keys&gt; - Visualize the 2D scalar grid function and apply control keys.
+vfem2d_gf_data &lt;mesh&gt; &lt;solution&gt; - Visualize the 2D vector grid function.
+vfem2d_gf_data_keys &lt;mesh&gt; &lt;solution&gt; &lt;keys&gt; - Visualize the 2D vector grid function and apply control keys.
+fem3d_gf_data &lt;mesh&gt; &lt;solution&gt; - Visualize the 3D scalar grid function.
+fem3d_gf_data_keys &lt;mesh&gt; &lt;solution&gt; &lt;keys&gt; - Visualize the 3D scalar grid function and apply control keys.
+vfem3d_gf_data &lt;mesh&gt; &lt;solution&gt; - Visualize the 3D vector grid function.
+vfem3d_gf_data_keys &lt;mesh&gt; &lt;solution&gt; &lt;keys&gt; - Visualize the 3D vector grid function and apply control keys.
+raw_scalar_2d &lt;data&gt; - Visualize the 2D scalar data (see stream_reader.cpp).
+parallel &lt;num proc&gt; &lt;proc&gt; - Prefix for distributed mesh/solution/quadrature.
+screenshot &lt;file&gt; - Take a screenshot, saving it to the file.
+viewcenter &lt;x&gt; &lt;y&gt; - Change the viewcenter.
+view &lt;theta&gt; &lt;phi&gt; - Change the solid angle of view.
+zoom &lt;zoom&gt; - Change the zoom factor.
+shading &lt;flat/smooth/cool&gt; - Change the shading algorithm.
+subdivisions &lt;times&gt; &lt;dummy&gt; - Change the refinement level.
+valuerange &lt;min&gt; &lt;max&gt; - Change the value range.
+autoscale &lt;off/on/value/mesh&gt; - Change the autoscale algorithm.
+levellines &lt;min&gt; &lt;max&gt; &lt;num&gt; - Set the level lines.
+axis_numberformat '&lt;format&gt;' - Set the axis number format.
+colorbar_numberformat '&lt;format&gt;' - Set the colorbar number format.
+window_size &lt;w&gt; &lt;h&gt; - Set the size of the window.
+window_geometry &lt;x&gt; &lt;y&gt; &lt;w&gt; &lt;h&gt; - Set the position and size of the window.
+window_title '&lt;title&gt;' - Set title of the window.
+keys &lt;keys&gt; - Send the control key sequence.
+palette &lt;index&gt; - Set the palette index.
+palette_repeat &lt;times&gt; - Set the repetition of the palette.
+camera &lt;cam[0]&gt; ... &lt;cam[2]&gt; &lt;dir[0]&gt; ... &lt;dir[2]&gt; &lt;up[0]&gt; ... &lt;up[2]&gt; - Set the camera position, direction and upward vector.
+plot_caption '&lt;caption&gt;' - Set the plot caption.
+axis_labels '&lt;x label&gt;' '&lt;y label&gt;' '&lt;z label&gt;' - Set labels of the axes.
+pause  - Stop the stream until space is pressed.
+autopause &lt;0/off/1/on&gt; - Turns off or on autopause.
+</code></pre>
+
 <h2 id="visualizing-meshes">Visualizing meshes</h2>
 <p>GLVis can also be employed in non-sever mode, e.g. to visualize a mesh file:</p>
 <pre><code class="sh">glvis -m quad.vtk
@@ -725,10 +770,7 @@ function plotted, without changing any other visualization parameters, while
 <a href="http://www.xfree86.org/current/xwd.1.html">xwd</a> depending on the build
 configuration) with
 <a href="http://www.imagemagick.org/script/convert.php">ImageMagick's convert utility</a>
-to save a picture in the specified format. There are a number of additional
-script commands available, the complete list of which can be found (and
-extended) by examining the
-<a href="https://github.com/glvis/glvis/blob/v4.4/glvis.cpp#L500">glvis.cpp source code</a>.</p>
+to save a picture in the specified format. </p>
 <p>Executing</p>
 <pre><code class="sh">glvis -run quad-vec.glvs
 </code></pre>
@@ -743,8 +785,43 @@ to see the animation):</p>
 <p><img alt="" src="../img/quad-vec2.gif" /></p>
 <p>More examples of animations produced with GLVis scripts can be found at the
 <a href="http://www.llnl.gov/casc/blast">BLAST website</a>, e.g.,
-<a href="http://computation.llnl.gov/sites/default/files/public/triple-pt-xy.gif">here</a> and
-<a href="http://computation.llnl.gov/sites/default/files/public/triple-pt-rz.gif">here</a>.</p></div>
+<a href="https://computing.llnl.gov/sites/default/files/triple-pt-xy.gif">here</a> and
+<a href="https://computing.llnl.gov/sites/default/files/triple-pt-rz.gif">here</a>.</p>
+<p>There are a number of additional script commands available, the complete list is here:</p>
+<pre><code class="text">mesh &lt;file&gt; - Visualize the mesh.
+solution &lt;mesh&gt; &lt;solution&gt; - Visualize the solution.
+psolution &lt;np&gt; &lt;mesh prefix&gt; &lt;keep attributes&gt; &lt;solution prefix&gt; - Visualize the distributed solution.
+quadrature &lt;mesh&gt; &lt;quadrature&gt; - Visualize the quadrature.
+pquadrature &lt;np&gt; &lt;mesh prefix&gt; &lt;keep attributes&gt; &lt;quadrature prefix&gt; - Visualize the distributed quadrature.
+data_coll_mesh &lt;type&gt; &lt;data coll&gt; - Visualize the mesh from data collection.
+data_coll_field &lt;type&gt; &lt;data coll&gt; &lt;field&gt; - Visualize the field from data collection.
+data_coll_quad &lt;type&gt; &lt;data coll&gt; &lt;quad&gt; - Visualize the Q-field from data collection.
+data_coll_cycle &lt;cycle&gt; - Preset the cycle of the data collection.
+data_coll_protocol &lt;protocol&gt; - Preset the protocol of the data collection.
+screenshot &lt;file&gt; - Take a screenshot, saving it to the file.
+viewcenter &lt;x&gt; &lt;y&gt; - Change the viewcenter.
+perspective &lt;on/off&gt; - Turn on or off perspective projection.
+light &lt;on/off&gt; - Turn on or off light.
+view &lt;theta&gt; &lt;phi&gt; - Change the solid angle of view.
+zoom &lt;zoom&gt; - Change the zoom factor.
+shading &lt;flat/smooth/cool&gt; - Change the shading algorithm.
+subdivisions &lt;times&gt; &lt;dummy&gt; - Change the refinement level.
+valuerange &lt;min&gt; &lt;max&gt; - Change the value range.
+autoscale &lt;off/on/value/mesh&gt; - Change the autoscale algorithm.
+levellines &lt;min&gt; &lt;max&gt; &lt;num&gt; - Set the level lines.
+axis_numberformat '&lt;format&gt;' - Set the axis number format.
+colorbar_numberformat '&lt;format&gt;' - Set the colorbar number format.
+window &lt;x&gt; &lt;y&gt; &lt;w&gt; &lt;h&gt; - Set the position and size of the window.
+keys &lt;keys&gt; - Send the control key sequence.
+palette &lt;index&gt; - Set the palette index.
+palette_repeat &lt;times&gt; - Set the repetition of the palette.
+toggle_attributes &lt;1/0&gt; [[&lt;1/0&gt;] ...]; - Toggle visibility of the attributes.
+rotmat &lt;[0,0]&gt; &lt;[1,0]&gt; ... &lt;[3,3]&gt; - Set the rotation matrix.
+camera &lt;cam[0]&gt; ... &lt;cam[2]&gt; &lt;dir[0]&gt; ... &lt;dir[2]&gt; &lt;up[0]&gt; ... &lt;up[2]&gt; - Set the camera position, direction and upward vector.
+scale &lt;scale&gt; - Set the scaling factor.
+translate &lt;x&gt; &lt;y&gt; &lt;z&gt; - Set the translation coordinates.
+plot_caption '&lt;caption&gt;' - Set the plot caption.
+</code></pre></div>
             <div class="col-md-3 hidden-xs hidden-sm"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
@@ -776,7 +853,7 @@ to see the animation):</p>
               <p class="text-muted alignright">LLNL-WEB-676630</p>
               <p class="text-muted alignleft">
                   Developed by the <a href="/about/">GLVis team</a> at
-                  <a href="http://computation.llnl.gov/casc/">CASC</a>,
+                  <a href="https://computing.llnl.gov/casc/">CASC</a>,
                   <a href="https://www.llnl.gov/">LLNL</a></p>
            </div>
         </footer>
