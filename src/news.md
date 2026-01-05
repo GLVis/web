@@ -2,6 +2,7 @@
 
 &nbsp;       | |
 ------------ | -----------------------------------------------------------------
+Jan XX, 2026 | Version 4.5 [released](https://github.com/glvis/glvis/blob/v4.5/CHANGELOG).
 May 1, 2025 | Version 4.4 [released](https://github.com/glvis/glvis/blob/v4.4/CHANGELOG).
 Sep 27, 2024 | Version 4.3.2 [released](https://github.com/glvis/glvis/blob/v4.3.2/CHANGELOG).
 Aug 7, 2024 | Version 4.3 [released](https://github.com/glvis/glvis/blob/v4.3/CHANGELOG).
