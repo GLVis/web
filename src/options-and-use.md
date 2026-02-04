@@ -145,7 +145,7 @@ application without any options:
 glvis
 ```
 By default, the server is established on
-[port 19916](https://github.com/glvis/glvis/blob/v4.4/glvis.cpp#L1421), but
+[port 19916](https://github.com/glvis/glvis/blob/v4.5/glvis.cpp#L386), but
 this can be changed with the `-p` option.
 
 <!--
