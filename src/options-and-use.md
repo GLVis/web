@@ -83,10 +83,12 @@ All Options:
         Number of digits used for processor ranks in file names.
    -run <string>, --run-script <string>, current value: (none)
         Run a GLVis script file.
-   -k <string>, --keys <string>, current value: (none)
-        Execute key shortcut commands in the GLVis window.
    -pal <string>, --palettes <string>, current value: (none)
         Palette file.
+   -pname <string>, --palette-name <string>, current value: (none)
+        Palette name.
+   -k <string>, --keys <string>, current value: (none)
+        Execute key shortcut commands in the GLVis window.
    -fo, --fix-orientations, -no-fo, --dont-fix-orientations, current option: --dont-fix-orientations
         Attempt to fix the orientations of inverted elements.
    -a, --real-attributes, -ap, --processor-attributes, current option: --processor-attributes
@@ -97,6 +99,8 @@ All Options:
         Save the mesh coloring generated when opening only a mesh.
    -p <int>, --listen-port <int>, current value: 19916
         Specify the port number on which to accept connections.
+   -pr, --persistent, -no-pr, --no-persistent, current option: --persistent
+        Keep server running after all windows are closed.
    -sec, --secure-sockets, -no-sec, --standard-sockets, current option: --standard-sockets
         Enable or disable GnuTLS secure sockets.
    -save, --save-stream, -no-save, --dont-save-stream, current option: --dont-save-stream
@@ -109,6 +113,8 @@ All Options:
         Set the window height.
    -wt <string>, --window-title <string>, current value: (default)
         Set the window title.
+   -hl, --headless, -no-hl, --no-headless, current option: --no-headless
+        Start headless (no GUI) visualization.
    -c <string>, --plot-caption <string>, current value: (none)
         Set the plot caption (visible when colorbar is visible).
    -fn <string>, --font <string>, current value: (default)
@@ -117,7 +123,7 @@ All Options:
         Set the multisampling mode (toggled with the 'A' key).
    -lw <double>, --line-width <double>, current value: 1
         Set the line width (multisampling off).
-   -mslw <double>, --multisample-line-width <double>, current value: 1
+   -mslw <double>, --multisample-line-width <double>, current value: 1.4
         Set the line width (multisampling on).
    -oldgl, --legacy-gl, -anygl, --any-gl, current option: --any-gl
         Only try to create a legacy OpenGL (< 2.1) context.
@@ -139,7 +145,7 @@ application without any options:
 glvis
 ```
 By default, the server is established on
-[port 19916](https://github.com/glvis/glvis/blob/v4.4/glvis.cpp#L1421), but
+[port 19916](https://github.com/glvis/glvis/blob/v4.5/glvis.cpp#L386), but
 this can be changed with the `-p` option.
 
 <!--
@@ -276,6 +282,8 @@ window_geometry <x> <y> <w> <h> - Set the position and size of the window.
 window_title '<title>' - Set title of the window.
 keys <keys> - Send the control key sequence.
 palette <index> - Set the palette index.
+palette_name <palette_name> - Use palette with given name.
+palette_file <filename> - Load in a palette file.
 palette_repeat <times> - Set the repetition of the palette.
 camera <cam[0]> ... <cam[2]> <dir[0]> ... <dir[2]> <up[0]> ... <up[2]> - Set the camera position, direction and upward vector.
 plot_caption '<caption>' - Set the plot caption.
@@ -653,6 +661,8 @@ colorbar_numberformat '<format>' - Set the colorbar number format.
 window <x> <y> <w> <h> - Set the position and size of the window.
 keys <keys> - Send the control key sequence.
 palette <index> - Set the palette index.
+palette_file <filename> - Load in a palette file.
+palette_name <palette_name> - Use palette with given name.
 palette_repeat <times> - Set the repetition of the palette.
 toggle_attributes <1/0> [[<1/0>] ...]; - Toggle visibility of the attributes.
 rotmat <[0,0]> <[1,0]> ... <[3,3]> - Set the rotation matrix.
@@ -660,4 +670,5 @@ camera <cam[0]> ... <cam[2]> <dir[0]> ... <dir[2]> <up[0]> ... <up[2]> - Set the
 scale <scale> - Set the scaling factor.
 translate <x> <y> <z> - Set the translation coordinates.
 plot_caption '<caption>' - Set the plot caption.
+headless  - Change the session to headless.
 ```
