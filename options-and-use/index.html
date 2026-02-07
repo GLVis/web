@@ -269,10 +269,12 @@ All Options:
         Number of digits used for processor ranks in file names.
    -run &lt;string&gt;, --run-script &lt;string&gt;, current value: (none)
         Run a GLVis script file.
-   -k &lt;string&gt;, --keys &lt;string&gt;, current value: (none)
-        Execute key shortcut commands in the GLVis window.
    -pal &lt;string&gt;, --palettes &lt;string&gt;, current value: (none)
         Palette file.
+   -pname &lt;string&gt;, --palette-name &lt;string&gt;, current value: (none)
+        Palette name.
+   -k &lt;string&gt;, --keys &lt;string&gt;, current value: (none)
+        Execute key shortcut commands in the GLVis window.
    -fo, --fix-orientations, -no-fo, --dont-fix-orientations, current option: --dont-fix-orientations
         Attempt to fix the orientations of inverted elements.
    -a, --real-attributes, -ap, --processor-attributes, current option: --processor-attributes
@@ -283,6 +285,8 @@ All Options:
         Save the mesh coloring generated when opening only a mesh.
    -p &lt;int&gt;, --listen-port &lt;int&gt;, current value: 19916
         Specify the port number on which to accept connections.
+   -pr, --persistent, -no-pr, --no-persistent, current option: --persistent
+        Keep server running after all windows are closed.
    -sec, --secure-sockets, -no-sec, --standard-sockets, current option: --standard-sockets
         Enable or disable GnuTLS secure sockets.
    -save, --save-stream, -no-save, --dont-save-stream, current option: --dont-save-stream
@@ -295,6 +299,8 @@ All Options:
         Set the window height.
    -wt &lt;string&gt;, --window-title &lt;string&gt;, current value: (default)
         Set the window title.
+   -hl, --headless, -no-hl, --no-headless, current option: --no-headless
+        Start headless (no GUI) visualization.
    -c &lt;string&gt;, --plot-caption &lt;string&gt;, current value: (none)
         Set the plot caption (visible when colorbar is visible).
    -fn &lt;string&gt;, --font &lt;string&gt;, current value: (default)
@@ -303,7 +309,7 @@ All Options:
         Set the multisampling mode (toggled with the 'A' key).
    -lw &lt;double&gt;, --line-width &lt;double&gt;, current value: 1
         Set the line width (multisampling off).
-   -mslw &lt;double&gt;, --multisample-line-width &lt;double&gt;, current value: 1
+   -mslw &lt;double&gt;, --multisample-line-width &lt;double&gt;, current value: 1.4
         Set the line width (multisampling on).
    -oldgl, --legacy-gl, -anygl, --any-gl, current option: --any-gl
         Only try to create a legacy OpenGL (&lt; 2.1) context.
@@ -322,7 +328,7 @@ application without any options:</p>
 </code></pre>
 
 <p>By default, the server is established on
-<a href="https://github.com/glvis/glvis/blob/v4.4/glvis.cpp#L1421">port 19916</a>, but
+<a href="https://github.com/glvis/glvis/blob/v4.5/glvis.cpp#L386">port 19916</a>, but
 this can be changed with the <code>-p</code> option.</p>
 <!--
 On legacy Mac machines with OS X Leopard, the server needs to be started with
@@ -453,6 +459,8 @@ window_geometry &lt;x&gt; &lt;y&gt; &lt;w&gt; &lt;h&gt; - Set the position and s
 window_title '&lt;title&gt;' - Set title of the window.
 keys &lt;keys&gt; - Send the control key sequence.
 palette &lt;index&gt; - Set the palette index.
+palette_name &lt;palette_name&gt; - Use palette with given name.
+palette_file &lt;filename&gt; - Load in a palette file.
 palette_repeat &lt;times&gt; - Set the repetition of the palette.
 camera &lt;cam[0]&gt; ... &lt;cam[2]&gt; &lt;dir[0]&gt; ... &lt;dir[2]&gt; &lt;up[0]&gt; ... &lt;up[2]&gt; - Set the camera position, direction and upward vector.
 plot_caption '&lt;caption&gt;' - Set the plot caption.
@@ -814,6 +822,8 @@ colorbar_numberformat '&lt;format&gt;' - Set the colorbar number format.
 window &lt;x&gt; &lt;y&gt; &lt;w&gt; &lt;h&gt; - Set the position and size of the window.
 keys &lt;keys&gt; - Send the control key sequence.
 palette &lt;index&gt; - Set the palette index.
+palette_file &lt;filename&gt; - Load in a palette file.
+palette_name &lt;palette_name&gt; - Use palette with given name.
 palette_repeat &lt;times&gt; - Set the repetition of the palette.
 toggle_attributes &lt;1/0&gt; [[&lt;1/0&gt;] ...]; - Toggle visibility of the attributes.
 rotmat &lt;[0,0]&gt; &lt;[1,0]&gt; ... &lt;[3,3]&gt; - Set the rotation matrix.
@@ -821,6 +831,7 @@ camera &lt;cam[0]&gt; ... &lt;cam[2]&gt; &lt;dir[0]&gt; ... &lt;dir[2]&gt; &lt;u
 scale &lt;scale&gt; - Set the scaling factor.
 translate &lt;x&gt; &lt;y&gt; &lt;z&gt; - Set the translation coordinates.
 plot_caption '&lt;caption&gt;' - Set the plot caption.
+headless  - Change the session to headless.
 </code></pre></div>
             <div class="col-md-3 hidden-xs hidden-sm"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
