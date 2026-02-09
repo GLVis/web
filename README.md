@@ -14,12 +14,13 @@ If you've already cloned you can pull submodules with:
 git submodule update --init --recursive
 ```
 
-To make changes to the website you will need an install of Python 3 with the following libraries:
+To make changes to the website you will need an install of Python pre-v3.10 with the following libraries:
 
-- use MkDocs v1.0.4 with Markdown v3.0 and the latest PyYAML
+- use MkDocs v1.0.4 with Markdown v3.0, the latest PyYAML and Jinja2 pre-v3.1
   * `pip install --upgrade --user mkdocs==1.0.4`
   * `pip install --upgrade --user Markdown==3.0`
   * `pip install --upgrade --user PyYAML`
+  * `pip install --upgrade --user Jinja2==3.0.3`
 - newer versions may not generate correct front page (to see the installed version, use `pip show mkdocs`)
 - clone this repo,
 - edit or add some `.md` files (you may also need to update the `mkdocs.yml` config),
