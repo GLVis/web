@@ -20,7 +20,7 @@ To make changes to the website you will need an install of Python pre-v3.10 with
   * `pip install --upgrade --user mkdocs==1.0.4`
   * `pip install --upgrade --user Markdown==3.0`
   * `pip install --upgrade --user PyYAML`
-  * `pip install --upgrade --user Jinja2<3.1`
+  * `pip install --upgrade --user Jinja2==3.0.3`
 - newer versions may not generate correct front page (to see the installed version, use `pip show mkdocs`)
 - clone this repo,
 - edit or add some `.md` files (you may also need to update the `mkdocs.yml` config),
