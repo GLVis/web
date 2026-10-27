@@ -214,16 +214,40 @@
                       <v-spacer></v-spacer>
                       <v-card-text>
                         <v-form ref="socketForm" lazy-validation>
+                          <v-radio-group
+                            v-model="socketConnectionMode"
+                            row
+                            hide-details
+                          >
+                            <v-radio
+                              label="Server address"
+                              value="address"
+                            ></v-radio>
+                            <v-radio
+                              label="WebSocket URL"
+                              value="url"
+                            ></v-radio>
+                          </v-radio-group>
                           <v-text-field
+                            v-if="socketConnectionMode === 'address'"
                             v-model="socketHost"
                             label="Host"
                             required
                           ></v-text-field>
                           <v-text-field
+                            v-if="socketConnectionMode === 'address'"
                             v-model="socketPort"
-                            label="Port"
+                            label="Port (optional)"
+                          ></v-text-field>
+                          <v-text-field
+                            v-if="socketConnectionMode === 'url'"
+                            v-model="socketUrl"
+                            label="WebSocket URL"
                             required
                           ></v-text-field>
+                          <div class="text-caption mb-2">
+                            {{ websocketAddress() }}
+                          </div>
                           <v-btn @click="connectWebsocket">
                             {{ connectWebsocketButtonLabel }}
                           </v-btn>
@@ -281,7 +305,7 @@
                   <v-dialog
                     v-model="examplesDialogActive"
                     scrollable
-                    width="275px"
+                    width="300px"
                   >
                     <template v-slot:activator="{ on: dialog, attrs }">
                       <v-tooltip transition="fade" bottom>
@@ -852,7 +876,23 @@
     if (host === "127.0.0.1" || host === "glvis.org") {
       host = "localhost";
     }
-    console.log(`host = ${host}`);
+    const socket = new URLSearchParams(window.location.search).get("socket");
+    const socketHost = host;
+    const socketPort = "8080";
+    const socketUrl = socket
+      ? socket.startsWith("/")
+        ? `${window.location.protocol === "https:" ? "wss" : "ws"}://${
+            window.location.host
+          }${socket}`
+        : socket
+      : "";
+    console.log("socket settings:", {
+      host,
+      socket,
+      socketHost,
+      socketPort,
+      socketUrl,
+    });
 
     const touch = matchMedia("(hover: none), (pointer: coarse)").matches;
     console.log(`touch = ${touch}`);
@@ -867,8 +907,10 @@
         websocketDialogActive: false,
         logWindowActive: false,
         connectWebsocketButtonLabel: "Connect",
-        socketHost: host,
-        socketPort: "8080",
+        socketConnectionMode: socketUrl ? "url" : "address",
+        socketHost: socketHost,
+        socketPort: socketPort,
+        socketUrl: socketUrl,
         controlWindowActive: false,
         helpWindowActive: false,
         fullScreenMode: false,
@@ -885,7 +927,7 @@
         experimentalMode: false,
         logMode: false,
         streamDelay: 0,
-        defaultExample: 14,
+        defaultExample: 18,
         examples: [
           {
             name: "MFEM Example 1",
@@ -904,8 +946,20 @@
             url: "../data/streams/ex5.saved",
           },
           {
+            name: "MFEM Example 6",
+            url: "../data/streams/ex6-dofs-numbering.saved",
+          },
+          {
             name: "MFEM Example 9",
             url: "../data/streams/ex9.saved",
+          },
+          {
+            name: "MFEM Example 22 (scalar)",
+            url: "../data/streams/ex22-scalar.saved",
+          },
+          {
+            name: "MFEM Example 22 (vector)",
+            url: "../data/streams/ex22-vector.saved",
           },
           {
             name: "MFEM Example 27",
@@ -914,6 +968,10 @@
           {
             name: "Capacitor",
             url: "../data/streams/capacitor.saved",
+          },
+          {
+            name: "Distance",
+            url: "../data/streams/distance.saved",
           },
           {
             name: "Klein Bottle",
@@ -958,6 +1016,10 @@
           {
             name: "Shaper",
             url: "../data/streams/shaper.saved",
+          },
+          {
+            name: "Shifted BC",
+            url: "../data/streams/shifted.saved",
           },
           {
             name: "Snake",
@@ -1074,6 +1136,10 @@
           await new Promise((r) => setTimeout(r, 50 + this.streamDelay * 10));
         });
 
+        if (socket) {
+          this.connectWebsocket();
+        }
+
         this.glvIsLoading = false;
       },
       watch: {
@@ -1089,6 +1155,19 @@
         },
       },
       methods: {
+        websocketAddress: function () {
+          if (this.socketConnectionMode === "url") {
+            return this.socketUrl;
+          }
+
+          const isLoopback = ["localhost", "127.0.0.1"].includes(
+            this.socketHost
+          );
+          const proto =
+            window.location.protocol === "https:" && !isLoopback ? "wss" : "ws";
+          const port = this.socketPort ? `:${this.socketPort}` : "";
+          return `${proto}://${this.socketHost}${port}`;
+        },
         updateCanvasSize: function () {
           [w, h] = windowDim();
           this.glv.setSize(w, h);
@@ -1112,9 +1191,7 @@
             return;
           }
 
-          const host = this.socketHost;
-          const port = this.socketPort;
-          const addr = `ws:\/\/${host}:${port}`;
+          const addr = this.websocketAddress();
 
           console.log(`trying to connect websocket to ${addr}`);
           this.glvSocket = new WebSocket(addr);
